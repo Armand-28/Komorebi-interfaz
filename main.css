@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 :root {
-    --alibaba: "imagenes/AlibabaSans-Medium.otf";
+    --Caveat: "Caveat", cursive;
+    --YanoneKaffeesatz: "Yanone Kaffeesatz", sans-serif;
+    --OpenSans: "Open Sans", sans-serif;    
 }
 
 header{
@@ -55,11 +57,53 @@ header p{
     outline: none;
     padding-left: 20px;
     font-size: 16px;
-    font-family: var(--alibaba);
+    font-family: var(--YanoneKaffeesatz);
     
     
 }
 .navegacion input::placeholder{
     color: #aaaaaa;
+    font-family: var(--YanoneKaffeesatz);
 }
+.navegacion span{
+    position: absolute;
+    top: 30px;
+    left: 1155px;
+    font-size: 23px;
+    color: #000000;
+
+}
+.navegacion .fa-cart-shopping{
+    position: absolute;
+    left: 1280px;
+    top:-1px;
+    color: #FFFFFF;
+}
+.navegacion .fa-cart-shopping a:first-child{
+position: absolute;
+color: #FFFFFF;
+font-size: 15px;
+top: 50px;
+text-decoration: none;
+right: 20px;
+display: flex;
+font-family: var(--YanoneKaffeesatz);
+}
+
+.navegacion .fa-circle-user{
+    position: absolute;
+    left: 1350px;
+    top:-1px;
+    color: #FFFFFF;
+}
+.navegacion .fa-circle-user a:last-child{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 15px;
+    top: 50px;
+    text-decoration: none;
+    right: 20px;
+    display: flex;
+    font-family: var(--YanoneKaffeesatz);
+    }
 
