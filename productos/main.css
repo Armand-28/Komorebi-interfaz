@@ -1,0 +1,439 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --Caveat: "Caveat", cursive;
+    --YanoneKaffeesatz: "Yanone Kaffeesatz", sans-serif;
+    --OpenSans: "Open Sans", sans-serif;    
+}
+.container{
+    position: relative;
+    max-width: 1600px;
+    min-width: 1000px;
+    height: 100vh;
+    margin: auto;
+}
+
+header{
+    position: relative;
+    background-color: #D2D2D2;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    margin: auto;
+}
+header p{
+    position: relative;
+    display:inline-flex ;
+    align-items:center ;
+    font-size: 20px;
+    padding-left: 25px; 
+    top: 5px;
+    left: 15px;
+    color: #777777;
+}
+.navegacion{
+    position: relative;
+    background-color: #e90000;
+    width: 100%;
+    height: 120px;
+    margin: auto;
+}
+.navegacion p i{
+    position: absolute;
+    top: 0px;
+    font-size: 40px;
+    color: #FFFFFF;
+    left: 72px;
+    cursor: pointer;
+}
+
+.navegacion p img{
+    position: absolute;
+    top: -80px;
+    width: 201px;
+    height: 201px;
+    left: 180px;
+}
+.navegacion input{
+    position: absolute;
+    width: 580px;
+    height: 40px;
+    left: 507px;
+    top: 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: var(--YanoneKaffeesatz); 
+}
+.navegacion input::placeholder{
+    color: #aaaaaa;
+    font-family: var(--YanoneKaffeesatz);
+}
+.navegacion span{
+    position: absolute;
+    top: 30px;
+    left: 1055px;
+    font-size: 23px;
+    color: #000000; 
+    cursor: pointer;
+
+}
+.carro .fa-cart-shopping{
+    position: relative;
+    left: 1240px;
+    top:30px;
+    color: #FFFFFF;
+}
+.navegacion .li-1{
+position: absolute;
+list-style: none;
+left: 1305px;
+top: 80px;
+font-size: 16px;
+}
+.li-1 a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cuenta .fa-circle-user{
+    position: relative;
+    left: 1210px;
+    top: 30px;
+    color: #FFFFFF;
+}
+.navegacion .li-2{
+    position: absolute;
+    list-style: none;
+    left: 1400px;
+    top: 80px;
+    font-size: 16px;
+    z-index: 1;
+    }
+.li-2 a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 14px;
+    font-weight: bold;
+}
+.navegacion div{
+position: absolute;
+top: 70px;
+left: 530px;
+display: flex;
+width: 500px;
+height: 40px;
+justify-content: space-between;
+}
+.navegacion div .modoentrega{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 180px;
+    height: 28px;
+    top: 6px;
+    font-size: 14px;
+    font-family: var(--OpenSans);
+    font-weight: 600;
+}
+.modoentrega a{
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+div .modoentrega .fa-shop{
+    position: absolute;
+    color: #000000;
+    font-size: 20px;
+    left: 15px;
+    top: 4px;
+}
+.navegacion div .quienessomos{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 180px;
+    height: 28px;
+    top: 6px;
+    font-size: 14px;
+    font-family: var(--OpenSans);
+    font-weight: 600;
+}
+.quienessomos a{
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px
+}
+div .quienessomos .fa-store{
+    position: absolute;
+    color: #000000;
+    font-size: 20px;
+    left: 15px;
+    top: 4px;
+}
+.lines{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:-610px;
+    left: 0px;
+    width: 1400px;
+    height: 30px;
+    margin: auto;
+}
+.lines  a{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000000;
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    text-decoration: none;
+    padding-left: 20px;
+    display: flex;
+    color: #000000;
+    font-size: 15px;
+    font-family: var(--YanoneKaffeesatz);
+}
+.lines a:hover{
+    background-color: #e90000;
+}
+
+.lines a:first-child{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.lines a:last-child{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#container2{
+    position: relative;
+    max-width: 1600px;
+    margin: auto;
+}
+#deslizar{
+    position: relative;
+    top: -550px;
+    width: 1600px;
+    height: 600px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 280px);
+    grid-template-rows: repeat(4, 380px);
+    gap: 5px;
+}
+
+.promociones{
+    position: relative;
+    display: block;
+    justify-content: center;
+    top: 0px;
+    margin: auto;
+    width: 250px;
+    height: 370px;
+    left: -1600px;
+    opacity: 0;
+    transition: all .2s linear;
+    border-radius: 20px;
+    box-shadow: 1px 2px 20px 5px #00000090;
+}
+.promociones.active{
+    left: 200px;
+    opacity: 1;
+}
+.promociones div:nth-child(1){
+    border-radius: 20px;
+}
+.promociones div:nth-child(1) p:nth-child(1){
+    position: absolute;
+    width: 35px;
+    height: 17px;
+    border: none;
+    top: 15px;
+    padding-left: 10px;
+    left: 15px;
+    font-size: 12px;
+    background-color: #FF9F23;
+}
+.promociones div:nth-child(1) img{
+    position: absolute;
+    top: 35px;
+    left: 16px;
+    width: 220px;
+    height: 200px;
+}
+.promociones .precios{
+    position: absolute;
+    display: flex;
+    left: 0px;
+    top: 230px;
+}
+div:nth-child(1) .precios p:nth-child(1){
+    position: absolute;
+    font-size: 18px;
+    background-color: #FF9F23;
+    width: 70px;
+    height: 20px;
+    border-radius: 4px;
+    left: 20px;
+    font-family: var(--YanoneKaffeesatz);
+}
+
+div:nth-child(1) .precios p:nth-child(1) small{
+    position: absolute;
+    left: 150px;
+    top: 4px;
+    color: #aaaaaa;
+    font-size: 10px;
+    font-family: var(--YanoneKaffeesatz);
+}
+
+div:nth-child(1) .precios p:nth-child(2){
+    position: absolute;
+    top: 40px;
+    width: 200px;
+    border: none;
+    left: 20px;
+    font-size: 14px;
+    font-family: var(--YanoneKaffeesatz);
+    text-transform: capitalize;
+}
+div:nth-child(1) .precios p:nth-child(3){
+    position: absolute;
+    display: inline-flex;
+    top: 70px;
+    font-size: 14px;
+    display: inline-flex;
+    width: 290px;
+    left: 20px;
+    color: #aaaaaa;
+    font-weight: normal;
+}
+.precios button{
+    position: absolute;
+    left: 120px;
+    top: 100px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px; ;
+    background-color: #FF9F23;
+    border: none;
+}
+.precios button a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 545;
+    padding-left: 12px;
+    font-family: var(--YanoneKaffeesatz);
+}
+.precios button i{
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+.promociones div:nth-child(2){
+    border-radius: 20px;
+}
+.promociones div:nth-child(3){
+    border-radius: 20px;
+}
+.promociones div:nth-child(4){
+    border-radius: 20px;
+}
+.promociones div:nth-child(5){
+    border-radius: 20px;
+}
+.promociones div:nth-child(6){
+    border-radius: 20px;
+}
+.promociones div:nth-child(7){
+    border-radius: 20px;
+}
+.promociones div:nth-child(8){
+    border-radius: 20px;
+}
+.promociones div:nth-child(9){
+    border-radius: 20px;
+}
+.promociones div:nth-child(10){
+    border-radius: 20px;
+}
+.promociones div:nth-child(11){
+    border-radius: 20px;
+}
+.promociones div:nth-child(12){
+    border-radius: 20px;
+}
+.indicadores{
+    position: relative;
+    top: 40px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 50px;
+    }
+    .indicadores P{
+        letter-spacing: 10px;
+        color: #777777;
+        font-family: var(--YanoneKaffeesatz);
+    }
+    .circles{
+        border: 2px solid #FFFFFF;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin: 0 5px 0 5px;
+        background-color: #aaaaaa;
+        border-radius: 50%;
+    }
+    .resaltado{
+        background-color: #FF9F23;
+        transition: background-color .8s;
+    }
+    .fa-chevron-left{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        top:0;
+        left: 0px;
+        padding: 5px 6px;
+        background-color: #FF9F23;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    .fa-chevron-right{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        top:0px;
+        left: 7px;
+        padding: 5px 6px;
+        background-color: #FF9F23;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    

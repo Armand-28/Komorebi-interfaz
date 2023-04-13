@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--YanoneKaffeesatz);
+}
+:root {
+    --Caveat: "Caveat", cursive;
+    --YanoneKaffeesatz: "Yanone Kaffeesatz", sans-serif;
+    --OpenSans: "Open Sans", sans-serif;    
+}
+.container{
+    position: relative;
+    width: 1600px;
+    height: 100vh;
+    margin: auto;
+     
+}
+.login{
+    position: relative;
+    width: 1050px;
+    height: 620px;
+    display: flex;
+    border: 1px solid #777777;
+    top: 80px;
+    margin: auto ;
+    overflow: hidden;
+    z-index: 1;
+}
+.login > img{
+    position: absolute;
+    width:550px ;
+    height: 700px;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+}
+.login .formulario{
+    position: absolute;
+    width:550px ;
+    height: 700px;
+    right: -170px;
+    display: inline-block;
+    line-height: 60px;
+}
+.formulario p img{
+    position: absolute;
+    top: 25px;
+    width: 60px;
+    left: -70px;
+}
+.formulario h1{
+    position: absolute;
+    top: 120px;
+    left: -70px;
+}
+.formulario p b{
+    position: absolute;
+    top: 160px;
+    left: -70px;
+    font-weight: bolder;
+}
+.formulario p:nth-child(4){
+    position: absolute;
+    top: 199px;
+    left: 80px;
+    color: #777777;
+    background-color: #ea0b0b;
+    height: 10px;
+}
+.formulario p:nth-child(4) span:first-child{
+    position: absolute;
+    border: 1px solid #b8b8b8;
+    top: 20px;
+    left: -145px;
+    width: 140px;
+}
+.formulario p:nth-child(4) span:last-child{
+    position: absolute;
+    border: 1px solid #b8b8b8;
+    top: 20px;
+    right: -284px;
+    width: 140px;
+}
+.formulario p:nth-child(4) small{
+    position: absolute;
+    top: -10px;
+    width: 200px;
+    color: #b8b8b8;
+}
+.formulario form{
+    position: absolute;
+    display: block;
+    top: 240px;
+    left: -68px;
+}
+.formulario form label{
+    position: relative;
+    display: block;
+    line-height: 80px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.formulario form .input1{
+    position: absolute;
+    display: block;
+    top: 55px;
+    width: 400px;
+    border-radius: 15px;
+    height: 35px;
+    border: 2px solid #000000;
+    overflow: none;
+    padding-left: 20px;
+    
+}
+.formulario form .input1::placeholder{
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.formulario form .input1:hover{
+    border: 2px solid rgba(50, 139, 255, 0.881);
+}
+.formulario form .input2{
+    position: absolute;
+    display: block;
+    top: 133px;
+    width: 400px;
+    border-radius: 15px;
+    height: 35px;
+    border: 2px solid #000000;
+    overflow: none;
+    padding-left: 20px;
+    
+}
+.formulario form .input2::placeholder{
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.formulario form .input2:hover{
+    border: 2px solid blue;
+}
+.formulario p:nth-child(5){
+    position: absolute;
+    top: 164px;
+    width: 200px;
+    right: -290px;
+}
+.formulario p:nth-child(5) a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #FF9F23;
+}
+.formulario button{
+    position: absolute;
+    top: 250px;
+    width: 400px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: #FF9F23;
+    border: none;
+    left: 0;
+}
+.formulario button a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+.formulario p:last-child{
+    position: absolute;
+    top: 540px;
+    width: 400px;
+    left: -60px;
+}
+.formulario p:last-child a{
+    position: absolute;
+    font-weight: bold;
+    color: #000000;
+    right: 0;
+}
+.forma1{
+    position: absolute;
+    background-color: rgba(255,24,24,1);
+    width: 840px;
+    height: 250px;
+    top: 550px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    right: 0;
+}
+.forma2{
+    position: absolute;
+    background-color: rgba(255,24,24,1);
+    width: 890px;
+    height: 290px;
+    top: 510px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    left: 0;
+}
+  
