@@ -11,11 +11,10 @@
 .container{
     position: relative;
     max-width: 1600px;
-    min-width: 1000px;
     height: 100vh;
     margin: auto;
+    font-family: var(--YanoneKaffeesatz);
 }
-
 header{
     position: relative;
     background-color: #D2D2D2;
@@ -39,13 +38,18 @@ header p{
     width: 100%;
     height: 120px;
 }
-.navegacion p i{
+.navegacion .seguir{
     position: absolute;
-    top: 0px;
-    font-size: 40px;
+    top: 40px;
+    font-size: 17px;
+    font-family: var(--YanoneKaffeesatz);
     color: #FFFFFF;
-    left: 72px;
+    left: -10px;
     cursor: pointer;
+}
+.navegacion .seguir i{
+    color: #FF9F23;
+    font-size: 25px;
 }
 
 .navegacion p img{
@@ -67,8 +71,6 @@ header p{
     padding-left: 20px;
     font-size: 16px;
     font-family: var(--YanoneKaffeesatz);
-    
-    
 }
 .navegacion input::placeholder{
     color: #aaaaaa;
@@ -81,13 +83,13 @@ header p{
     font-size: 23px;
     color: #000000; 
     cursor: pointer;
-
 }
 .carro .fa-cart-shopping{
     position: relative;
-    left: 1220px;
+    left: 1240px;
     top:30px;
     color: #FFFFFF;
+    font-size: 40px;
 }
 .navegacion .li-1{
 position: absolute;
@@ -106,9 +108,10 @@ font-size: 16px;
 
 .cuenta .fa-circle-user{
     position: relative;
-    left: 1180px;
+    left: 1210px;
     top: 30px;
     color: #FFFFFF;
+    font-size:  40px;
 }
 .navegacion .li-2{
     position: absolute;
@@ -128,13 +131,14 @@ font-size: 16px;
 .navegacion div{
 position: absolute;
 top: 70px;
-left: 530px;
+left: 538px;
 display: flex;
 width: 500px;
 height: 40px;
 justify-content: space-between;
 }
 .navegacion div .modoentrega{
+    position: absolute;
     background-color: #FFFFFF;
     border-radius: 20px;
     width: 180px;
@@ -160,13 +164,15 @@ div .modoentrega .fa-shop{
     top: 4px;
 }
 .navegacion div .quienessomos{
+    position: absolute;
     background-color: #FFFFFF;
     border-radius: 20px;
     width: 180px;
     height: 28px;
     top: 6px;
+    left: 350px;
     font-size: 14px;
-    font-family: var(--OpenSans);
+    font-family: var(--YanoneKaffeesatz);
     font-weight: 600;
 }
 .quienessomos a{
@@ -184,272 +190,180 @@ div .quienessomos .fa-store{
     left: 15px;
     top: 4px;
 }
-#menu{
+.container2{
     position: relative;
-    background-color: #e90000;
-    width: 200px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    left: -200px;
-    transition: all .3s linear;
+    top: 0px;
+    margin: auto;
+    width: 1600px;
+    height: 100vh;
 }
-#menu.active{
-    opacity: 1;
-    left: 0;
-}
-.fa-xmark{
+aside{
     position: absolute;
-    right: -10px;
-    top: 18px;
-    font-size: 20px;
-    cursor: pointer;
+    width: 250px;
+    top: 80px;
+    height: 500px;
 }
-
-#menu ul{
+aside p i{
     position: absolute;
+    font-size: 80px;
+    left: 50px;
+    color: #777777;
+}
+aside p:nth-child(2){
+    position: absolute;
+    top: 90px;
+    left: 58px;
+    font-size: 14px;
+}
+aside p:nth-child(3){
+position: absolute;
+top: 110px;
+left: 54px;
+font-size: 22px;
+font-weight: bolder;
+}
+aside ul{
+    position: absolute;
+    top: 150px;
+    left: 58px;
     list-style: none;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 15px;
-    color: #FFFFFF;
-    top: -10px;
 }
-#menu ul li{
-    border-bottom: 2px solid #FF9F23;
-    padding: 10px;
-    padding-top: 35px;
-    padding-left: 10px;
-}
-#menu ul li a{
-    color: #FFFFFF;
-    text-decoration: none;   
-}
-.carrusel{
-    position: relative;
-    margin: auto;
-    justify-content: center;
-    top: -350px;
-    left: 10px;
-    border: 2px solid #aaaaaa;
-    width: 1000px;
-    height: 600px;
-    overflow: hidden;
-    transition: all .3s linear;
-}
-.carrusel p:first-child .fa-arrow-left{
-    position: absolute;
-    background-color: #0000004e;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 300px;
-    left: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 1;
-}
-.carrusel p:first-child:hover .fa-arrow-left{
-    background-color: #ff00008e;
-    color: #FFFFFF;
-}
-.carrusel p:nth-child(2) .fa-arrow-right{
-    position: absolute;
-    background-color: #0000004e;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 300px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 1;
-}
-.carrusel p:nth-child(2):hover .fa-arrow-right { 
-    background-color: #ff00008e;
-    color: #FFFFFF;
-}
-
-.carrusel .imagen{
-    position: absolute;
-    width: 100%;
-    height: 100%;   
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 1;
-    margin: auto;
-    transition: all .3s linear;
-    display: flex;
+aside ul li{
+    border-left:3px solid #FF9F23 ;
+    height: 29px;
+    margin-top: 30px;
+    padding: 5px 10px;
+    text-transform: capitalize;
 }
 section{
     position: relative;
-    top: -300px;
-    width: 100%;
-    height: 600px;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 300px);
-    gap: 5px;
+    top: 200px;
+    box-shadow: 0px 0px 25px 0px #00000073;
+    border-radius: 10px;
+    width:500px;
+    height: 500px;
 }
-section .titulo{
+section input:hover{
+    border: 1px solid rgb(0, 156, 204);
+}
+section input{
+    border: 1px solid #000000;
+}
+section label:nth-child(1){
     position: absolute;
-    font-weight: 550;
-    left: 675px;
-    text-align: center;
-    margin: auto;
-    letter-spacing: 2px;
-    border-bottom: 3px solid #e90000;
+    left: 30px;
+    top: 30px;
+    font-weight: bolder;
     font-size: 20px;
-    text-transform: uppercase;
-    font-family: var(--YanoneKaffeesatz);
 }
-.promociones{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    top: 0px;
-    margin: auto;
-    width: 250px;
-    height: 370px;
-    left: 200px;
-    border-radius: 20px;
-    box-shadow: 1px 2px 20px 5px #00000090;
-}
-.promociones div:nth-child(1){
-    border-radius: 20px;
-}
-.promociones div:nth-child(1) p:nth-child(1){
+section label:nth-child(1) input{
     position: absolute;
-    width: 35px;
-    height: 17px;
-    border: none;
-    top: 15px;
-    padding-left: 10px;
-    left: 15px;
-    font-size: 12px;
-    background-color: #FF9F23;
-}
-.promociones div:nth-child(1) img{
-    position: absolute;
-    top: 35px;
-    left: 16px;
-    width: 220px;
-    height: 200px;
-}
-.promociones .precios{
-    position: absolute;
-    display: flex;
-    left: 0px;
-    top: 230px;
-}
-div:nth-child(1) .precios p:nth-child(1){
-    position: absolute;
-    font-size: 18px;
-    background-color: #FF9F23;
-    width: 70px;
-    height: 20px;
-    border-radius: 4px;
-    left: 20px;
-    font-family: var(--YanoneKaffeesatz);
-}
-
-div:nth-child(1) .precios p:nth-child(1) small{
-    position: absolute;
-    left: 150px;
-    top: 4px;
-    color: #aaaaaa;
-    font-size: 10px;
-    font-family: var(--YanoneKaffeesatz);
-}
-
-div:nth-child(1) .precios p:nth-child(2){
-    position: absolute;
-    top: 40px;
-    width: 200px;
-    border: none;
-    left: 20px;
-    font-size: 14px;
-    font-family: var(--YanoneKaffeesatz);
-    text-transform: capitalize;
-}
-div:nth-child(1) .precios p:nth-child(3){
-    position: absolute;
-    display: inline-flex;
-    top: 70px;
-    font-size: 14px;
-    display: inline-flex;
-    width: 290px;
-    left: 20px;
-    color: #aaaaaa;
-    font-weight: normal;
-}
-.precios button{
-    position: absolute;
-    left: 120px;
-    top: 100px;
-    width: 100px;
+    display: block;
     height: 30px;
-    border-radius: 5px; ;
-    background-color: #FF9F23;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+}
+section label:nth-child(2){
+    position: absolute;
+    left: 280px;
+    top: 30px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(2) input{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+}
+section label:nth-child(3){
+    position: absolute;
+    left: 30px;
+    top: 120px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(3) input{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    width: 438px;
+    border-radius: 10px;
+}
+section label:nth-child(4){
+    position: absolute;
+    left: 30px;
+    top: 230px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(4) select{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+}
+section label:nth-child(5){
+    position: absolute;
+    left: 240px;
+    top: 230px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(5) input{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    width: 230px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+}
+section label:nth-child(6){
+    position: absolute;
+    left: 30px;
+    top: 350px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(6) input{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    width: 230px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+section button{
+    position: absolute;
     border: none;
+    background-color: #FF9F23;
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    top: 370px;
+    right: 30px;
 }
-.precios button a{
+section button a{
     text-decoration: none;
-    color: #FFFFFF;
-    font-weight: 545;
-    padding-left: 12px;
-    font-family: var(--YanoneKaffeesatz);
-}
-.precios button i{
     color: #FFFFFF;
     font-size: 15px;
-}
-
-.promociones div:nth-child(2){
-    border-radius: 20px;
-}
-.promociones div:nth-child(3){
-    border-radius: 20px;
-}
-.promociones div:nth-child(4){
-    border-radius: 20px;
-}
-.ofertas{
-    position: absolute;
-    top: 550px;
-    display: inline-block;
-    left: 177px;
-    border-top: 5px solid #e90000;
-    width: 1177px;
-    padding-left: 500px;
-    margin: auto;
-}
-.ofertas a{
-    text-decoration: none;
-    color: #000000;
-    font-size: 20px;
-    font-family: var(--YanoneKaffeesatz);
-    text-transform: uppercase;
-    font-weight: bold;
-    height: 70px;
-}
-.ofertas i{
-    position: absolute;
-    top: 40px;
-    left: 580px;
-    font-size: 30px;
-    margin: auto;
-    transform: rotate(90deg);
-    color: #FF9F23;
-    cursor: pointer;
 }
 footer{
     position: relative;
@@ -457,45 +371,31 @@ footer{
     height: 400px;
     overflow: hidden;
 }
-footer img{
-    position: absolute;
-    top: 100px;
-    right: 20px;
-    width: 250px;
-    height: 140px;
-}
 footer button{
     position: absolute;
     width: 50px;
     height: 50px;
     left: 60px;
-    top: 340px;
+    top: 270px;
     font-size: 40px;
     font-weight: normal;
     color: #e90000;
     cursor: pointer;
-}
-footer > p{
-    position: absolute;
-    top:368px;
-    right: 70px;
-    font-weight: bold;
-    font-family: var(--YanoneKaffeesatz);
 }
 .emerguente{
     position: relative;
     border: 2px solid #000000;
     width: 390px;
     height: 250px;
-    top: 190px;
-    left: 100px;
+    top: -300px;
+    left: -600px;
     opacity: 0;
     transition: all .2s ease-in;
 }
 .emerguente.active{
     opacity: 1;
-    left: 100px;
-    top: -350px;
+    left: 80px;
+    top: -300px;
 }
 .emerguente .fa-circle-xmark{
     position: absolute;
@@ -507,11 +407,12 @@ footer > p{
 footer button .emerguente .ayuda{
     position: absolute;
     font-size: 23px;
+    display: flex;
     font-family: var(--YanoneKaffeesatz);
     color: #000000;
     left: 10px;
     top: 50px;
-    width: 330px;
+    width: 270px;
     letter-spacing: 1px;
     padding-left: 0px;
     display: flex;
@@ -527,17 +428,19 @@ footer button .emerguente .ayuda i{
     position: absolute;
     color: #e90000 ;
     left: 0;
+    top: -10px;
 font-size: 35px
 }
 footer button .emerguente .ayuda2{
     position: absolute;
+    display: flex;
     font-size: 23px;
     font-family: var(--YanoneKaffeesatz);
     color: #000000;
     left: 10px;
     top: 50px;
     display: flex;
-    width: 350px;
+    width: 380px;
     padding-left: 30px;
     margin-top: 80px;
 }
@@ -554,7 +457,4 @@ footer button .emerguente .ayuda2 i{
     left: 0;
     font-size: 35px
 }
-
-
-
 

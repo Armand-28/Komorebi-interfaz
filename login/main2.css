@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--YanoneKaffeesatz);
+}
+:root {
+    --Caveat: "Caveat", cursive;
+    --YanoneKaffeesatz: "Yanone Kaffeesatz", sans-serif;
+    --OpenSans: "Open Sans", sans-serif;    
+}
+.container{
+    position: relative;
+    width: 1600px;
+    height: 100vh;
+    margin: auto;
+     
+}
+.login{
+    position: relative;
+    width: 1050px;
+    height: 620px;
+    display: flex;
+    border: 1px solid #777777;
+    top: 80px;
+    margin: auto ;
+    overflow: hidden;
+    z-index: 1;
+}
+.login > img{
+    position: absolute;
+    width:550px ;
+    height: 700px;
+    right: 0;
+    background-position: center center;
+    background-size: cover;
+}
+.login .formulario{
+    position: absolute;
+    width:550px ;
+    top: -40px;
+    height: 700px;
+    left: 100px;
+    display: inline-block;
+    line-height: 60px;
+}
+.formulario p img{
+    position: absolute;
+    top: 49px;
+    width: 60px;
+    left: -70px;
+}
+.formulario h1{
+    position: absolute;
+    top: 120px;
+    left: -70px;
+}
+.formulario p b{
+    position: absolute;
+    top: 160px;
+    left: -70px;
+    font-weight: bolder;
+}
+.formulario p:nth-child(4){
+    position: absolute;
+    top: 199px;
+    left: 80px;
+    color: #777777;
+    background-color: #ea0b0b;
+    height: 10px;
+}
+.formulario p:nth-child(4) span:first-child{
+    position: absolute;
+    border: 1px solid #b8b8b8;
+    top: 20px;
+    left: -145px;
+    width: 170px;
+}
+.formulario p:nth-child(4) span:last-child{
+    position: absolute;
+    border: 1px solid #b8b8b8;
+    top: 20px;
+    right: -294px;
+    width: 170px;
+}
+.formulario p:nth-child(4) small{
+    position: absolute;
+    top: -10px;
+    width: 100px;
+    left: 50px;
+    color: #b8b8b8;
+}
+.formulario form{
+    position: absolute;
+    display: block;
+    top: 200px;
+    left: -68px;
+}
+.formulario form label{
+    position: relative;
+    display: block;
+    line-height: 65px;
+    font-weight: bolder;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.formulario form .input1{
+    position: absolute;
+    display: block;
+    top: 49px;
+    width: 400px;
+    border-radius: 15px;
+    height: 35px;
+    border: 2px solid #000000;
+    overflow: none;
+    padding-left: 20px;
+    
+}
+.formulario form .input1::placeholder{
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.formulario form input:hover{
+    border: 2px solid rgba(50, 139, 255, 0.881);
+}
+.formulario form .input2{
+    position: absolute;
+    display: block;
+    top: 113px;
+    width: 400px;
+    border-radius: 15px;
+    height: 35px;
+    border: 2px solid #000000;
+    overflow: none;
+    padding-left: 20px;
+    
+}
+.formulario form .input2::placeholder{
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+/* label nuevos numero de telefono y genero */
+.formulario form .input3{
+    position: absolute;
+    top: 180px;
+    border-radius: 15px;
+    height: 35px;
+    border: 2px solid #000000;
+    overflow: none;
+    padding-left: 20px;
+}
+form #fec{
+    position: absolute;
+    width: 200px;
+    top: 210px;
+}
+form #con{
+    position: absolute;
+    width: 200px;
+    top: 280px;
+}
+.input4{
+    position: absolute;
+    top: 260px;
+    border-radius: 15px;
+    height: 35px;
+    border: 2px solid #000000;
+    overflow: none;
+    padding-left: 20px; 
+    width: 400px;
+}
+.input5{
+    position: absolute;
+    top: 328px;
+    border-radius: 15px;
+    height: 35px;
+    border: 2px solid #000000;
+    overflow: none;
+    padding-left: 20px;
+    width: 400px; 
+
+}
+.genero{
+    position: absolute;
+    top: -64px;
+    left: 215px;
+}
+#genero{
+    position: absolute;
+    top: 180px;
+    width: 196px;
+    height: 35px;
+    right: -250px;
+    border-radius: 20px;
+    border: 2px solid #000000;
+}
+.formulario button{
+    position: absolute;
+    top: 398px;
+    width: 400px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: #FF9F23;
+    border: none;
+    left: 0;
+}
+.formulario button a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+.forma1{
+    position: absolute;
+    background-color: rgba(255,24,24,1);
+    width: 840px;
+    height: 140px;
+    top: 655px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    right: 0;
+}
+.forma2{
+    position: absolute;
+    background-color: rgba(255,24,24,1);
+    width: 890px;
+    height: 140px;
+    top: 655px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    left: 0;
+}
+
+  
