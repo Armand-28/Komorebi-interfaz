@@ -9,7 +9,7 @@
     --OpenSans: "Open Sans", sans-serif;
 }
 .container{
-    width: 100%;
+    width: 1600px;
     height: 100vh;
     margin: auto;
     font-family: var(--YanoneKaffeesatz);
@@ -18,7 +18,7 @@
 .navegacion{
     position: relative;
     background-color: #e90000;
-    width: 100%;
+    width: 1600px;
     height: 120px;
     overflow: hidden;
 }

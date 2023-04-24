@@ -10,7 +10,7 @@
 }
 .container{
     position: relative;
-    width: 100%;
+    width: 1600px;
     height: 100vh;
     margin: auto;
 }
@@ -18,7 +18,7 @@
 header{
     position: relative;
     background-color: #D2D2D2;
-    width: 100%;
+    width: 1600px;
     height: 30px;
     overflow: hidden;
 }
@@ -35,7 +35,7 @@ header p{
 .navegacion{
     position: relative;
     background-color: #e90000;
-    width: 100%;
+    width: 1600px;
     height: 120px;
 }
 .navegacion p i{
@@ -240,7 +240,7 @@ div .quienessomos .fa-store{
     top: -350px;
     left: 10px;
     border: 2px solid #aaaaaa;
-    width: 74%;
+    width: 1100px;
     height: 600px;
     overflow: hidden;
 }
@@ -296,7 +296,7 @@ div .quienessomos .fa-store{
 section{
     position: relative;
     top: -300px;
-    width: 100%;
+    width: 1600px;
     height: 600px;
     margin: auto;
     display: grid;
@@ -452,7 +452,7 @@ div:nth-child(1) .precios p:nth-child(3){
 footer{
     position: relative;
     top: -300px;
-    width: 100%;
+    width: 1600px;
     height: 400px;
     overflow: hidden;
 }

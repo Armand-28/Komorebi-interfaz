@@ -10,7 +10,7 @@
 }
 .container{
     position: relative;
-    max-width: 100%;
+    max-width: 1600px;
     height: 100vh;
     margin: auto;
     font-family: var(--YanoneKaffeesatz);
@@ -18,7 +18,7 @@
 header{
     position: relative;
     background-color: #D2D2D2;
-    width: 100%;
+    width: 1600px;
     height: 30px;
     overflow: hidden;
 }
@@ -35,7 +35,7 @@ header p{
 .navegacion{
     position: relative;
     background-color: #e90000;
-    width: 100%;
+    width: 1600px;
     height: 120px;
 }
 .navegacion .seguir{
@@ -194,7 +194,7 @@ div .quienessomos .fa-store{
     position: relative;
     top: 0px;
     margin: auto;
-    width: 100%;
+    width: 1600px;
     height: 100vh;
 }
 aside{

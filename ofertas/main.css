@@ -10,7 +10,7 @@
 }
 .container{
     position: relative;
-    max-width: 100%;
+    max-width: 1600px;
     height: 100vh;
     margin: auto;
 }
@@ -18,7 +18,7 @@
 header{
     position: relative;
     background-color: #D2D2D2;
-    width: 100%;
+    width: 1600px;
     height: 30px;
     overflow: hidden;
     margin: auto;
@@ -36,7 +36,7 @@ header p{
 .navegacion{
     position: relative;
     background-color: #e90000;
-    width: 100%;
+    width: 1600px;
     height: 120px;
     margin: auto;
 }
@@ -228,19 +228,19 @@ div .quienessomos .fa-store{
 .container2{
     position: relative;
     top: 0px;
-    width: 100%;
+    width: 1600px;
     left: 18px;
     margin: auto;
 }
 section{
     position: relative;
-    width: 100%;
+    width: 1600px;
     height: 900px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 280px);
     grid-template-rows: repeat(4, 380px);
-    gap: 25px;
+    gap: 10px;
 }
 section .titulo{
     position: absolute;
@@ -261,7 +261,7 @@ section .titulo{
     justify-content: center;
     top: -190px;
     margin: auto;
-    width: 100%;
+    width: 250px;
     height: 370px;
     left: 190px;
     border-radius: 20px;
