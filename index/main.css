@@ -225,6 +225,14 @@ div .quienessomos .fa-store{
     color: #FFFFFF;
     text-decoration: none;   
 }
+.carrusel-total .imagen{
+    transition: all .3s ease-in-out;
+    opacity: 1;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
 .carrusel{
     position: relative;
     margin: auto;
@@ -235,7 +243,6 @@ div .quienessomos .fa-store{
     width: 74%;
     height: 600px;
     overflow: hidden;
-    transition: all .3s linear;
 }
 .carrusel p:first-child .fa-arrow-left{
     position: absolute;
@@ -279,13 +286,12 @@ div .quienessomos .fa-store{
 .carrusel .imagen{
     position: absolute;
     width: 100%;
-    height: 100%;   
+    height: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 1;
     margin: auto;
-    display: flex;
 }
 section{
     position: relative;
