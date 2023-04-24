@@ -11,7 +11,6 @@
 .container{
     position: relative;
     width: 100%;
-    min-width: 1000px;
     height: 100vh;
     margin: auto;
 }
@@ -233,7 +232,7 @@ div .quienessomos .fa-store{
     top: -350px;
     left: 10px;
     border: 2px solid #aaaaaa;
-    width: 1000px;
+    width: 74%;
     height: 600px;
     overflow: hidden;
     transition: all .3s linear;
@@ -286,7 +285,6 @@ div .quienessomos .fa-store{
     background-repeat: no-repeat;
     opacity: 1;
     margin: auto;
-    transition: all .3s linear;
     display: flex;
 }
 section{
@@ -324,8 +322,10 @@ section .titulo{
     border-radius: 20px;
     box-shadow: 1px 2px 20px 5px #00000090;
 }
-.promociones div:nth-child(1){
-    border-radius: 20px;
+.promociones:hover{
+    box-shadow: 1px 2px 20px 5px #000000;
+    transform: scale(1.05);   
+    transition: all .2s linear;
 }
 .promociones div:nth-child(1) p:nth-child(1){
     position: absolute;
@@ -334,6 +334,8 @@ section .titulo{
     border: none;
     top: 15px;
     padding-left: 10px;
+    padding-top: 2px;
+    border-radius: 2px;
     left: 15px;
     font-size: 12px;
     background-color: #FF9F23;
@@ -370,7 +372,6 @@ div:nth-child(1) .precios p:nth-child(1) small{
     font-size: 10px;
     font-family: var(--YanoneKaffeesatz);
 }
-
 div:nth-child(1) .precios p:nth-child(2){
     position: absolute;
     top: 40px;
@@ -383,7 +384,7 @@ div:nth-child(1) .precios p:nth-child(2){
 }
 div:nth-child(1) .precios p:nth-child(3){
     position: absolute;
-    display: inline-flex;
+    display: block;
     top: 70px;
     font-size: 14px;
     display: inline-flex;
@@ -398,7 +399,7 @@ div:nth-child(1) .precios p:nth-child(3){
     top: 100px;
     width: 100px;
     height: 30px;
-    border-radius: 5px; ;
+    border-radius: 5px;
     background-color: #FF9F23;
     border: none;
 }
@@ -413,27 +414,16 @@ div:nth-child(1) .precios p:nth-child(3){
     color: #FFFFFF;
     font-size: 15px;
 }
-
-.promociones div:nth-child(2){
-    border-radius: 20px;
-}
-.promociones div:nth-child(3){
-    border-radius: 20px;
-}
-.promociones div:nth-child(4){
-    border-radius: 20px;
-}
 .ofertas{
     position: absolute;
+    display: block;
+    left: 223px;
     top: 550px;
-    display: inline-block;
-    left: 177px;
     border-top: 5px solid #e90000;
-    width: 1177px;
-    padding-left: 500px;
-    margin: auto;
+    width: 77%;
 }
 .ofertas a{
+    position: absolute;
     text-decoration: none;
     color: #000000;
     font-size: 20px;
@@ -441,11 +431,12 @@ div:nth-child(1) .precios p:nth-child(3){
     text-transform: uppercase;
     font-weight: bold;
     height: 70px;
+    left: 480px;
 }
 .ofertas i{
     position: absolute;
     top: 40px;
-    left: 580px;
+    left: 80px;
     font-size: 30px;
     margin: auto;
     transform: rotate(90deg);
@@ -455,6 +446,7 @@ div:nth-child(1) .precios p:nth-child(3){
 footer{
     position: relative;
     top: -300px;
+    width: 100%;
     height: 400px;
     overflow: hidden;
 }

@@ -9,7 +9,7 @@
     --OpenSans: "Open Sans", sans-serif;
 }
 .container{
-    width: 1600px;
+    width: 100%;
     height: 100vh;
     margin: auto;
     font-family: var(--YanoneKaffeesatz);
