@@ -225,14 +225,6 @@ div .quienessomos .fa-store{
     color: #FFFFFF;
     text-decoration: none;   
 }
-.carrusel-total .imagen{
-    transition: all .3s ease-in-out;
-    opacity: 1;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-}
 .carrusel{
     position: relative;
     margin: auto;
@@ -290,7 +282,6 @@ div .quienessomos .fa-store{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 1;
     margin: auto;
 }
 section{
