@@ -432,7 +432,7 @@ div:nth-child(1) .precios p:nth-child(3){
         background-color: #FF9F23;
         height: 25px;
         width: 25px;
-        border-radius: 50%;
+        border-radius: 49%;
         color: #FFFFFF;
         cursor: pointer;
     }
