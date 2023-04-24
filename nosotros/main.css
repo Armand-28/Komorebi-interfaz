@@ -340,7 +340,7 @@ footer{
     height: 250px;
     width: 1600px;
     background-color: #D2D2D2;
-    overflow: hidden;
+    overflow: hidden; 
 }
 footer button{
     position: absolute;

@@ -160,7 +160,7 @@
     border-radius: 20px;
     background-color: #FF9F23;
     border: none;
-    left: 0;
+    left: 0; 
 }
 .formulario button a{
     text-decoration: none;
