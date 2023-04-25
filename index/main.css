@@ -13,6 +13,7 @@
     width: 1600px;
     height: 100vh;
     margin: auto;
+    font-family: var(--YanoneKaffeesatz);
 }
 
 header{
@@ -230,7 +231,7 @@ div .quienessomos .fa-store{
     margin: auto;
     justify-content: center;
     top: -350px;
-    left: 10px;
+    left: -45px;
     border: 2px solid #aaaaaa;
     width: 1100px;
     height: 600px;
@@ -417,7 +418,7 @@ div:nth-child(1) .precios p:nth-child(3){
     left: 223px;
     top: 550px;
     border-top: 5px solid #e90000;
-    width: 77%;
+    width: 1180px;
 }
 .ofertas a{
     position: absolute;
@@ -443,7 +444,7 @@ div:nth-child(1) .precios p:nth-child(3){
 footer{
     position: relative;
     top: -300px;
-    width: 1600px;
+    width: 1500px;
     height: 400px;
     overflow: hidden;
 }
@@ -544,7 +545,153 @@ footer button .emerguente .ayuda2 i{
     left: 0;
     font-size: 35px;
 }
+/* Css de carrito de compras */
 
+.carrito{
+    border: 1px solid #000000;
+    width: 380px;
+    height: 430px;
+    position: relative;
+    margin-top: -2100px;
+    left: 1138px;
+    border-radius: 10px;
+    transition: all .3s;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    z-index: 3;
+    opacity: 1;
+}
+#carrito{
+    opacity: 0;
+    left: 1600px;
+    z-index: 3;
+}
+#carrito.active{
+    opacity: 1;
+    left: 1138px;
+}
+.carrito .header-carrito{
+    background-color: #e90000;
+    color: #FFFFFF;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carrito .header-carrito i{
+    right: 20px;
+}
+.carrito .carrito-item img{
+    margin-right: 50px;
+}
+.carrito .carrito-item{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #000000;
+    padding: 15px;
+}
+.carrito .carrito-item .carrito-item-titulo{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.carrito .carrito-item .selector-cantidad{
+    display: inline-block;
+    margin-right: 15px;
+}
+.carrito .carrito-item .carrito-item-cantidad{
+    border: none;
+    background: transparent;
+    width: 30px;
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+}
+.carrito .carrito-item .selector-cantidad i{
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    line-height: 32px;
+    cursor: pointer;
+}
+.carrito .carrito-item .selector-cantidad i:hover{
+    transform: scale(1.04);
+}
+.carrito .carrito-item .carrito-item-precio{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
 
+}
+.carrito .carrito-item .btn-eliminar{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border:  1px solid #000000;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.carrito .carrito-item .btn-eliminar:hover{
+    transform: scale(1.04);
+    color: #FF9F23;
+}
+.carrito .carrito-item .btn-eliminar i{
+    pointer-events: none;
+}
+.carrito-total{
+    padding: 30px 50px;
+}
+.carrito-total .fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.carrito-total .btn-pagar{
+    border: none;
+    width: 100%;
+    height: 40px;
+    background-color:#FF9F23 ;
+    border-radius: 10px;
+    display: block;
+    padding: 20px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.carrito-total .btn-pagar:hover{
+    background-color: #ff9102;
+    transform: scale(1.02);
+}
+/* seccion responsive */
+@media screen and (max-width:850px){
 
-
+    section{
+        display: flex;
+        top: -250px;
+        width: 600px;
+    }
+    .promociones{
+        margin-bottom: 20px;
+        width: 250px;
+        height: 380px;
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        grid-area: 20px;
+        
+    }
+}

@@ -93,7 +93,15 @@ cierre.addEventListener("click", () =>{
 })
 
 
+var carrito = document.querySelector(".carrito-compras");
+var cerrar = document.querySelector(".cerrar-carrito");
 
+carrito.addEventListener("click", () =>{
+   document.getElementById("carrito").classList.toggle("active");
+});
+cerrar.addEventListener("click", () =>{
+   document.getElementById("carrito").classList.toggle("active");
+})
 
 
 
