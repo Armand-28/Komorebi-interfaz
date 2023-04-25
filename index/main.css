@@ -51,7 +51,7 @@ header p{
 .navegacion p img{
     position: absolute;
     top: -80px;
-    width: 201px;
+    width: 101px;
     height: 201px;
     left: 180px;
 }
@@ -568,7 +568,7 @@ footer button .emerguente .ayuda2 i{
 }
 #carrito.active{
     opacity: 1;
-    left: 1138px;
+    left: 1223px;
 }
 .carrito .header-carrito{
     background-color: #e90000;
@@ -678,20 +678,54 @@ footer button .emerguente .ayuda2 i{
     transform: scale(1.02);
 }
 /* seccion responsive */
-@media screen and (max-width:850px){
+@media screen and (max-width:1000px){
 
     section{
-        display: flex;
+        display: block;
         top: -250px;
-        width: 600px;
+        display: grid;
+        grid-template-columns: repeat(2, 280px);
+        grid-template-rows: repeat(1, -200px);
+        grid-area: 20px;
+        margin-left: 200px;
+        
     }
     .promociones{
         margin-bottom: 20px;
         width: 250px;
         height: 380px;
-        display: grid;
-        grid-template-columns: repeat(2, 250px);
-        grid-area: 20px;
+
         
+    }
+}
+@media screen and (min-width:1990px) {
+    .container{
+        width: 1900px;
+    }
+    .navegacion{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width:1000px) {
+    .container{
+        width: 1200px;
+    }
+    .navegacion{
+        width: 1200px;
+    }
+    .carrusel{
+        width: 980px;
+        margin-left: 250px;
+    }
+    .carrito{
+        position: absolute;
+        left: -1238px;
+    }
+    header{
+        width: 1200px;
     }
 }
