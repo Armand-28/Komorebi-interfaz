@@ -23,4 +23,4 @@ abrir.addEventListener("click", () =>{
 
 cierre.addEventListener("click", () =>{
    document.getElementById("abrir-boton-ayuda").classList.toggle("active")
-})
+}) 

@@ -13,7 +13,7 @@
     height: 100vh;
     margin: auto;
     font-family: var(--YanoneKaffeesatz);
-    display: block;
+    display: block; 
 }
 .navegacion{
     position: relative;

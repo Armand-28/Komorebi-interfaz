@@ -6,4 +6,4 @@ ventana.addEventListener("click", () =>{
 })
 cerrar.addEventListener("click", () =>{
     document.getElementById("abrir-boton-ayuda").classList.toggle("active")
-})
+}) 

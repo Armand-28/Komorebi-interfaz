@@ -268,7 +268,7 @@ div .quienessomos .fa-store{
     top: 15px;
     padding-left: 10px;
     left: 15px;
-    font-size: 12px;
+    font-size: 12px; 
     background-color: #FF9F23;
 }
 .promociones div:nth-child(1) img{

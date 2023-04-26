@@ -12,7 +12,7 @@ deslizar.addEventListener("click", () =>{
 });
 deslizar.addEventListener("click", () =>{
     document.getElementById("promociones4").classList.toggle("active")
-});
+}); 
 deslizar.addEventListener("click", () =>{
     document.getElementById("promociones5").classList.toggle("active")
 });

@@ -129,8 +129,6 @@ verificarCierre.addEventListener("click", () =>{
    document.getElementById("verificar").style.display = "none";
    document.getElementById("modo-entrega").classList.toggle("active");
 })
-
-
 var seguirComprando = document.querySelector(".btn-verificar");
 
 seguirComprando.addEventListener("click", () =>{

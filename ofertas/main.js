@@ -28,4 +28,4 @@ addEventListener("DOMContentLoaded", () =>{
         divIndicadores.appendChild("div")
         
     }
-})
+}) 

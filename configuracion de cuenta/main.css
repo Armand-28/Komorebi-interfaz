@@ -11,7 +11,7 @@
 .container{
     position: relative;
     max-width: 1600px;
-    height: 100vh;
+    height: 100vh; 
     margin: auto;
     font-family: var(--YanoneKaffeesatz);
 }

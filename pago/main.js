@@ -9,7 +9,7 @@ secciones.forEach(e =>{
     padre.parentNode.children[1].classList.toggle("animation");
     
     })
-})
+}) 
 
 
 
