@@ -51,9 +51,9 @@ header p{
 
 .navegacion p img{
     position: absolute;
-    top: -80px;
-    width: 201px;
-    height: 201px;
+    top: -25px;
+    width: 200px;
+    height: 100px;
     left: 180px;
 }
 .navegacion input{

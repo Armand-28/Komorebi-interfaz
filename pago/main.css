@@ -39,9 +39,9 @@
 }
 .navegacion p img{
     position: absolute;
-    top: -80px;
-    width: 181px;
-    height: 190px;
+    top: -30px;
+    width: 270px;
+    height: 100px;
     left: 550px;
     margin: auto;
 }
@@ -68,9 +68,16 @@
 .fa-chevron-right{
     color: #FF9F23;
     position: relative;
-    right: -230px;
+    justify-content: space-around;
+    display: flex;
+    left: 240px;
     top: 10px;
     font-size: 28px;
+}
+.derecha{
+    position: relative;
+    top:10px;
+    left: 200px;
 }
 #iconos{
     position: relative;
