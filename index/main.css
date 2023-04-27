@@ -873,7 +873,7 @@ footer .logo-footer{
     width: 450px;
     height: 220px;
     box-shadow: 0px 0px 10px #000000;
-    z-index: 4;
+    z-index: 10;
     background-color: #FFFFFF;
     left:550px;
 }
@@ -1056,6 +1056,7 @@ footer .logo-footer{
 #cuadro-seguir.active{
     opacity: 1;
     top: 200px;
+    transition: all .3s linear;
     z-index: 5;
 }
 .cuadro-seguir .fa-circle-check{
@@ -1083,9 +1084,6 @@ footer .logo-footer{
     font-size: 16px;
 
 }
-
-
-
 /* seccion responsive */
 @media screen and (max-width:1000px){
 
