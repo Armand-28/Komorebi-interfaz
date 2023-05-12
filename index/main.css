@@ -310,9 +310,9 @@ section .titulo{
     justify-content: center;
     top: 0px;
     margin: auto;
-    width: 250px;
+    width: 260px;
     height: 370px;
-    left: 200px;
+    left: 180px;
     border-radius: 20px;
     box-shadow: 1px 2px 20px 5px #00000090;
 }
@@ -578,22 +578,17 @@ footer .logo-footer{
 .carrito{
     border: 1px solid #000000;
     width: 380px;
-    height: 430px;
+    height: auto;
     position: relative;
     border-radius: 10px;
+    top: 150px;
+    right: 0px;
+    z-index: 6;
+    margin-bottom: auto;
+    position: absolute;
     transition: all .4s linear;
     overflow: hidden;
     background-color: #FFFFFF;
-}
-#carrito{
-    opacity: 0.2;
-    top: -2700px;
-    right:-1138px;
-    z-index: 3;
-}
-#carrito.active{
-    opacity: 1;
-    top: -2100px;
 }
 .carrito .header-carrito{
     background-color: #e90000;
@@ -652,7 +647,6 @@ footer .logo-footer{
     display: inline-block;
     font-size: 18px;
     margin-bottom: 5px;
-
 }
 .carrito .carrito-item .btn-eliminar{
     position: absolute;
@@ -674,7 +668,7 @@ footer .logo-footer{
     pointer-events: none;
 }
 .carrito-total{
-    padding: 30px 50px;
+    padding: 30px;
 }
 .carrito-total .fila{
     display: flex;
@@ -685,12 +679,11 @@ footer .logo-footer{
     margin-bottom: 10px;
 }
 .carrito-total .btn-pagar{
+    display: block;
     border: none;
     width: 100%;
-    height: 40px;
     background-color:#FF9F23 ;
     border-radius: 10px;
-    display: block;
     padding: 20px;
     font-size: 16px;
     display: flex;
@@ -1103,9 +1096,9 @@ footer .logo-footer{
         height: 380px;
     }
 }
-@media screen and (min-width:2000px) {
+@media screen and (max-width:1900px) {
     .container{
-        width: 2000px;
+        width: 100%;
     }
     .navegacion{
         width: 100%;
@@ -1113,11 +1106,10 @@ footer .logo-footer{
     header{
         width: 100%;
     }
-    
 }
 @media screen and (max-width:1600px) {
     .container{
-        width: 1600px;
+        width: 100%;
     }
     .navegacion{
         width: 100%;

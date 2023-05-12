@@ -79,7 +79,9 @@ function imagenes(carruseles){
       
           imagenes(carrusel)
       });
-   
+
+// boton de ayuda
+
 var abrir = document.querySelector(".fa-question")
 var cierre = document.querySelector(".fa-circle-xmark")
 
@@ -103,6 +105,10 @@ carrito.addEventListener("click", () =>{
 cerrar.addEventListener("click", () =>{
    document.getElementById("carrito").classList.toggle("active");
 })
+
+// funcionalidad al carrito de compras
+
+
 
 
 // modo entrega
@@ -164,6 +170,56 @@ guardar.addEventListener("click", () =>{
    document.getElementById("cuadro-seguir").style.display = "block";
 })
 
+// funcionalidad carrito de compras
+
+// variable que mantiene el estado visible del carrito
+
+var carritoVisible = false;
+
+// esperamos que todos los elementos de la pagina se carguen para continuar con el script
+
+if (document.readyState=='loading') {
+   document.addEventListener('DOMContentLoaded',ready)
+}else{
+   ready();
+}
+
+function ready() {
+   // agregamops funcionalidad a los botones eliminar del carrito
+   var botonEliminarItem = document.getElementsByClassName('btn-eliminar');
+   for (var i = 0; i < botonEliminarItem.length;i++) {
+      var button = botonEliminarItem[i];
+      button.addEventListener('click', eliminarItemCarrito);
+
+   }
+}
+
+// elimino el item seleccionado del carrito
+
+function eliminarItemCarrito(event) {
+   var buttonCliked = event.target;
+   buttonCliked.parentElement.remove();
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // function imagenes(carruseles){
 //    carruseles.addEventListener("click", e =>{
 //          var atras = carruseles.querySelector(".fa-arrow-left"),
@@ -197,12 +253,6 @@ guardar.addEventListener("click", () =>{
 
 //    imagenes(carrusel)
 // });
-
-
-
-
-
-
  
 
 // let menu = document.querySelector(".fa-bars")
@@ -211,3 +261,4 @@ guardar.addEventListener("click", () =>{
 //     document.getElementById("menu").classList.toggle("active")
     
 // })
+
