@@ -6,25 +6,24 @@ error_reporting(E_ALL);
 
 include("conexion.php");
 
-$auxid = $_POST['auxid'];
-$auxrolid = $_POST['auxrolid'];
-$auxname = $_POST['auxname'];
-$auxsurname = $_POST['auxsurname'];
-$auxnumcel = $_POST['auxnumcel'];
-$auxaddres = $_POST['auxaddres'];
+$rolidrol = $_POST['rolidrol'];
+$rol = $_POST['rol'];
+$rolidper = $_POST['rolidper'];
+$rolname = $_POST['rolname'];
+$rolsurname = $_POST['rolsurname'];
+$roladdres = $_POST['roladdres'];
+$rolemail = $_POST['rolemail'];
+$rolpass = $_POST['rolpass'];
+$rolnumper = $_POST['rolnumper'];
 
+$consulta = "INSERT INTO `rol` (`rolidrol`, `rol`, `rolidper`, `rolname`, `rolsurname`, `roladdres`, `rolemail`, `rolpass`, `rolnumper`) VALUES ('$rolidrol', '$rol', '$rolidper', '$rolname', '$rolsurname', '$roladdres', '$rolemail', '$rolpass', '$rolnumper')";
 
-$datosIngreso = "INSERT INTO 'auxiliar' VALUES('$auxid', '$auxname', '$auxsurname', '$auxnumcel','$auxaddres')";
+$resultado = mysqli_query($conectar, $consulta) or die("Error de registro");
 
-$resultado = mysqli_query($conectar, $datosIngreso)or die("error de registro");
-
-echo "Registro exitoso";
-
-if ($resultado) {
-    header("location: auxiliar/auxiliar.html");
-}
+echo "registro exitoso";
 
 mysqli_close($conectar);
+
 
 
 ?>
