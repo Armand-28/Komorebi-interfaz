@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 
 include("conexion.php");
 
+
 $rolidrol = $_POST['rolidrol'];
 $rol = $_POST['rol'];
 $rolidper = $_POST['rolidper'];
@@ -22,8 +23,6 @@ $resultado = mysqli_query($conectar, $consulta) or die("Error de registro");
 
 echo "registro exitoso";
 
+
 mysqli_close($conectar);
-
-
-
 ?>
