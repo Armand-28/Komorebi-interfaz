@@ -51,10 +51,10 @@ header p{
 
 .navegacion p img{
     position: absolute;
-    top: -25px;
-    width: 200px;
-    height: 100px;
-    left: 180px;
+    top: -14px;
+    width: 210px;
+    height: 70px;
+    left: 150px;
 }
 .navegacion input{
     position: absolute;
@@ -263,12 +263,13 @@ z-index: 999;
     color: #000000;
     font-size: 18px;
     font-family: var(--YanoneKaffeesatz);
+    text-transform: none;
 }
 aside{
     position: relative;
     margin: auto;
     left: 0px;
-    top: 700px;
+    top: 730px;
     display: grid;
     grid-template-columns: repeat(2, 400px);
     grid-template-rows: repeat(2, 200px);
@@ -299,11 +300,12 @@ aside .mision p{
     position: absolute;
     top: 90px;
     left: 35px;
-    width: 380px;
+    width: 450px;
     font-family: var(--YanoneKaffeesatz);
     font-size: 14px;
     font-weight: 500;
     line-height: 25px;
+    text-transform: none;
 }
 aside .vision{
     position: relative;
@@ -328,11 +330,12 @@ aside .vision p{
     position: absolute;
     top: 90px;
     left: 35px;
-    width: 380px;
+    width: 470px;
     font-family: var(--YanoneKaffeesatz);
     font-size: 14px;
     font-weight: 500;
     line-height: 25px;
+    text-transform: none;
 }
 footer{
     position: relative;

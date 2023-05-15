@@ -48,10 +48,10 @@ header p{
 }
 .navegacion p img{
         position: absolute;
-        top: -30px;
-        width: 200px;
-        height: 100px;
-        left: 180px;
+        top: -14px;
+        width: 250px;
+        height: 60px;
+        left: 150px;
 }
 .navegacion input{
     position: absolute;
@@ -552,11 +552,12 @@ footer button .emerguente .ayuda2 i{
 .dir{
     position: absolute;
     top: 100px;
-    right: 600px;
+    right: 850px;
     text-align: center;
     line-height: 50px;
     font-family: var(--YanoneKaffeesatz);
     font-weight: normal;
+    margin: auto;
 }
 footer span{
     position: absolute;
@@ -570,8 +571,8 @@ footer span i{
 }
 footer .logo-footer{
     position: absolute;
-    right: 190px;
-    top: 170px;
+    right: 155px;
+    top: 240px;
 }
 /* Css de carrito de compras */
 
