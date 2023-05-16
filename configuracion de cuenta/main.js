@@ -8,33 +8,42 @@ cerrar.addEventListener("click", () =>{
     document.getElementById("abrir-boton-ayuda").classList.toggle("active")
 }) 
 
-var perfil = document.querySelector(".perfil");
 
-perfil.addEventListener("click", () =>{
-    document.getElementById("perfil").style.display = "block";
-    document.getElementById("carritoCompras").style.display = "none"
+var transition1 = document.getElementById("perfil");
+var transition2 = document.getElementById("carritoCompras");
+var transition3 = document.getElementById("direccion");
+var transition4 = document.getElementById("pedidos");
 
-})
 
-var carrito = document.querySelector(".carrito-compras");
+function transition(x) {
+   
+   if (x == 1) {
+      transition1.style.display = "block";
+      transition2.style.display = "none";
+      transition3.style.display = "none";
+      transition4.style.display = "none";
+   }
+   else if (x == 2){
+      transition1.style.display = "none";
+      transition2.style.display = "block";
+      transition3.style.display = "none";
+      transition4.style.display = "none";
+   }
+   else if (x == 3){
+      transition1.style.display = "none";
+      transition2.style.display = "none";
+      transition3.style.display = "block";
+      transition4.style.display = "none";
+   }
+   else if (x == 4){
+      transition1.style.display = "none";
+      transition2.style.display = "none";
+      transition3.style.display = "none";
+      transition4.style.display = "block";
+   }
 
-carrito.addEventListener("click", () =>{
-    document.getElementById("perfil").style.display = "none"
-    document.getElementById("carritoCompras").style.display = "block"
-})
 
-var direccion = document.querySelector(".direcciones");
-
-direccion.addEventListener("click", () =>{
-    document.getElementById("direccion").style.display = "block";
-    document.getElementById("pedidos").style.display = "none";
-})
-
-var pedidos = document.querySelector(".pedidos");
-
-pedidos.addEventListener("click", () =>{
-    document.getElementById("pedidos").style.display = "block";
-})
+}
 
 
 // modo entrega
