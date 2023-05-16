@@ -283,6 +283,19 @@ section label:nth-child(1) input{
     padding-left: 10px;
     outline: none;
     border-radius: 10px;
+    width: 220px;
+
+}
+#contraseña{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+    width: 180px;
+
 }
 section label:nth-child(2){
     position: absolute;
@@ -291,15 +304,7 @@ section label:nth-child(2){
     font-weight: bolder;
     font-size: 20px;
 }
-section label:nth-child(2) input{
-    position: absolute;
-    display: block;
-    height: 30px;
-    top: 25px;
-    padding-left: 10px;
-    outline: none;
-    border-radius: 10px;
-}
+
 section label:nth-child(3){
     position: absolute;
     left: 30px;
@@ -324,7 +329,7 @@ section label:nth-child(4){
     font-weight: bolder;
     font-size: 20px; 
 }
-section label:nth-child(4) select{
+section select{
     position: absolute;
     display: block;
     height: 30px;
@@ -332,6 +337,7 @@ section label:nth-child(4) select{
     padding-left: 10px;
     outline: none;
     border-radius: 10px;
+    border: 1px solid black;
 }
 section label:nth-child(5){
     position: absolute;

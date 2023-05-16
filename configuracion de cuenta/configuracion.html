@@ -65,33 +65,19 @@
         </aside>
         <!-- perfil -->
         <section id="perfil">
-          <form action="" method="post">
+          <form action="../recibir.php" method="post">
             <label for=""
               >Nombres:
               <input
                 type="text"
-                name=""
+                name="cliname"
                 id=""
-                placeholder="Ingrese su nombre"
+                placeholder="Ingrese sus nombres completos"
               />
-            </label>
-
-            <label for=""
-              >Apellidos:
-              <input
-                type="text"
-                name=""
-                id=""
-                placeholder="Ingrese su Apellido"
-              />
-            </label>
-            <label for=""
-              >Correo electronico:
-              <input type="email" name="" id="" />
             </label>
             <label for=""
               >Género:
-              <select name="" id="">
+              <select name="cligenero" id="">
                 <option value="">Seleecione su género</option>
                 <option value="">Masculino</option>
                 <option value="">Femenino</option>
@@ -99,17 +85,32 @@
               </select>
             </label>
             <label for=""
+              >Correo electronico:
+              <input type="email" name="cliemail" id="" />
+            </label>
+
+            <label for=""
+              >Contraseña:
+              <input
+                type="text"
+                name="clicontra"
+                id="contraseña"
+                placeholder="Ingresa tu contraseña"
+              />
+            </label>
+            
+            <label for=""
               >Número de Telefono:
               <input
                 type="text"
-                name=""
+                name="clinumcell"
                 id=""
                 placeholder="Ingrese su Apellido"
               />
             </label>
             <label for=""
               >Fecha de Nacimiento:
-              <input type="date" name="" id="" />
+              <input type="date" name="clifecnac" id="" />
             </label>
             <button type="submit"><a href="">Guardar</a></button>
           </form>
