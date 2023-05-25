@@ -19,7 +19,7 @@ $resultado = mysqli_query($conectar, $consulta) or die("Error de registro");
 
 echo "El registro ha sido exitoso";
 
-mysqli_close($conectar)
+mysqli_close($conectar);
 
 
 
