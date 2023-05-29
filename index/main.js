@@ -18,9 +18,9 @@ window.addEventListener("load", () => {
 
   var imagenes = [];
 
-  imagenes[0] = "../imagenes/img1.png";
-  imagenes[1] = "../imagenes/img2.jpg";
-  imagenes[2] = "../imagenes/img3.jpg";
+  imagenes[0] = "../imagenes/carrucel2.jpg";
+  imagenes[1] = "../imagenes/carrusel.jpg";
+  imagenes[2] = "../imagenes/carrucel3.jpg";
 
   var indiceImagen = 0;
   function cambiarImagen() {
@@ -36,9 +36,9 @@ window.addEventListener("load", () => {
 });
 
 var carrusel = [
-    "../imagenes/img1.png",
-    "../imagenes/img2.jpg",
-    "../imagenes/img3.jpg",
+    "../imagenes/carrucel2.jpg",
+    "../imagenes/carrusel.jpg",
+    "../imagenes/carrucel3.jpg",
   ],
   cont = 0;
 
