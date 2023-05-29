@@ -13,7 +13,8 @@
     position: relative;
     width: 1600px;
     height: 100vh;
-    margin: auto; 
+    margin: auto;
+    border-radius: 20px; 
 }
 .login{
     position: relative;
@@ -25,6 +26,7 @@
     margin: auto ;
     overflow: hidden;
     z-index: 1;
+    border-radius: 30px;
 }
 .login > img{
     position: absolute;
