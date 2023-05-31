@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.productos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.producto {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.agregar {
+    display: block;
+    margin: 10px auto;
+}
+
+.carrito {
+    list-style: none;
+    padding: 0;
+}
+
+.carrito li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.carrito li button {
+    margin-left: 10px;
+}

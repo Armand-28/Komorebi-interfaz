@@ -18,8 +18,8 @@ window.addEventListener("load", () => {
 
   var imagenes = [];
 
-  imagenes[0] = "../imagenes/carrucel2.jpg";
-  imagenes[1] = "../imagenes/carrusel.jpg";
+  imagenes[1] = "../imagenes/carrucel2.jpg";
+  imagenes[0] = "../imagenes/carrusel.jpg";
   imagenes[2] = "../imagenes/carrucel3.jpg";
 
   var indiceImagen = 0;
