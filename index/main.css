@@ -402,7 +402,8 @@ div:nth-child(1) .precios p:nth-child(3){
     text-decoration: none;
     color: #FFFFFF;
     font-weight: 545;
-    padding-left: 12px;
+    padding-left: 10px;
+    justify-content: space-between;
     font-family: var(--YanoneKaffeesatz);
 }
 .precios button i{
@@ -584,12 +585,12 @@ footer .logo-footer{
     position: relative;
     border-radius: 10px;
     top: 150px;
-    right: 0px;
+    right: 0;
+    overflow: hidden;
     z-index: 6;
     margin-bottom: auto;
     position: absolute;
     transition: all .4s linear;
-    overflow: hidden;
     background-color: #FFFFFF;
 }
 .carrito .header-carrito{

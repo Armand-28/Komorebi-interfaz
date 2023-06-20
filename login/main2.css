@@ -179,7 +179,6 @@ form #con{
     overflow: none;
     padding-left: 20px;
     width: 400px; 
-
 }
 .genero{
     position: absolute;
@@ -188,8 +187,7 @@ form #con{
 }
 #genero{
     position: absolute;
-    top: 180px;
-    width: 196px;
+    top: 180px;width: 196px;
     height: 35px;
     right: -250px;
     border-radius: 20px;
