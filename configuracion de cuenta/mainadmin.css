@@ -10,17 +10,17 @@
 }
 .container{
     position: relative;
-    width: 100%;
-    height: 100vh;
+    max-width: 100%;
+    height: 100vh; 
     margin: auto;
     font-family: var(--YanoneKaffeesatz);
 }
-
 header{
     position: relative;
     background-color: #D2D2D2;
     width: 100%;
     height: 30px;
+    overflow: hidden;
 }
 header p{
     position: relative;
@@ -38,20 +38,26 @@ header p{
     width: 100%;
     height: 120px;
 }
-.navegacion p i{
+.navegacion .seguir{
     position: absolute;
-    top: 0px;
-    font-size: 40px;
+    top: 40px;
+    font-size: 17px;
+    font-family: var(--YanoneKaffeesatz);
     color: #FFFFFF;
-    left: 72px;
+    left: -10px;
     cursor: pointer;
 }
+.navegacion .seguir i{
+    color: #FF9F23;
+    font-size: 25px;
+}
+
 .navegacion p img{
-        position: absolute;
-        top: -14px;
-        width: 250px;
-        height: 60px;
-        left: 150px;
+    position: absolute;
+    top: -30px;
+    width: 200px;
+    height: 100px;
+    left: 180px;
 }
 .navegacion input{
     position: absolute;
@@ -80,9 +86,10 @@ header p{
 }
 .carro .fa-cart-shopping{
     position: relative;
-    left: 1220px;
+    left: 1240px;
     top:30px;
     color: #FFFFFF;
+    font-size: 40px;
 }
 .navegacion .li-1{
 position: absolute;
@@ -101,9 +108,10 @@ font-size: 16px;
 
 .cuenta .fa-circle-user{
     position: relative;
-    left: 1180px;
+    left: 1210px;
     top: 30px;
     color: #FFFFFF;
+    font-size:  40px;
 }
 .navegacion .li-2{
     position: absolute;
@@ -123,13 +131,14 @@ font-size: 16px;
 .navegacion div{
 position: absolute;
 top: 70px;
-left: 530px;
+left: 538px;
 display: flex;
 width: 500px;
 height: 40px;
 justify-content: space-between;
 }
 .navegacion div .modoentrega{
+    position: absolute;
     background-color: #FFFFFF;
     border-radius: 20px;
     width: 180px;
@@ -155,13 +164,15 @@ div .modoentrega .fa-shop{
     top: 4px;
 }
 .navegacion div .quienessomos{
+    position: absolute;
     background-color: #FFFFFF;
     border-radius: 20px;
     width: 180px;
     height: 28px;
     top: 6px;
+    left: 350px;
     font-size: 14px;
-    font-family: var(--OpenSans);
+    font-family: var(--YanoneKaffeesatz);
     font-weight: 600;
 }
 .quienessomos a{
@@ -179,413 +190,357 @@ div .quienessomos .fa-store{
     left: 15px;
     top: 4px;
 }
-#menu{
+.container2{
     position: relative;
-    background-color: #e90000;
-    width: 200px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    left: -200px;
-    transition: all .3s linear;
-}
-#menu.active{
-    opacity: 1;
-    left: 0;
-}
-.fa-xmark{
-    position: absolute;
-    right: -10px;
-    top: 18px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-#menu ul{
-    position: absolute;
-    list-style: none;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 15px;
-    color: #FFFFFF;
-    top: -10px;
-}
-#menu ul li{
-    border-bottom: 2px solid #FF9F23;
-    padding: 10px;
-    padding-top: 35px;
-    padding-left: 10px;
-}
-#menu ul li a{
-    color: #FFFFFF;
-    text-decoration: none;   
-}
-.carrusel{
-    position: relative;
-    margin: auto;
-    justify-content: center;
-    top: -350px;
-    left: -5px;
-    border: 2px solid #aaaaaa;
-    width: 1100px;
-    height: 600px;
-    overflow: hidden;
-}
-.carrusel p:first-child .fa-arrow-left{
-    position: absolute;
-    background-color: #0000004e;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 300px;
-    left: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 1;
-}
-.carrusel p:first-child:hover .fa-arrow-left{
-    background-color: #ff00008e;
-    color: #FFFFFF;
-}
-.carrusel p:nth-child(2) .fa-arrow-right{
-    position: absolute;
-    background-color: #0000004e;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 300px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 1;
-}
-.carrusel p:nth-child(2):hover .fa-arrow-right { 
-    background-color: #ff00008e;
-    color: #FFFFFF;
-}
-
-.carrusel .imagen{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: auto;
-}
-section{
-    position: relative;
-    top: -300px;
-    width: 1600px;
-    height: 600px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 300px);
-    margin: 50px auto;
-    gap: 5px;
-    overflow-x: hidden;
-}
-section .titulo{
-    position: absolute;
-    font-weight: 550;
-    left: 675px;
-    text-align: center;
-    margin: auto;
-    letter-spacing: 2px;
-    border-bottom: 3px solid #e90000;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-family: var(--YanoneKaffeesatz);
-}
-.promociones{
-    position: relative;
-    display: flex;
-    justify-content: center;
     top: 0px;
     margin: auto;
-    width: 260px;
-    height: 370px;
-    left: 180px;
-    border-radius: 20px;
-    box-shadow: 1px 2px 20px 5px #00000090;
-}
-.promociones:hover{
-    box-shadow: 1px 2px 20px 5px #000000;
-    transform: scale(1.05);   
-    transition: all .2s linear;
-}
-.promociones div:nth-child(1) p:nth-child(1){
-    position: absolute;
-    width: 35px;
-    height: 17px;
-    border: none;
-    top: 15px;
-    padding-left: 10px;
-    padding-top: 2px;
-    border-radius: 2px;
-    left: 15px;
-    font-size: 12px;
-    background-color: #FF9F23;
-}
-.promociones div:nth-child(1) img{
-    position: absolute;
-    top: 35px;
-    left: 16px;
-    width: 220px;
-    height: 200px;
-}
-.promociones .precios{
-    position: absolute;
-    display: flex;
-    left: 0px;
-    top: 230px;
-}
-div:nth-child(1) .precios p:nth-child(1){
-    position: relative;
-    font-size: 18px;
-    background-color: #FF9F23;
     width: 100%;
-    height: 20px;
-    border-radius: 4px;
-    left: 20px;
-    font-family: var(--YanoneKaffeesatz);
+    height: 100vh;
 }
 
-div:nth-child(1) .precios p:nth-child(1) small{
+aside{
     position: absolute;
-    left: 150px;
-    top: 4px;
-    color: #aaaaaa;
-    font-size: 10px;
-    font-family: var(--YanoneKaffeesatz);
+    width: 250px;
+    top: 80px;
+    height: 500px;
 }
-div:nth-child(1) .precios p:nth-child(2){
+aside p i{
     position: absolute;
-    top: 40px;
-    width: 200px;
-    border: none;
-    left: 20px;
+    font-size: 80px;
+    left: 50px;
+    color: #777777;
+}
+aside p:nth-child(2){
+    position: absolute;
+    top: 90px;
+    left: 58px;
     font-size: 14px;
-    font-family: var(--YanoneKaffeesatz);
+}
+aside p:nth-child(3){
+position: absolute;
+top: 110px;
+left: 54px;
+font-size: 22px;
+font-weight: bolder;
+}
+aside ul{
+    position: absolute;
+    top: 150px;
+    left: 58px;
+    list-style: none;
+}
+aside ul li{
+    border-left:3px solid #FF9F23 ;
+    height: 29px;
+    margin-top: 30px;
+    padding: 5px 10px;
     text-transform: capitalize;
-}
-div:nth-child(1) .precios p:nth-child(3){
-    position: absolute;
-    display: block;
-    top: 70px;
-    font-size: 14px;
-    display: inline-flex;
-    width: 290px;
-    left: 20px;
-    color: #aaaaaa;
-    font-weight: normal;
-}
-.precios button{
-    position: absolute;
-    left: 120px;
-    top: 100px;
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: #FF9F23;
-    border: none;
     cursor: pointer;
 }
-.precios button a{
+aside ul a{
     text-decoration: none;
-    color: #FFFFFF;
-    font-weight: 545;
-    padding-left: 12px;
-    font-family: var(--YanoneKaffeesatz);
+    position: relative;
+    top: 20px;
+    left: 0px;
+    border-left: 3px solid #FF9F23;
+    padding: 5px 5px;
+    color: #000000;
+    width: 30px;
 }
-.precios button i{
+#perfil{
+    top: 100px;
+    display: none;
+    z-index: 7;
+    left:100px;
+    transition: all .3s linear;
+    width: 80%;
+}
+/* aside ul { */
+section{
+    position: relative;
+    margin: auto;
+    top: 200px;
+    box-shadow: 0px 0px 25px 0px #00000073;
+    border-radius: 10px;
+    width:100%;
+    height: 500px;
+}
+section input:hover{
+    border: 1px solid rgb(0, 156, 204);
+}
+section input{
+    border: 1px solid #000000;
+}
+section label:nth-child(1){
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(1) input{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+    width: 220px;
+
+}
+#contraseña{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+    width: 180px;
+
+}
+section label:nth-child(2){
+    position: absolute;
+    left: 280px;
+    top: 30px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+section label:nth-child(3){
+    position: absolute;
+    left: 30px;
+    top: 120px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(3) input{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    width: 438px;
+    border-radius: 10px;
+}
+section label:nth-child(4){
+    position: absolute;
+    left: 30px;
+    top: 230px;
+    font-weight: bolder;
+    font-size: 20px; 
+}
+section select{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+section label:nth-child(5){
+    position: absolute;
+    left: 240px;
+    top: 230px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(5) input{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    width: 230px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+}
+section label:nth-child(6){
+    position: absolute;
+    left: 30px;
+    top: 350px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(6) input{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    width: 230px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+section button{
+    position: absolute;
+    border: none;
+    background-color: #FF9F23;
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    top: 370px;
+    right: 30px;
+}
+section button a{
+    text-decoration: none;
     color: #FFFFFF;
     font-size: 15px;
 }
-.ofertas{
+/* carrito de compras  reutilice el codigo pero cambia las clases que puso en el de direcciones*/
+.carritoCompras{
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 0 10px #000000;
+    background: #FFFFFF;
     position: absolute;
-    display: block;
-    left: 223px;
-    top: 550px;
-    border-top: 5px solid #e90000;
-    width: 1180px;
+    left: 600px;
+    top:100px;
+    border-radius: 10px;
 }
-.ofertas a{
+.carritoCompras .contenido{
+    display: block;
+    margin: 50px 80px ;
+    line-height: 80px;
+    text-align: center;
+}
+.carritoCompras .contenido i{
+    color: #e90000;
+    font-size: 130px;
+}
+.carritoCompras .contenido p{
+    font-family: var(--YanoneKaffeesatz);
+    font-weight: 500;
+    width: 380px;
+    margin-left: -60px;
+    font-size: 18px;
+}
+.carritoCompras .contenido button{
+    background: #FF9F23;
+    width: 190px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    top: 70px;
+}
+.carritoCompras .contenido button a{
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#carritoCompras{
+    display: none;
+    transition: all .3s  ;
+}
+/* parte 2 */
+#direccion{
+    display: none;
+    transition: all .3s;
+}
+/* pedidos */
+#pedidos{
+    display: none;
+    transition: all .3s;
+}
+footer{
+    position: relative;
+    top: -300px;
+    height: 400px;
+    overflow: hidden;
+}
+footer button{
     position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 60px;
+    top: 270px;
+    font-size: 40px;
+    font-weight: normal;
+    color: #e90000;
+    cursor: pointer;
+}
+.emerguente{
+    position: relative;
+    border: 2px solid #000000;
+    width: 350px;
+    height: 220px;
+    top: -300px;
+    left: -600px;
+    opacity: 0;
+    transition: all .2s ease-in;
+}
+.emerguente.active{
+    opacity: 1;
+    left: 80px;
+    top: -300px;
+}
+.emerguente .fa-circle-xmark{
+    position: absolute;
+    font-size: 23px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+footer button .emerguente .ayuda{
+    position: absolute;
+    font-size: 23px;
+    display: flex;
+    font-family: var(--YanoneKaffeesatz);
+    color: #000000;
+    left: 10px;
+    top: 50px;
+    width: 270px;
+    letter-spacing: 1px;
+    padding-left: -50px;
+    display: flex;
+}
+footer button .emerguente .ayuda a{
+    position: absolute;
+    padding-left: 50px;
     text-decoration: none;
     color: #000000;
-    font-size: 20px;
+    left: 30px; 
+}
+footer button .emerguente .ayuda i{
+    position: absolute;
+    color: #e90000 ;
+    left: 0;
+    top: -10px;
+font-size: 35px
+}
+footer button .emerguente .ayuda2{
+    position: absolute;
+    display: flex;
+    font-size: 23px;
     font-family: var(--YanoneKaffeesatz);
-    text-transform: uppercase;
-    font-weight: bold;
-    height: 70px;
-    left: 480px;
-}
-.ofertas i{
-    position: absolute;
-    top: 40px;
-    left: 80px;
-    font-size: 30px;
-    margin: auto;
-    transform: rotate(90deg);
-    color: #FF9F23;
-    cursor: pointer;
-}
-
-.dir{
-    position: absolute;
-    top: 100px;
-    text-align: center;
-    line-height: 50px;
-    justify-content: center;
-    font-family: var(--YanoneKaffeesatz);
-    font-weight: normal;
-    left: 10%;
-}
-footer span{
-    position: absolute;
-    top: 280px;
-    left: 20px;
-    font-size: 45px;
-    color: #e90000;
-}
-footer span i{
-    padding-left: 24px;
-}
-footer .logo-footer{
-    position: absolute;
-    right: 155px;
-    top: 240px;
-}
-/* Css de carrito de compras */
-
-.carrito{
-    border: 1px solid #000000;
+    color: #000000;
+    left: 10px;
+    top: 50px;
+    display: flex;
     width: 380px;
-    height: auto;
-    position: relative;
-    border-radius: 10px;
-    top: 150px;
-    right: 0px;
-    z-index: 6;
-    margin-bottom: auto;
+    padding-left: 50px;
+    margin-top: 80px;
+}
+footer button .emerguente .ayuda2 a{
     position: absolute;
-    transition: all .4s linear;
-    overflow: hidden;
-    background-color: #FFFFFF;
+    padding-left: 34px;
+    text-decoration: none;
+    color: #000000;
+    left: 30px; 
 }
-.carrito .header-carrito{
-    background-color: #e90000;
-    color: #FFFFFF;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.carrito .header-carrito i{
-    right: 20px;
-}
-.carrito .carrito-item img{
-    margin-right: 50px;
-}
-.carrito .carrito-item{
-    display: flex;
-    align-items: center;
-    position: relative;
-    border-bottom: 1px solid #000000;
-    padding: 15px;
-}
-.carrito .carrito-item .carrito-item-titulo{
-    display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-.carrito .carrito-item .selector-cantidad{
-    display: inline-block;
-    margin-right: 15px;
-}
-.carrito .carrito-item .carrito-item-cantidad{
-    border: none;
-    background: transparent;
-    width: 30px;
-    display: inline-block;
-    padding: 5px;
-    text-align: center;
-}
-.carrito .carrito-item .selector-cantidad i{
-    font-size: 20px;
-    width: 32px;
-    height: 32px;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid #000000;
-    line-height: 32px;
-    cursor: pointer;
-}
-.carrito .carrito-item .selector-cantidad i:hover{
-    transform: scale(1.04);
-}
-.carrito .carrito-item .carrito-item-precio{
-    font-weight: bold;
-    display: inline-block;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-.carrito .carrito-item .btn-eliminar{
+footer button .emerguente .ayuda2 i{
     position: absolute;
-    right: 20px;
-    top: 20px;
-    border:  1px solid #000000;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
+    color: #e90000 ;
+    left: -10px;
+    font-size: 35px
 }
-.carrito .carrito-item .btn-eliminar:hover{
-    transform: scale(1.04);
-    color: #FF9F23;
-}
-.carrito .carrito-item .btn-eliminar i{
-    pointer-events: none;
-}
-.carrito-total{
-    padding: 30px;
-}
-.carrito-total .fila{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.carrito-total .btn-pagar{
-    display: block;
-    border: none;
-    width: 100%;
-    background-color:#FF9F23 ;
-    border-radius: 10px;
-    padding: 20px;
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-}
-.carrito-total .btn-pagar:hover{
-    background-color: #ff9102;
-    transform: scale(1.02);
-}
+
 /* modo entrega */
 .modo-entrega{
     position: absolute;
@@ -966,86 +921,4 @@ footer .logo-footer{
     text-decoration: none;
     color: #FFFFFF;
     font-size: 16px;
-
-}
-/* seccion responsive */
-@media screen and (max-width:1000px){
-
-    section{
-        display: block;
-        top: -250px;
-        display: grid;
-        grid-template-columns: repeat(2, 280px);
-        grid-template-rows: repeat(1, -200px);
-        grid-area: 20px;
-        margin-left: 200px;
-        
-    }
-    .promociones{
-        margin-bottom: 20px;
-        width: 250px;
-        height: 380px;
-    }
-}
-@media screen and (max-width:1900px) {
-    .container{
-        width: 100%;
-    }
-    .navegacion{
-        width: 100%;
-    }
-    header{
-        width: 100%;
-    }
-}
-@media screen and (max-width:1600px) {
-    .container{
-        width: 100%;
-    }
-    .navegacion{
-        width: 100%;
-    }
-    .carrusel{
-        width: 980px;
-        margin-left: 250px;
-    }
-    header{
-        width: 100%;
-    }
-}
-@media screen and (max-width:800px) {
-    .container{
-        width: 100%;
-    }
-    header{
-        width: 100%;
-    }
-    .navegacion{
-        width: 100%;
-    }
-    .carrusel{
-        width: 600px;
-        height: 300px;
-    }
-    .navegacion .fa-bars{
-        left: 20px;
-        font-size: 30px;
-    }
-    .navegacion p a img{
-        width: 100px;
-        height: 50px;
-        top: 0px;
-        left: 60px;
-    }
-    .navegacion input{
-        width: 180px;
-        left: 270px;
-    }
-    .navegacion .carro{
-        left: -750px;
-    }
-    .navegacion .cuenta{
-        left: -760px;
-    }
-
 }
