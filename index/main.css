@@ -283,7 +283,6 @@ div .quienessomos .fa-store{
 section{
     position: relative;
     top: -300px;
-    width: 1600px;
     height: 600px;
     margin: auto;
     display: grid;
@@ -438,117 +437,70 @@ div:nth-child(1) .precios p:nth-child(3){
     color: #FF9F23;
     cursor: pointer;
 }
-footer{
-    position: relative;
-    top: -90px;
-    height: 250px;
+.pagina{
     width: 100%;
-    height: 400px;
-    background-color: #D2D2D2;
-    overflow: hidden; 
+    background-color: #b4b4b4;
 }
-footer button{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    left: 60px;
-    top: 100px;
-    font-size: 40px;
-    font-weight: normal;
-    border: none;
-    border-radius: 5px;
+.pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pagina.grupo-1.box h2{
     color: #e90000;
-    cursor: pointer;
-    box-shadow: 0px 0px 15px 0px #000000;
+    margin-bottom: 25px;
+    font-size: 20px;
 }
-footer > p{
-    position: absolute;
-    top:348px;
-    right: 100px;
-    font-weight: bold;
-    font-family: var(--YanoneKaffeesatz);
+.pagina .grupo-1 .box p{
+    color: #da2828;
+    margin-bottom: 10px;
 }
-footer > p i{
-    position: relative;
-    color: #FF9F23;
-    font-size: 28px;
-    top: 5px;
-}
-
-.emerguente{
-    position: absolute;
-    box-shadow: 0px 1px 10px 0px #000000;
-    border-radius: 5px;
-    background-color: #FFFFFF;
-    width: 300px;
-    height: 150px;
-    top: 250px;
-    left: 50px;
-    opacity: 0;
-    transition: all .2s ease-in;
-    z-index: 1;
-}
-.emerguente.active{
-    opacity: 1;
-    left: 55px;
-    top: 0px;
-}
-.emerguente .fa-circle-xmark{
-    position: absolute;
-    font-size: 23px;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-}
-footer button .emerguente .ayuda{
-    position: absolute;
-    font-size: 18px;
-    font-family: var(--YanoneKaffeesatz);
-    color: #000000;
-    left: 5px;
-    top: 30px;
-    width: 330px;
-    letter-spacing: 1px;
-    padding-left: 0px;
-    display: flex;
-}
-footer button .emerguente .ayuda a{
-    position: absolute;
-    padding-left: 50px;
+.pagina .grupo-1 .red-social a{
+    display: inline-block;
     text-decoration: none;
-    color: #000000;
-    left: 30px; 
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #e90000;
+    margin-right: 10px;
+    background-color: #ff0000;
+    text-align: center;
+    transition: all 300ms ease;
 }
-footer button .emerguente .ayuda i{
-    position: absolute;
-    color: #e90000 ;
-    left: 0;
-font-size: 35px
+.pagina .grupo-1 .red-social a:hover{
+    color: #aaaaaa;
 }
-footer button .emerguente .ayuda2{
-    position: absolute;
-    font-size: 18px;
-    font-family: var(--YanoneKaffeesatz);
-    color: #000000;
-    left: 5px;
-    top: 20px;
-    display: flex;
-    width: 350px;
-    padding-left: 30px;
-    margin-top: 80px;
+.pagina .grupo-2{
+    background-color: #7a7474;
+    padding: 15px 1ppx;
+    text-align: center;
+    color: #FFFFFF;
 }
-footer button .emerguente .ayuda2 a{
-    position: absolute;
-    padding-left: 50px;
-    text-decoration: none;
-    color: #000000;
-    left: 30px; 
+.pagina .grupo-2 small{
+    font-size: 15px;
 }
-footer button .emerguente .ayuda2 i{
-    position: absolute;
-    color: #e90000 ;
-    left: 0;
-    font-size: 35px
+@media screen and (max-width:800px){
+    .pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1rf);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+    
 }
 .dir{
     position: absolute;
