@@ -87,20 +87,6 @@ cierre.addEventListener("click", () => {
   document.getElementById("abrir-boton-ayuda").classList.toggle("active");
 });
 
-// carrito de compras
-
-var carrito = document.querySelector(".carrito-compras");
-var cerrar = document.querySelector(".cerrar-carrito");
-
-carrito.addEventListener("click", () => {
-  document.getElementById("carrito").classList.toggle("active");
-});
-cerrar.addEventListener("click", () => {
-  document.getElementById("carrito").classList.toggle("active");
-});
-
-// funcionalidad al carrito de compras
-
 // modo entrega
 
 var modoEntregaMostrar = document.querySelector(".modoentrega");
@@ -160,146 +146,62 @@ guardar.addEventListener("click", () => {
   document.getElementById("cuadro-seguir").style.display = "block";
 });
 
-// funcionalidad carrito de compras
 
-// variable que mantiene el estado visible del carrito
+//Variable que mantiene el estado visible del carrito
 
 var carritoVisible = false;
 
-// esperamos que todos los elementos de la pagina se carguen para continuar con el script
+// Esperamos que todos los elementos de la pagina se carguen para continuar con el script
 
-if (document.readyState == 'loading') {
-  document.addEventListener('DOMContentLoaded', ready);
-} else {
+if(document.readyState=='loading'){
+  document.addEventListener('DOMContentLoaded',ready)
+}else{
   ready();
 }
 
-function ready() {
-  // agregamops funcionalidad a los botones eliminar del carrito
-  var botonEliminarItem = document.getElementsByClassName('btn-eliminar');
-  for (var i = 0; i < botonEliminarItem.length; i++) {
-    var button = botonEliminarItem[i];
+function ready(){
+  // agregamos funcionalidad a los botones eliminar del carrito  
+  var botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
+  for(var i = 0; i < botonesEliminarItem.length; i++){
+    var button = botonesEliminarItem[i];
     button.addEventListener('click', eliminarItemCarrito);
-  }
-  // agregar funcionalidad al boton de sumar cantidad
-  var botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
-  for (var i=0; i < botonesSumarCantidad.length; i++) {
-    var button = botonesSumarCantidad[i];
-    button.addEventListener('click', sumarCantidad);
-  }
-
-  // agregar funcionalidad al boton de restar cantidad
-  var botonesRestarCantidad = document.getElementsByClassName('restar-cantidad');
-  for (var i=0; i < botonesRestarCantidad.length; i++) {
-    var button = botonesRestarCantidad[i];
-    button.addEventListener('click', restarCantidad);
-  }
-  // agrego funcionalidad a los botones de agregar al carrito
-
-  var botonesAgregarAlCarrito = document.getElementsByClassName('boton-item');
-
-  for (var i=0; i < botonesAgregarAlCarrito.length; i++) {
-    var button = botonesAgregarAlCarrito[i];
-    button.addEventListener('click', agregarAlCarritoClicked);
-  }
+  } 
 }
 
-// elimina el item seleccionado del carrito
+//Elimino el item selecionado del carrito
 
-function eliminarItemCarrito(event) {
-  var buttonCliked = event.target;
-  buttonCliked.parentElement.remove();
-  // Actualizamos el total del carriro una vez que hemos eliminado un item
-  actualizarTotalCarrito();
-  // la siguinte funcion controla si hay elelmentos en el carrito una vez que se elimino
-  //si no hay debo ocultar el carrito
-  ocultarCarrito();
-}
-//Actualiza el total del carrito
-function actualizarTotalCarrito() {
-  //seleccionamos el contenedor carrito
-
-  var carritoContenedor = document.getElementsByClassName("carrito")[0];
-  var carritoItems = carritoContenedor.getElementsByClassName("carrito-item");
-  var total = 0;
-  //recorremos cada elemento del carrito para actualizar el total
-  for (var i = 0; i < carritoItems.length; i++) {
-    var item = carritoItems[i];
-    var precioElemento = item.getElementsByClassName("carrito-item-precio")[0];
-    console.log(precioElemento);
-    // quitamos el simbolo de peso y el punto de milisimo
-    var precio = parseFloat(precioElemento.innerText.replace('$', '').replace('.','')
-    );
-    console.log(precio);
-
-    var cantidadItem = item.getElementsByClassName("carrito-item-cantidad")[0];
-    var cantidad = cantidadItem.value;
-    console.log(cantidad);
-    total = total + precio * cantidad;
-  }
-  total = Math.round(total * 100) / 100;
-  document.getElementsByClassName("carrito-precio-total")[0].innerText =
-    '$' + total.toLocaleString('es') + ',00';
-}
-function ocultarCarrito() {
-  var carritoItems = document.getElementsByClassName("carrito-items")[0];
-  if (carritoItems.childElementCount == 0) {
-    var carriro = document.getElementsByClassName("carrito")[0];
-    carrito.style.marginRight = "-100%";
-    carriro.style.opacity = "0";
-    carritoVisible = false;
-
-    //ahora maximizo el contenedor de los elementos
-
-    var items = document.getElementsByClassName('contenedor-cuadros')[0];
-    items.style.width = "100%";
-  }
-}
-// aumento en uno la cantidad del elemento seleccionado
-function sumarCantidad(event) {
-  var buttonCliked = event.target;
-  var selector = buttonCliked.parentElement;
-  var cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
-  console.log(cantidadActual);
-  cantidadActual++;
-  selector.getElementsByClassName('carrito-item-cantidad')[0].value = cantidadActual;
-
-  // actualizamos el total del precio
-  actualizarTotalCarrito();
-}
-function restarCantidad(event) {
-  var buttonCliked = event.target;
-  var selector = buttonCliked.parentElement;
-  var cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
-  console.log(cantidadActual);
-  cantidadActual--;
-
-  // controlamos que no sea menor que 1
-
-  if (cantidadActual >= 1) {
-    selector.getElementsByClassName('carrito-item-cantidad')[0].value = cantidadActual;
-    //actualizamos el total
-    actualizarTotalCarrito();
-  }
-   
-}
-
-// Elimino el item seleccionaddo del carrito
 function eliminarItemCarrito(event){
   var buttonClicked = event.target;
-  buttonClicked.parentElement.parentElement.remove();
-  //Actulizamos totalñ en carrito 
-  actualizarTotalCarrito();
+  buttonClicked.parentElement.remove();
 
-  //la suguinte funcion controla si hay elementos en el carrito 
-  //si no hya elimino el carrito
-  ocultarCarrito();
-} 
-//Funcion que controla si hay elementos
-// en el carrito. si no hay oculto el carrito
-function ocultarCarrito(){
-  var carritoItems = document.getElementsByClassName()
+  //actualizamos el total del carrito una vez que hemos eliminado un item
+
+  actualizarTotalCarrito();
 }
+
+function actualizarTotalCarrito(){
+  // seleccionamos el contenedor del carrito
+  var carritoContenedor = document.getElementsByClassName('carrito')[0];
+  var carritoItem = carritoContenedor.getElementsByClassName('carrito-item');
+  var total = 0;
+
+  // recorremos cada elemento del carrito para actualizar el total
+  for(var i = 0; i < carritoItem.length; i++){
+    var item = carritoItem[i];
+    var precioElemento = item.getElementsByClassName('carrito-item-precio')[0];
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
