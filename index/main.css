@@ -437,6 +437,9 @@ div:nth-child(1) .precios p:nth-child(3){
     color: #FF9F23;
     cursor: pointer;
 }
+.icon{
+    margin-top: 2%;
+}
 .pagina{
     width: 100%;
     background-color: #b4b4b4;
@@ -460,7 +463,8 @@ div:nth-child(1) .precios p:nth-child(3){
 .pagina .grupo-1 .box figure img{
     width: 250px;
 }
-.pagina.grupo-1.box h2{
+
+.pagina.grupo-1.box-red h2{
     color: #e90000;
     margin-bottom: 25px;
     font-size: 20px;
@@ -469,9 +473,12 @@ div:nth-child(1) .precios p:nth-child(3){
     color: #da2828;
     margin-bottom: 10px;
 }
+.pagina.grupo-1.box i{
+    color: #000000;
+    text-decoration: none;
+}
 .pagina .grupo-1 .red-social a{
     display: inline-block;
-    text-decoration: none;
     width: 45px;
     height: 45px;
     line-height: 45px;

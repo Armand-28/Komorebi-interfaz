@@ -1,0 +1,80 @@
+
+/*--------------------------------------------------------------
+# Profie Page
+--------------------------------------------------------------*/
+.profile .profile-card img {
+    max-width: 120px;
+  }
+  
+  .profile .profile-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #8e0a0ac9;
+    margin: 10px 0 0 0;
+  }
+  
+  .profile .profile-card h3 {
+    font-size: 18px;
+  }
+  
+  .profile .profile-card .social-links a {
+    font-size: 20px;
+    display: inline-block;
+    color: rgba(184, 24, 24, 0.662);
+    line-height: 0;
+    margin-right: 10px;
+    transition: 0.3s;
+  }
+  
+  .profile .profile-card .social-links a:hover {
+    color: #8e0a0ac9;
+  }
+  
+  .profile .profile-overview .row {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  
+  .profile .profile-overview .card-title {
+    color: #8e0a0ac9;
+  }
+  
+  .profile .profile-overview .label {
+    font-weight: 600;
+    color: rgba(184, 24, 24, 0.662);
+  }
+  
+  .profile .profile-edit label {
+    font-weight: 600;
+    color: rgba(184, 24, 24, 0.662);
+  }
+  
+  .profile .profile-edit img {
+    max-width: 120px;
+  }
+
+/* Bordered Tabs */
+.nav-tabs-bordered {
+    border-bottom: 2px solid #ebeef4;
+  }
+  
+  .nav-tabs-bordered .nav-link {
+    margin-bottom: -2px;
+    border: none;
+    color: #a70b0b;
+  }
+  
+  .nav-tabs-bordered .nav-link:hover,
+  .nav-tabs-bordered .nav-link:focus {
+    color: #8e0a0ac9;
+  }
+  
+  .nav-tabs-bordered .nav-link.active {
+    background-color: #fff;
+    color: #8e0a0ac9;
+    border-bottom: 2px solid #8e0a0ac9;
+  }
+  
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/  
