@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Komorebi</title>
     <link rel="stylesheet" href="../index/main.css">
+    <script src="https://kit.fontawesome.com/96f9a4100d.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
@@ -40,6 +41,7 @@
             <i class="fa-sharp fa-solid fa-shop"></i
             ><a href="#">Modo de entrega</a>
           </p>
+          <a href="../userAdmin\index.php">aaa</a>
           <p class="quienessomos">
             <a href="../nosotros/nosotros.html"
               ><i class="fa-solid fa-store"></i> ¿Quienes somos?</a
@@ -139,9 +141,14 @@
                     $120.000,00
                 </span>
             </div>
-            <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
-        </div>
-    </div>
+          </div>
+          <p class="ofertas">
+            <br /><a href="../ofertas/ofertas.html"
+              >Ver mas ofertas<i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </p>
+        </section>
+      </div>
       <footer>
         <button>
           <i class="fa-regular fa-question"></i>
@@ -150,19 +157,90 @@
             <p class="ayuda"> <a href=""><i class="fa-solid fa-headphones"></i>01-8000-9999</a></p>
             <p class="ayuda2"><a href=""><i class="fa-solid fa-envelope"></i>PlazaAs2023@gmail.com</a></p>
           </div>
-        </button>
-        <p class="dir">
-          <b>Plaza autoservicios S.A.S NIT 123 321 1234</b> <br>
-          Direccion: Oficina central, Calle 8 # 12a-44, Bogotá <br>
-          Lunes a Viernes de 7:00 am a 4:45 pm <br>
-          plaza-autoservicios@gmail.com
-        </p>
-        <span><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-youtube"></i></span>
-        <p> <i class="fa-brands fa-nfc-directional"></i> Todos los derechos reservados-Autoservicio el centro</p>
-        <img src="../imagenes/logo rojo.png" alt="" class="logo-footer">
+          <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>Plaza autoservicios S.A.S NIT 123 321 1234</b> <br>
+              Direccion: Oficina central, Calle 8 # 12a-44, Bogotá <br>
+              Lunes a Viernes de 7:00 am a 4:45 pm <br>
+              plaza-autoservicios@gmail.com</p>
+             <a href=""><i class="fa-solid fa-headphones" style="color: black; text-decoration: none;"> 01-8000-9999</i></a> 
+          </div>
+          <div class="box-red">
+            <h2>SIGUENOS</h2>
+          <div class="icon">
+            <a href="#" class="fa fa-facebook fa-lg" style="color:  #3b5998; text-decoration: none;"></a>
+            <a href="#" class="fa fa-instagram fa-lg" style="color: #eb0505; text-decoration: none;"></a>
+            <a href="#" class="fa fa-twitter fa-lg" style="color: #55acee; text-decoration: none;" ></a>
+            <a href="#" class="fa fa-youtube fa-lg" style="color: #FF0000; text-decoration: none;"></a>
+            <a href="#" class="fa fa-whatsapp fa-lg" style="color: #088536; text-decoration: none;"></a>
+          </div>
+          </div> 
+        </div>
+        <div class="grupo-2">
+          <small>&copy; 2023 <b>Todos los derechos reservados-Autoservicio el centro.</b></small>
+        </div>
       </footer>
 
+      
+      <!-- carrito de compras  estructura-->
+       <div class="carrito" id="carrito">
+        <div class="header-carrito">
+          <h2>Carrito de compras <i class="fa-sharp fa-solid fa-xmark cerrar-carrito"></i> </h2>
+        </div>
 
+        <div class="carrito-items">
+          <div class="carrito-item">
+            <img src="../imagenes/arveja.png" alt="" width="80px">
+            <div class="carrito-item-detalles">
+              <span class="carrito-item-titulo">Arveja</span>
+              <div class="selector-cantidad">
+                <i class="fa-solid fa-minus restar restar-cantidad"></i>
+                <input
+                  type="text"
+                  value="1"
+                  class="carrito-item-cantidad"
+                  disabled
+                />
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+              </div>
+              <span class="carrito-item-precio">$ 15.000</span>
+            </div>
+            <span class="btn-eliminar">
+              <i class="fa-solid fa-trash"></i>
+            </span>
+          </div>
+
+            <!-- opcion 2 carrito de compras -->
+
+          <div class="carrito-item">
+            <img src="../imagenes/papel.jpg" alt="" width="80px">
+            <div class="carrito-item-detalles">
+              <span class="carrito-item-titulo">Papel higienico</span>
+              <div class="selector-cantidad">
+                <i class="fa-solid fa-minus restar restar-cantidad"></i>
+                <input
+                  type="text"
+                  value="1"
+                  class="carrito-item-cantidad" disabled/>
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+              </div>
+              <span class="carrito-item-precio">$ 10.000</span>
+            </div>
+            <span class="btn-eliminar">
+              <i class="fa-solid fa-trash"></i>
+            </span>
+          </div>
+        </div> 
+        <div class="carrito-total">
+          <div class="fila">
+             <strong>Tu total</strong>
+             <span class="carrito-precio-total">
+              $0,00
+             </span>
+          </div>
+          <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+      </div>
       <!--Modo de entrega-->
       <div class="modo-entrega" id="modo-entrega">
         <div class="header-titulo">
@@ -233,8 +311,9 @@
           <button class="btn-guardar" id="btn-guardar"><a href="#">Guardar</a></button>
         </div>
       </div>
-
     </div> <!-- div container -->
+
+    <script src="../index/main.js"></script>
     <script
       src="https://kit.fontawesome.com/72ac7502a0.js"
       crossorigin="anonymous"
