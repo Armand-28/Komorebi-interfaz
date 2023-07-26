@@ -2,59 +2,59 @@
 
 var barlat = document.querySelector(".fa-bars");
 var cerrar = document.querySelector(".fa-xmark");
-var añadirItem = document.querySelectorAll(".boton-item");
+// var añadirItem = document.querySelectorAll(".boton-item");
 
-añadirItem.forEach((item) => {
-  item.addEventListener("click", () => {
-    var contenedor = item.parentElement;
-    var titulo = contenedor.querySelector(".titulo-item");
-    var img = contenedor.querySelector(".img-item");
-    var precio = contenedor.querySelector(".precio-item");
+// añadirItem.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     var contenedor = item.parentElement;
+//     var titulo = contenedor.querySelector(".titulo-item");
+//     var img = contenedor.querySelector(".img-item");
+//     var precio = contenedor.querySelector(".precio-item");
 
-    var items = document.querySelector(".carrito-items");
+//     var items = document.querySelector(".carrito-items");
 
-    var exist = false;
-    var guardados = items.querySelectorAll(".carrito-item-titulo");
-    guardados.forEach((e) => {
-      if (e.innerHTML == titulo.innerHTML) {
-        exist = true;
-      }
-    });
+//     var exist = false;
+//     var guardados = items.querySelectorAll(".carrito-item-titulo");
+//     guardados.forEach((e) => {
+//       if (e.innerHTML == titulo.innerHTML) {
+//         exist = true;
+//       }
+//     });
 
-    if (!exist) {
-      var itemHtml = `
-      <div class="carrito-item">
-          <img src="${img.getAttribute("src")}" width="80px" alt=""> 
-          <div class="carrito-item-detalles">
-              <span class="carrito-item-titulo" data-titulo="${titulo.innerHTML}">${titulo.innerHTML}</span>
-              <span class="carrito-item-precio">${precio.innerHTML}</span>
-          </div>
-          <span class="btn-eliminar">
-              <i class="fa-solid fa-trash"></i>
-          </span>
-      </div>
-      `;
+//     if (!exist) {
+//       var itemHtml = `
+//       <div class="carrito-item">
+//           <img src="${img.getAttribute("src")}" width="80px" alt=""> 
+//           <div class="carrito-item-detalles">
+//               <span class="carrito-item-titulo" data-titulo="${titulo.innerHTML}">${titulo.innerHTML}</span>
+//               <span class="carrito-item-precio">${precio.innerHTML}</span>
+//           </div>
+//           <span class="btn-eliminar">
+//               <i class="fa-solid fa-trash"></i>
+//           </span>
+//       </div>
+//       `;
 
-      items.innerHTML += itemHtml;
+//       items.innerHTML += itemHtml;
       
-      items.querySelector(`[data-titulo="${titulo.innerHTML}"]`).parentElement.parentElement.querySelector(".btn-eliminar").addEventListener("click", eliminarItemCarrito)
+//       items.querySelector(`[data-titulo="${titulo.innerHTML}"]`).parentElement.parentElement.querySelector(".btn-eliminar").addEventListener("click", eliminarItemCarrito)
 
-      var valor = [];
-      var carrito = getCookie("carrito");
-      if (carrito != "") {
-        valor = JSON.parse(carrito);
-      }
+//       var valor = [];
+//       var carrito = getCookie("carrito");
+//       if (carrito != "") {
+//         valor = JSON.parse(carrito);
+//       }
       
-      valor.push({
-        img: img.getAttribute("src"),
-        titulo: titulo.innerHTML,
-        precio: precio.innerHTML
-      })
+//       valor.push({
+//         img: img.getAttribute("src"),
+//         titulo: titulo.innerHTML,
+//         precio: precio.innerHTML
+//       })
 
-      document.cookie = `carrito=${JSON.stringify(valor)}; path=/`;
-    }
-  });
-});
+//       document.cookie = `carrito=${JSON.stringify(valor)}; path=/`;
+//     }
+//   });
+// });
 
 barlat.addEventListener("click", () => {
   document.getElementById("menu").classList.toggle("active");
@@ -199,114 +199,10 @@ guardar.addEventListener("click", () => {
   document.getElementById("cuadro-seguir").style.display = "block";
 });
 
-//Variable que mantiene el estado visible del carrito
+var carritoVisible = document.querySelector(".li-1");
 
-var carritoVisible = false;
+carritoVisible.addEventListener("click", () =>{
+document.getElementById("carrito").style.display = "block";
+})
 
-// Esperamos que todos los elementos de la pagina se carguen para continuar con el script
 
-if (document.readyState == "loading") {
-  document.addEventListener("DOMContentLoaded", ready);
-} else {
-  ready();
-}
-
-function ready() {
-  // agregamos funcionalidad a los botones eliminar del carrito
-  var botonesEliminarItem = document.getElementsByClassName("btn-eliminar");
-  for (var i = 0; i < botonesEliminarItem.length; i++) {
-    var button = botonesEliminarItem[i];
-    button.addEventListener("click", eliminarItemCarrito);
-  }
-}
-
-//Elimino el item selecionado del carrito
-
-function eliminarItemCarrito(event) {
-  var item = event.target.parentElement;
-  var contenedor = item.parentElement;
-  item.remove();
-
-  setTimeout(() => {    
-    var valor = [];
-    var todo = contenedor.querySelectorAll(".carrito-item");
-    todo.forEach(e => {
-      var img = e.querySelector("img")
-      var titulo = e.querySelector(".carrito-item-titulo")
-      var precio = e.querySelector(".carrito-item-precio")
-
-      valor.push({
-        img: img.getAttribute("src"),
-        titulo: titulo.innerHTML,
-        precio: precio.innerHTML
-      })
-    })
-
-    document.cookie = `carrito=${JSON.stringify(valor)}; path=/`;
-  }, 100)
-
-  //actualizamos el total del carrito una vez que hemos eliminado un item
-
-  actualizarTotalCarrito();
-}
-
-function actualizarTotalCarrito() {
-  // seleccionamos el contenedor del carrito
-  var carritoContenedor = document.getElementsByClassName("carrito")[0];
-  var carritoItems = carritoContenedor.getElementsByClassName("carrito-item");
-  var total = 0;
-
-  // recorremos cada elemento del carrito para actualizar el total
-  for (var i = 0; i < carritoItems.length; i++) {
-    var item = carritoItems[i];
-    var precioElemento = item.getElementsByClassName("carrito-item-precio")[0];
-    // console.log(precioElemento);
-    //quitamos el simbolo de pesos y el punto de milesimo
-    var precio = parseFloat(
-      precioElemento.innerText.replace("$", "").replace(".", "")
-    );
-    // console.log(precio);
-  }
-}
-
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
-(() => {
-  var carritoGuardado = JSON.parse(getCookie("carrito"));
-  var items = document.querySelector(".carrito-items");
-  carritoGuardado.forEach(e => {
-    var itemHtml = `
-    <div class="carrito-item">
-        <img src="${e.img}" width="80px" alt=""> 
-        <div class="carrito-item-detalles">
-            <span class="carrito-item-titulo">${e.  titulo}</span>
-            <span class="carrito-item-precio">${e.  precio}</span>
-        </div>
-        <span class="btn-eliminar">
-            <i class="fa-solid fa-trash"></i>
-        </span>
-    </div>
-    `;
-
-    items.innerHTML += itemHtml;
-
-    
-  })
-
-  ready();
-  
-})()
