@@ -592,10 +592,17 @@ footer .logo-footer{
     border: none;
     background-color: #FF9F23;
     color: #fff;
-    padding: 5px 15px;
+    padding: 5px 5px;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
 }
+.contenedor .contenedor-items .item p{
+    color: #aaaaaa;
+    font-size: 13px;
+    text-align: center;
+}
+
 /* seccion carrito */
 .carrito{
     border: 1px solid #666;
@@ -616,9 +623,15 @@ footer .logo-footer{
     background-color: #ff0000;
     color: #fff;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    padding: 30px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 25px 10px;
+}
+.carrito .header-carrito .fa-xmark{
+    position: absolute;
+    color: #FFFFFF;
+    right: 10px;
+    top: 10px;
 }
 .carrito .carrito-item{
     display: flex;

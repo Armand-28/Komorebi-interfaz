@@ -24,7 +24,7 @@ var cerrar = document.querySelector(".fa-xmark");
 //     if (!exist) {
 //       var itemHtml = `
 //       <div class="carrito-item">
-//           <img src="${img.getAttribute("src")}" width="80px" alt=""> 
+//           <img src="${img.getAttribute("src")}" width="80px" alt="">
 //           <div class="carrito-item-detalles">
 //               <span class="carrito-item-titulo" data-titulo="${titulo.innerHTML}">${titulo.innerHTML}</span>
 //               <span class="carrito-item-precio">${precio.innerHTML}</span>
@@ -36,7 +36,7 @@ var cerrar = document.querySelector(".fa-xmark");
 //       `;
 
 //       items.innerHTML += itemHtml;
-      
+
 //       items.querySelector(`[data-titulo="${titulo.innerHTML}"]`).parentElement.parentElement.querySelector(".btn-eliminar").addEventListener("click", eliminarItemCarrito)
 
 //       var valor = [];
@@ -44,7 +44,7 @@ var cerrar = document.querySelector(".fa-xmark");
 //       if (carrito != "") {
 //         valor = JSON.parse(carrito);
 //       }
-      
+
 //       valor.push({
 //         img: img.getAttribute("src"),
 //         titulo: titulo.innerHTML,
@@ -129,16 +129,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // boton de ayuda
 
-var abrir = document.querySelector(".fa-question");
-var cierre = document.querySelector(".fa-circle-xmark");
+// var abrir = document.querySelector(".fa-question");
+// var cierre = document.querySelector(".fa-circle-xmark");
 
-abrir.addEventListener("click", () => {
-  document.getElementById("abrir-boton-ayuda").classList.toggle("active");
-});
+// abrir.addEventListener("click", () => {
+//   document.getElementById("abrir-boton-ayuda").classList.toggle("active");
+// });
 
-cierre.addEventListener("click", () => {
-  document.getElementById("abrir-boton-ayuda").classList.toggle("active");
-});
+// cierre.addEventListener("click", () => {
+//   document.getElementById("abrir-boton-ayuda").classList.toggle("active");
+// });
 
 // modo entrega
 
@@ -200,9 +200,31 @@ guardar.addEventListener("click", () => {
 });
 
 var carritoVisible = document.querySelector(".li-1");
+var carritoVisible2 = document.querySelector(".carrito-compras");
+var cerrarCarrito = document.querySelector("#cerrarCarrito");
 
-carritoVisible.addEventListener("click", () =>{
-document.getElementById("carrito").style.display = "block";
-})
+carritoVisible.addEventListener("click", () => {
+  if (document.getElementById("carrito").style.marginRight == "") {
+    document.getElementById("carrito").style.marginRight = "-100%";
+  } else {
+  document.getElementById("carrito").style.marginRight = "";
+  }
+});
+carritoVisible2.addEventListener("click", () => {
+  if (document.getElementById("carrito").style.marginRight == "") {
+    document.getElementById("carrito").style.marginRight = "-100%";
+  } else {
+  document.getElementById("carrito").style.marginRight = "";
+  }
+});
+cerrarCarrito.addEventListener("click", () => {
+  if (document.getElementById("carrito").style.marginRight == "") {
+    document.getElementById("carrito").style.marginRight = "-100%";
+  } else {
+  document.getElementById("carrito").style.marginRight = "";
+  }
+});
+
+
 
 

@@ -1,5 +1,4 @@
 function getCookie(cname) {
-  alert("hola");
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
   let ca = decodedCookie.split(";");
@@ -24,6 +23,11 @@ if(document.readyState == 'loading'){
 }
 
 function ready(){
+
+    var carrito = getCookie("carrito") !== "" ? JSON.parse(getCookie("carrito")) : [];
+    carrito.forEach(element => {
+        agregarItemAlCarrito(element.titulo, element.precio, element.imagenSrc, false);
+    });
     
     //Agregremos funcionalidad a los botones eliminar del carrito
     var botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
@@ -31,6 +35,8 @@ function ready(){
         var button = botonesEliminarItem[i];
         button.addEventListener('click',eliminarItemCarrito);
     }
+
+    console.log(botonesEliminarItem)
 
     //Agrego funcionalidad al boton sumar cantidad
     var botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
@@ -94,13 +100,14 @@ function hacerVisibleCarrito(){
 }
 
 //Funciòn que agrega un item al carrito
-function agregarItemAlCarrito(titulo, precio, imagenSrc){
+function agregarItemAlCarrito(titulo, precio, imagenSrc, esNuevo = true){
     var item = document.createElement('div');
     item.classList.add = ('item');
     var itemsCarrito = document.getElementsByClassName('carrito-items')[0];
 
     //controlamos que el item que intenta ingresar no se encuentre en el carrito
     var nombresItemsCarrito = itemsCarrito.getElementsByClassName('carrito-item-titulo');
+
     for(var i=0;i < nombresItemsCarrito.length;i++){
         if(nombresItemsCarrito[i].innerText==titulo){
             alert("El item ya se encuentra en el carrito");
@@ -139,6 +146,17 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
     var botonSumarCantidad = item.getElementsByClassName('sumar-cantidad')[0];
     botonSumarCantidad.addEventListener('click',sumarCantidad);
 
+    //Actualizar carrito en la cookie
+    if (esNuevo) {
+        var carrito = getCookie("carrito") !== "" ? JSON.parse(getCookie("carrito")) : [];
+        carrito.push({
+            titulo: titulo,
+            imagenSrc: imagenSrc,
+            precio: precio
+        })
+        document.cookie = `carrito=${JSON.stringify(carrito)};path=/`
+    }
+
     //Actualizamos total
     actualizarTotalCarrito();
 }
@@ -168,7 +186,18 @@ function restarCantidad(event){
 //Elimino el item seleccionado del carrito
 function eliminarItemCarrito(event){
     var buttonClicked = event.target;
-    buttonClicked.parentElement.parentElement.remove();
+    var item = buttonClicked.parentElement.parentElement;
+    var carrito = getCookie("carrito") !== "" ? JSON.parse(getCookie("carrito")) : [];
+
+    carrito.forEach((element, indice) => {
+        var titulo = item.querySelector(".carrito-item-titulo").innerHTML
+        if (element.titulo == titulo) {
+            carrito.splice(indice, 1);
+        }
+    });
+
+    item.remove();
+    document.cookie = `carrito=${JSON.stringify(carrito)};path=/`
     //Actualizamos el total del carrito
     actualizarTotalCarrito();
 
