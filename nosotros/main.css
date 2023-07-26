@@ -330,42 +330,87 @@ aside .vision p{
     line-height: 25px;
     text-transform: none;
 }
+/*Aquí debajo va el FOOTER*/
+
 footer{
-    position: relative;
-    top: 580px;
-    height: 250px;
-    width: 1600px;
-    background-color: #D2D2D2;
-    overflow: hidden; 
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url('../imagenes/background-footer.svg');
+    background-size: cover;
+    
+    /*background-color: #d0f0f8;
+    -webkit-mask-image: url("../Images/background-footer.svg");
+    mask-image: url("../Images/background-footer.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;*/
+}
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
     margin: auto;
+    margin-top: 100px;
 }
-footer button{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    left: 60px;
-    top: 20px;
-    font-size: 40px;
-    font-weight: normal;
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+}
+
+.box__footer .logo img{
+    width: 180px;
+}
+
+.box__footer .terms{
+    max-width: 330px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box__footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr{
     border: none;
-    border-radius: 5px;
-    color: #e90000;
-    cursor: pointer;
-    box-shadow: 0px 0px 15px 0px #000000;
+    height: 1px;
+    background-color: #7a7a7a;
 }
-footer > p{
-    position: absolute;
-    top:208px;
-    right: 20px;
-    font-weight: bold;
-    font-family: var(--YanoneKaffeesatz);
-}
-footer > p i{
-    position: relative;
-    color: #FF9F23;
-    font-size: 28px;
-    top: 5px;
-}
+/*Aquí termina el FOOTER*/
+
 .emerguente{
     position: absolute;
     box-shadow: 0px 1px 10px 0px #000000;

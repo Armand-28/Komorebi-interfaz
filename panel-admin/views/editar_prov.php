@@ -47,13 +47,6 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">RFC </label><br>
-                                <input type="text" name="rfc" id="rfc" class="form-control" value="<?php echo $fila['rfc']; ?>" required>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="mb-3">
                                 <label for="password">Correo </label><br>
                                 <input type="email" name="correo" id="correo" class="form-control" value="<?php echo $fila['correo']; ?>" required>
                             </div>

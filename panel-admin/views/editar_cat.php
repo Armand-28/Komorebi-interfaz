@@ -10,7 +10,7 @@
                 <form id="editCat<?php echo $fila['id']; ?>" method="POST">
 
                     <div class="form-group">
-                        <label for="nombre" class="form-label">Categoria</label>
+                        <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" id="categoria" name="categoria" value="<?php echo $fila['categoria']; ?>" class="form-control" required>
                     </div>
                     <br>

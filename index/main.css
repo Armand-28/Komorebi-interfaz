@@ -85,13 +85,30 @@ header p{
     color: #FFFFFF;
 }
 .navegacion .li-1{
-position: absolute;
-list-style: none;
-left: 1305px;
-top: 80px;
-font-size: 16px;
+    position: absolute;
+    list-style: none;
+    left: 1305px;
+    top: 80px;
+    font-size: 16px;
 }
+
+.navegacion .li-3{
+        position: absolute;
+        list-style: none;
+        left: 1510px;
+        top: 80px;
+        font-size: 16px;
+}
+
 .li-1 a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.li-3 a{
     text-decoration: none;
     color: #FFFFFF;
     font-family: var(--YanoneKaffeesatz);
@@ -101,10 +118,18 @@ font-size: 16px;
 
 .cuenta .fa-circle-user{
     position: relative;
-    left: 1180px;
+    left: 1100px;
     top: 30px;
     color: #FFFFFF;
 }
+.admin{
+    position: relative;
+    left: 1250px;
+    top: 2px;
+    color: #FFFFFF;
+}
+
+
 .navegacion .li-2{
     position: absolute;
     list-style: none;
@@ -521,21 +546,87 @@ div:nth-child(1) .precios p:nth-child(3){
     font-weight: normal;
     left: 10%;
 }
-footer span{
-    position: absolute;
-    top: 280px;
-    left: 20px;
-    font-size: 45px;
-    color: #e90000;
+
+/*Aquí debajo va el FOOTER*/
+
+footer{
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url('../imagenes/background-footer.svg');
+    background-size: cover;
+    
+    /*background-color: #d0f0f8;
+    -webkit-mask-image: url("../Images/background-footer.svg");
+    mask-image: url("../Images/background-footer.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;*/
 }
-footer span i{
-    padding-left: 24px;
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
 }
-footer .logo-footer{
-    position: absolute;
-    right: 155px;
-    top: 240px;
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
 }
+
+.box__footer .logo img{
+    width: 180px;
+}
+
+.box__footer .terms{
+    max-width: 330px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box__footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+/*Aquí termina el FOOTER*/
 /* Css de carrito de compras */
 
 .contenedor{

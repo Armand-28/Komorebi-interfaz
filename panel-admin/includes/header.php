@@ -74,7 +74,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones</h6>
-                        <a class="collapse-item" href="../views/inventario.php">Inventario</a>
+                        <a class="collapse-item" href="../views/inventario.php">Productos</a>
                         
                     </div>
                 </div>
@@ -112,11 +112,19 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="../views/usuarios.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Roles</span></a>
-            </li>
+            <?php
+
+
+                
+                if(isset($_SESSION['usuario'])){
+                  echo '<li class="nav-item">
+                  <a class="nav-link" href="../views/usuarios.php">
+                      <i class="fas fa-fw fa-table"></i>
+                      <span>Usuarios</span></a>
+              </li>';  
+                }
+
+            ?>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -199,8 +207,8 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                        <div class="small text-gray-500">Julio 15/2023</div>
+                                        <span class="font-weight-bold">¡Un nuevo informe mensual está listo para descargar!</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -210,8 +218,8 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
+                                        <div class="small text-gray-500">Julio 20/2023</div>
+                                        <span class="font-weight-bold">¡Se han depositado $290.29 en su cuenta!</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -221,11 +229,11 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
+                                        <div class="small text-gray-500">Junio 23/2023</div>                                      
+                                        Alerta de gastos: Hemos notado gastos inusualmente altos para su cuenta.
                                     </div>
                                 </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Cerrar</a>
                             </div>
                         </li>
 
