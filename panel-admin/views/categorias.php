@@ -17,7 +17,7 @@ session_start();
                 <br>
 
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#cat">
-                    <span class="glyphicon glyphicon-plus"></span> Agregar <i class="fa fa-plus"></i> </a></button>
+                    <span class="glyphicon glyphicon-plus"></span> Agregar Categoria <i class="fa fa-plus"></i> </a></button>
             </div>
 
             <div class="card-body">
@@ -25,8 +25,8 @@ session_start();
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Categoria</th>
-                                <th>Fecha</th>
+                                <th>Nombre Categoria</th>
+                                <th>Fecha de modificacion</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>

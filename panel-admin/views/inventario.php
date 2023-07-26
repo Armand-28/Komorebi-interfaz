@@ -19,7 +19,7 @@ session_start();
                 <br>
 
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#inv">
-                    <span class="glyphicon glyphicon-plus"></span> Agregar <i class="fa fa-plus"></i> </a></button>
+                    <span class="glyphicon glyphicon-plus"></span> Agregar Articulo <i class="fa fa-plus"></i> </a></button>
                 <!-- Agrega un botón para iniciar la exportación -->
                 <button id="export-btn" class="btn btn-outline-success" type="button">Exportar a Excel</button>
 

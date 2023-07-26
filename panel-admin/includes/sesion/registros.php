@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Usuario</label>
+                                <label for="nombre" class="form-label">Nombre</label>
                                 <input type="text" id="usuario" name="usuario" class="form-control" required>
 
                             </div>

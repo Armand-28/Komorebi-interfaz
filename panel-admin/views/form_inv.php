@@ -13,7 +13,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Codigo</label>
+                                <label for="codigo" class="form-label">Codigo</label>
                                 <input type="text" id="codigo" name="codigo" class="form-control" required>
 
                             </div>
@@ -22,7 +22,7 @@
 
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
+                                <label for="producto" class="form-label">Nombre</label>
                                 <input type="text" id="producto" name="producto" class="form-control" required>
                             </div>
                         </div>
@@ -31,14 +31,26 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Cantidad</label><br>
+                                <label for="cantidad">Cantidad</label><br>
                                 <input type="number" name="existencia" id="existencia" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fecha">fecha</label><br>
+                                <input type="date" name="fecha" id="fecha" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="unidad">Unidad</label><br>
+                                <input type="text" name="unidad" id="unidad" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="compra">Compra</label><br>
+                                <input type="number" name="compra" id="compra" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Minimo</label><br>
+                                <label for="minimo">Minimo</label><br>
                                 <input type="number" name="minimo" id="minimo" class="form-control" required>
                             </div>
                         </div>
@@ -47,15 +59,15 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Precio Venta </label><br>
+                                <label for="venta">Precio Venta </label><br>
                                 <input type="number" step=".01" id="venta" name="venta" class="form-control">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="username">Categoria</label><br>
+                                <label for="id_categoria">Categoria</label><br>
                                 <select name="id_categoria" id="id_categoria" class="form-control" required>
-                                    <option value="">Selecciona una opcion</option>
+                                    
                                     <?php
 
                                     include("../includes/db.php");
@@ -63,7 +75,7 @@
                                     $sql = "SELECT * FROM categorias ";
                                     $resultado = mysqli_query($conexion, $sql);
                                     while ($consulta = mysqli_fetch_array($resultado)) {
-                                        echo '<option value="' . $consulta['id'] . '">' . $consulta['categoria'] . '</option>';
+                                        echo '<option name="id_categoria" value="'.$consulta['id'].'">'.$consulta['categoria'].'</option>';
                                     }
 
                                     ?>
