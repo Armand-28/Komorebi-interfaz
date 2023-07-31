@@ -33,7 +33,7 @@ session_start();
                                 <th>Razon Social</th>
                                 <th>Direccion</th>
                                 <th>Telefono</th>
-                                <th>RFC</th>
+                                <th>Nit</th>
                                 <th>Correo</th>
                                 <th>Fecha</th>
                                 <th>Acciones.</th>
@@ -51,7 +51,7 @@ session_start();
                                     <td><?php echo $fila['r_social']; ?></td>
                                     <td><?php echo $fila['direccion']; ?></td>
                                     <td><?php echo $fila['telefono']; ?></td>
-                                    <td><?php echo $fila['rfc']; ?></td>
+                                    <td><?php echo $fila['nit']; ?></td>
                                     <td><?php echo $fila['correo']; ?></td>
                                     <td><?php echo $fila['fecha']; ?></td>
                                     <td>

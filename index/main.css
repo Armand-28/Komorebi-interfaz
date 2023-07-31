@@ -80,14 +80,14 @@ header p{
 }
 .carro .fa-cart-shopping{
     position: relative;
-    left: 1220px;
+    left: 1180px;
     top:30px;
     color: #FFFFFF;
 }
 .navegacion .li-1{
     position: absolute;
     list-style: none;
-    left: 1305px;
+    left: 1269px;
     top: 80px;
     font-size: 16px;
 }
@@ -99,7 +99,6 @@ header p{
         top: 80px;
         font-size: 16px;
 }
-
 .li-1 a{
     text-decoration: none;
     color: #FFFFFF;
@@ -107,38 +106,42 @@ header p{
     font-size: 14px;
     font-weight: bold;
 }
-
-.li-3 a{
+.cuenta .fa-circle-user{
+    position: relative;
+    left: 1130px;
+    top: 30px;
+    color: #FFFFFF;
+}
+.navegacion .li-2{
+    position: absolute;
+    list-style: none;
+    left: 1350px;
+    top: 80px;
+    font-size: 16px;
+    z-index: 1;
+    }
+.li-2 a{
     text-decoration: none;
     color: #FFFFFF;
     font-family: var(--YanoneKaffeesatz);
     font-size: 14px;
     font-weight: bold;
 }
-
-.cuenta .fa-circle-user{
+.admin .user-admin{
     position: relative;
-    left: 1100px;
+    left: 1130px;
     top: 30px;
     color: #FFFFFF;
 }
-.admin{
-    position: relative;
-    left: 1250px;
-    top: 2px;
-    color: #FFFFFF;
-}
-
-
-.navegacion .li-2{
+.navegacion .li-3{
     position: absolute;
     list-style: none;
-    left: 1400px;
+    left: 1430px;
     top: 80px;
     font-size: 16px;
     z-index: 1;
     }
-.li-2 a{
+.li-3 a{
     text-decoration: none;
     color: #FFFFFF;
     font-family: var(--YanoneKaffeesatz);
@@ -554,7 +557,7 @@ footer{
     padding: 50px 0px;
     background-image: url('../imagenes/background-footer.svg');
     background-size: cover;
-    
+    margin-top: 950px;
     /*background-color: #d0f0f8;
     -webkit-mask-image: url("../Images/background-footer.svg");
     mask-image: url("../Images/background-footer.svg");
@@ -574,7 +577,7 @@ footer{
 .box__footer{
     display: flex;
     flex-direction: column;
-    padding: 35px;
+    padding: 40px;
 }
 
 .box__footer .logo img{
@@ -582,7 +585,7 @@ footer{
 }
 
 .box__footer .terms{
-    max-width: 330px;
+    max-width: 350px;
     margin-top: 20px;
     font-weight: 500;
     color: #7a7a7a;

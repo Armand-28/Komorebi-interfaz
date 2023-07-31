@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 24-07-2023 a las 13:59:33
+-- Tiempo de generación: 26-07-2023 a las 17:58:25
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.0.25
 
@@ -38,11 +38,12 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id`, `categoria`, `fecha`) VALUES
-(37, 'TELEFONIA', '2023-05-30 23:25:42'),
-(38, 'JUGUETERIA', '2023-05-30 23:25:51'),
-(40, 'FERRETERIA', '2023-05-30 23:26:07'),
-(41, 'MASCOTAS', '2023-05-30 23:27:07'),
-(42, 'ALIMENTOS', '2023-07-01 22:40:49');
+(1, 'Refrigerados', '2023-07-24 13:06:33'),
+(2, 'Snacks y pasabocas', '2023-07-24 13:07:03'),
+(3, 'Cuidado personal', '2023-07-24 13:07:22'),
+(4, 'Aseo del hogar', '2023-07-24 13:07:38'),
+(5, 'Granos', '2023-07-24 13:07:55'),
+(6, 'Bebidas', '2023-07-24 13:09:12');
 
 -- --------------------------------------------------------
 
@@ -69,31 +70,10 @@ INSERT INTO `clientes` (`id`, `cliente`, `telefono`, `correo`, `direccion`, `fec
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `codbarra`
+-- Estructura de tabla para la tabla `factura`
 --
 
-CREATE TABLE `codbarra` (
-  `id` int(11) NOT NULL,
-  `id_producto` int(11) NOT NULL,
-  `codigo` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `codbarra`
---
-
-INSERT INTO `codbarra` (`id`, `id_producto`, `codigo`) VALUES
-(1, 3, '023'),
-(2, 4, '0101'),
-(3, 8, '123');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `facturas`
---
-
-CREATE TABLE `facturas` (
+CREATE TABLE `factura` (
   `facid` int(11) NOT NULL,
   `facidper` int(11) NOT NULL,
   `facname` varchar(255) NOT NULL,
@@ -116,7 +96,7 @@ CREATE TABLE `inventario` (
   `existencia` int(11) NOT NULL,
   `minimo` int(11) NOT NULL,
   `venta` float NOT NULL,
-  `compra` float NOT NULL,
+  `compra` int(11) NOT NULL,
   `unidad` varchar(50) NOT NULL,
   `id_categoria` int(11) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -127,16 +107,19 @@ CREATE TABLE `inventario` (
 --
 
 INSERT INTO `inventario` (`id`, `codigo`, `producto`, `existencia`, `minimo`, `venta`, `compra`, `unidad`, `id_categoria`, `fecha`) VALUES
-(3, '024', 'Televisor Samsung', 20, 10, 2000, 1500, 'PZA', 38, '2023-07-23 21:45:44'),
-(8, '123', 'maiz', 54, 5, 5600, 4500, 'KG', 41, '2023-07-23 19:58:09');
+(16, '233', 'arepa', 2321312, 321312, 21132100, 0, '', 3, '2023-07-04 05:00:00'),
+(18, '3123', 'cccc', 23423, 423423, 23, 25, 'gr', 4, '2023-07-06 05:00:00'),
+(19, '2133', 'maiz', 24, 24, 32, 21, 'libra', 5, '2023-07-12 05:00:00'),
+(20, '233', 'frijol', 312, 312, 23, 23, 'gr', 5, '2023-06-29 05:00:00'),
+(21, '99999999', 'azuar', 12424, 234234, 3423, 432432, 'gr', 3, '2023-07-05 05:00:00');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `ordendeentregas`
+-- Estructura de tabla para la tabla `ordendeentrega`
 --
 
-CREATE TABLE `ordendeentregas` (
+CREATE TABLE `ordendeentrega` (
   `ordid` int(11) NOT NULL,
   `ordprod` varchar(255) NOT NULL,
   `ordUdM` varchar(255) NOT NULL,
@@ -147,18 +130,6 @@ CREATE TABLE `ordendeentregas` (
   `ordsurnamecli` varchar(255) NOT NULL,
   `ordnumcel` varchar(255) NOT NULL,
   `ordaddrescli` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `pagos`
---
-
-CREATE TABLE `pagos` (
-  `pagid` int(11) NOT NULL,
-  `pagmetpago` varchar(255) NOT NULL,
-  `pagvaltotal` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -177,10 +148,10 @@ CREATE TABLE `parametros` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `pedidos`
+-- Estructura de tabla para la tabla `pedido`
 --
 
-CREATE TABLE `pedidos` (
+CREATE TABLE `pedido` (
   `pedid` int(11) NOT NULL,
   `pedimg` blob NOT NULL,
   `pednameprod` varchar(255) NOT NULL,
@@ -233,7 +204,7 @@ CREATE TABLE `proveedores` (
   `r_social` varchar(250) NOT NULL,
   `direccion` varchar(250) NOT NULL,
   `telefono` varchar(50) NOT NULL,
-  `rfc` varchar(250) NOT NULL,
+  `nit` int(50) NOT NULL,
   `correo` varchar(150) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -242,17 +213,23 @@ CREATE TABLE `proveedores` (
 -- Volcado de datos para la tabla `proveedores`
 --
 
-INSERT INTO `proveedores` (`id`, `name`, `r_social`, `direccion`, `telefono`, `rfc`, `correo`, `fecha`) VALUES
-(1, 'SABRITAS', 'PEPSICO S.A DE C.V', 'GUADALAJARA J', '2147483647', 'POMP010314IE7', 'lex@hotmail.com', '2023-05-30 23:44:13'),
-(2, 'REFRESCOS', 'COCA S.A DE C.V', 'CDMX', '9911165670', 'POML0412272U7', 'campos12@gmail.com', '2023-07-01 22:35:10');
+INSERT INTO `proveedores` (`id`, `name`, `r_social`, `direccion`, `telefono`, `nit`, `correo`, `fecha`) VALUES
+(1, 'Pepsi', 'PEPSICO S.A DE C.V', 'Bogota-Col', '2147483647', 0, 'pepsico@gmail.com', '2023-07-24 13:16:18'),
+(3, 'Margarita', 'pepsico', 'Bogota Col', '123165135', 0, 'margarita232@gmail.com', '2023-07-24 13:15:36'),
+(5, 'komorebi', 'dsa', 'dsbkfsd', '2132313', 0, 'labsflsab@gmail.com', '2023-07-26 13:28:40'),
+(6, 'komorebi', 'dsa', 'dgsdgfd', '2132313', 0, 'labsflsab@gmail.com', '2023-07-26 13:29:19'),
+(7, 'zuuuuu', 'dsa', 'dsbkfsd', '2132313', 2147483647, 'labsflsab@gmail.com', '2023-07-26 14:42:55'),
+(8, 'sasasasasas', 'dsa', 'das', '651646', 231654, 'labsflsab@gmail.com', '2023-07-26 13:37:18'),
+(9, 'bbbb', 'SOCIEDAD CON ACCIONES ', 'Bogota-col', '321321321321', 55646, 'arrozdiana23@gmail.com', '2023-07-26 14:44:07'),
+(10, 'juan', 'SOCIEDAD CON ACCIONES ', 'Bogota-col', '31258697', 258, 'arrozdiana23@gmail.com', '2023-07-26 14:47:06');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `roles`
+-- Estructura de tabla para la tabla `rol`
 --
 
-CREATE TABLE `roles` (
+CREATE TABLE `rol` (
   `rolidrol` int(11) NOT NULL,
   `rol` varchar(255) NOT NULL,
   `rolidper` int(11) NOT NULL,
@@ -285,9 +262,20 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `usuario`, `correo`, `telefono`, `password`, `fecha`, `id_rol`) VALUES
-(2, 'Ejemplo', 'example@gmail.com ', '8141137188', '$2y$05$2PLDl19.fsHtUZtEmmAT9u.dehxDPgi/FmcAtTeykiETGdSbpf5Km', '2023-05-30 17:02:15', 2),
-(5, 'Administrador', 'admin@softcodepm.com ', '45354356', '$2y$05$rSGStdVtYXAeIMxNwVR1suYBn4LT7zwImjLKvEMTT7Rxx1kKlCA8W', '2023-07-02 00:46:41', 1),
-(6, 'juan', 'juan23@gmail.com ', '3225136051', '$2y$05$.G.vhJb.jt13j5ku/b55NOluzH5xycda6vSZ4WSENGyb6psmY20jK', '2023-07-23 20:08:39', 2);
+(5, 'Administrador', 'admin@softcodepm.com', '45354356', '$2y$05$Lu7WwzfDYDplQCiyfePEHu.qd171Bo7CAJHbqsqlYWldMITAVffu6', '2023-07-24 16:03:20', 1),
+(6, 'juan', 'juan23@gmail.com', '3225136051', '$2y$05$zwn2qLkw9NMkpSdr8lzgs.fdn1Y8RfPyLSgr4.sq3W.qh/wDuZ6Ca', '2023-07-24 14:40:12', 2),
+(7, 'Jhan Franco Diaz', 'jhanfrancoo123@gmail.com ', '3225136051', '$2y$05$POYzRzQhY8JYw0lrsOp08uZUzHLjNTkPXssJkRlYRcDYOxQ1ZPC8u', '2023-07-24 13:25:12', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `userxrol`
+--
+
+CREATE TABLE `userxrol` (
+  `rol_id` int(11) NOT NULL,
+  `users_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -322,15 +310,9 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `codbarra`
+-- Indices de la tabla `factura`
 --
-ALTER TABLE `codbarra`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `facturas`
---
-ALTER TABLE `facturas`
+ALTER TABLE `factura`
   ADD PRIMARY KEY (`facid`),
   ADD KEY `facidper` (`facidper`);
 
@@ -341,16 +323,10 @@ ALTER TABLE `inventario`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `ordendeentregas`
+-- Indices de la tabla `ordendeentrega`
 --
-ALTER TABLE `ordendeentregas`
+ALTER TABLE `ordendeentrega`
   ADD PRIMARY KEY (`ordid`);
-
---
--- Indices de la tabla `pagos`
---
-ALTER TABLE `pagos`
-  ADD PRIMARY KEY (`pagid`);
 
 --
 -- Indices de la tabla `parametros`
@@ -359,9 +335,9 @@ ALTER TABLE `parametros`
   ADD PRIMARY KEY (`tarifaiva1`);
 
 --
--- Indices de la tabla `pedidos`
+-- Indices de la tabla `pedido`
 --
-ALTER TABLE `pedidos`
+ALTER TABLE `pedido`
   ADD PRIMARY KEY (`pedid`);
 
 --
@@ -383,9 +359,9 @@ ALTER TABLE `proveedores`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `roles`
+-- Indices de la tabla `rol`
 --
-ALTER TABLE `roles`
+ALTER TABLE `rol`
   ADD PRIMARY KEY (`rolidper`);
 
 --
@@ -393,6 +369,13 @@ ALTER TABLE `roles`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `userxrol`
+--
+ALTER TABLE `userxrol`
+  ADD KEY `rol_id` (`rol_id`),
+  ADD KEY `users_id` (`users_id`);
 
 --
 -- Indices de la tabla `ventas`
@@ -417,33 +400,21 @@ ALTER TABLE `clientes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `codbarra`
+-- AUTO_INCREMENT de la tabla `factura`
 --
-ALTER TABLE `codbarra`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT de la tabla `facturas`
---
-ALTER TABLE `facturas`
+ALTER TABLE `factura`
   MODIFY `facid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `inventario`
 --
 ALTER TABLE `inventario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT de la tabla `pagos`
+-- AUTO_INCREMENT de la tabla `pedido`
 --
-ALTER TABLE `pagos`
-  MODIFY `pagid` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `pedidos`
---
-ALTER TABLE `pedidos`
+ALTER TABLE `pedido`
   MODIFY `pedid` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -462,13 +433,13 @@ ALTER TABLE `productos_vendidos`
 -- AUTO_INCREMENT de la tabla `proveedores`
 --
 ALTER TABLE `proveedores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
@@ -481,10 +452,17 @@ ALTER TABLE `ventas`
 --
 
 --
--- Filtros para la tabla `facturas`
+-- Filtros para la tabla `factura`
 --
-ALTER TABLE `facturas`
-  ADD CONSTRAINT `facturas_ibfk_1` FOREIGN KEY (`facidper`) REFERENCES `roles` (`rolidper`);
+ALTER TABLE `factura`
+  ADD CONSTRAINT `factura_ibfk_1` FOREIGN KEY (`facidper`) REFERENCES `rol` (`rolidper`);
+
+--
+-- Filtros para la tabla `userxrol`
+--
+ALTER TABLE `userxrol`
+  ADD CONSTRAINT `userxrol_ibfk_1` FOREIGN KEY (`rol_id`) REFERENCES `rol` (`rolidper`),
+  ADD CONSTRAINT `userxrol_ibfk_2` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

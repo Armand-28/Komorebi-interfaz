@@ -27,21 +27,29 @@
         <input type="search" placeholder="¿Que buscas hoy?" /><span
           ><i class="fa-solid fa-magnifying-glass"></i
         ></span>
+        <!-- Carrito -->
         <p class="carro"><i class="fa-solid fa-cart-shopping carrito-compras"></i></p>
         <p>
           <li class="li-1"><a href="#">Mi carrito</a></li>
         </p>
+        <!-- Cuenta -->
         <p class="cuenta">
           <a href="../login/login.html"
             ><i class="fa-solid fa-circle-user"></i></a>
         </p>
         <li class="li-2"><a href="../login/login.html">Mi cuenta</a></li>
+        <!-- Admin -->
+        <p class="admin">
+          <a href="../panel-admin/includes/sesion/login.php"
+            ><i class="fa-solid fa-user-gear user-admin"></i></a>
+        </p>
+        <li class="li-3"><a href="../login/login.html">Admin</a></li>
+        <!-- modo entrega -->
         <div>
           <p class="modoentrega">
             <i class="fa-sharp fa-solid fa-shop"></i
             ><a href="#">Modo de entrega</a>
           </p>
-          <a href="../userAdmin\index.php">aaa</a>
           <p class="quienessomos">
             <a href="../nosotros/nosotros.html"
               ><i class="fa-solid fa-store"></i> ¿Quienes somos?</a
@@ -141,6 +149,51 @@
           </p>
         </section>
       </div>
+      <footer>
+        <div class="container__footer">
+            <div class="box__footer">
+                <div class="logo">
+                    <img src="../imagenes/logo rojo.png" alt="">
+                </div>
+                <div class="terms">
+                  <p>Plaza autoservicios S.A.S NIT 123 321 1234.
+                    <p>Direccion:Oficina central, Calle 8 # 12a-44, Bogotá</p>
+                    <p>Lunes a Viernes de 7:00 am a 4:45 pm</p>
+                    plaza-autoservicios@gmail.com
+                    </p>
+                </div>
+            </div>
+            <div class="box__footer">
+              <h2>Atención al Cliente</h2>
+              <a href="#">Peticiones,Quejas y Reclamos</a>
+              <a href="#">Preguntas frecuentes</a>
+              <a href="#">Oportunidades de empleo</a>
+              <a href="#">Tendencia</a>
+          </div>
+
+          <div class="box__footer">
+              <h2>Compañia</h2>
+              <a href="../nosotros/nosotros.html">Acerca de nosotros</a>
+              <a href="#">Politica & privacidad</a>
+              <a href="#">Procesos</a>
+              <a href="#">Servicios</a>              
+          </div>
+
+            <div class="box__footer">
+              <h2>Redes Sociales</h2>
+              <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
+              <a href="#"><i class="fab fa-whatsapp-square"></i> Whatsapp</a>
+              <a href="#"><i class="fab fa-youtube"></i> Youtube</a>
+              <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+            </div>
+
+        </div>
+
+        <div class="box__copyright">
+            <hr>
+            <p>Todos los derechos reservados © 2021 </p>
+        </div>
+    </footer>
     
         <!-- Carrito de Compras -->
         <div class="carrito" style="margin-right: -100%;" id="carrito">
@@ -263,6 +316,7 @@
           <button class="btn-guardar" id="btn-guardar"><a href="#">Guardar</a></button>
         </div>
       </div>
+      
     </div> <!-- div container -->
     <script
       src="https://kit.fontawesome.com/72ac7502a0.js"

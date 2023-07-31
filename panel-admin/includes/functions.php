@@ -66,8 +66,8 @@ function insertar_proveedor()
     extract($_POST);
     include "db.php";
 
-    $consulta = "INSERT INTO proveedores (name, r_social, direccion, telefono, rfc, correo) 
-    VALUES ('$name', '$r_social','$direccion','$telefono','$rfc','$correo')";
+    $consulta = "INSERT INTO proveedores (name, r_social, direccion, telefono, nit, correo) 
+    VALUES ('$name', '$r_social','$direccion','$telefono','$nit','$correo')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -75,6 +75,7 @@ function insertar_proveedor()
             'status' => 'success',
             'message' => 'Los datos se guardaron correctamente'
         );
+
     } else {
         $response = array(
             'status' => 'error',
@@ -137,7 +138,7 @@ function editar_prov()
 
 
     $consulta = "UPDATE proveedores SET name = '$name', r_social = '$r_social', 
-    direccion = '$direccion',  telefono = '$telefono', rfc = '$rfc', correo = '$correo' WHERE id = '$id' ";
+    direccion = '$direccion',  telefono = '$telefono', nit = '$nit', correo = '$correo' WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {

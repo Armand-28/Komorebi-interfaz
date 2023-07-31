@@ -114,7 +114,15 @@
                 data: formData,
                 dataType: 'json', // Espera una respuesta en formato JSON
                 success: function(response) {
-                    if (response.status === 'success') {
+                    if (response.status !== 'success') {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Ocurrió un error inesperado'
+                        });
+                        return;
+                    }
+
                         Swal.fire({
                             icon: 'success',
                             title: 'Éxito',
@@ -122,13 +130,6 @@
                         }).then(function() {
                             window.location = "inventario.php"; // Redirecciona al usuario a la página deseada
                         });
-                    } else {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error',
-                            text: 'Ocurrió un error inesperado'
-                        });
-                    }
                 },
                 error: function(xhr, status, error) {
                     Swal.fire({

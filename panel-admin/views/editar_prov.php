@@ -43,8 +43,13 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="nit">Nit</label><br>
+                                <input type="number" name="nit" id="nit" class="form-control" value="<?php echo $fila['nit']; ?>" required>
+                            </div>
+                        </div>
                         <div class="col-sm-6">
                             <div class="mb-3">
                                 <label for="password">Correo </label><br>

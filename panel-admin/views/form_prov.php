@@ -47,8 +47,8 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">RFC </label><br>
-                                <input type="text" name="rfc" id="rfc" class="form-control" required>
+                                <label for="password">Nit </label><br>
+                                <input type="number" name="nit" id="rfc" class="form-control" required>
                             </div>
                         </div>
 
