@@ -55,20 +55,23 @@ header p{
 }
 .navegacion input{
     position: absolute;
-    width: 580px;
-    height: 40px;
+    width: 600px;
+    height:45px ;
+    border-radius: 10px;
     left: 507px;
     top: 20px;
-    border-radius: 20px;
     border: none;
     outline: none;
     padding-left: 20px;
     font-size: 16px;
     font-family: var(--YanoneKaffeesatz);
+    
 }
 .navegacion input::placeholder{
     color: #aaaaaa;
     font-family: var(--YanoneKaffeesatz);
+    letter-spacing: 4px;
+    font-weight: bold;
 }
 .navegacion span{
     position: absolute;
@@ -256,9 +259,10 @@ div .quienessomos .fa-store{
     top: -350px;
     left: -5px;
     border: 2px solid #aaaaaa;
-    width: 600px;
+    width: 900px;
     height: 600px;
     overflow: hidden;
+    margin-left: 260px;
 }
 .carrusel p:first-child .fa-arrow-left{
     position: absolute;
@@ -311,7 +315,7 @@ div .quienessomos .fa-store{
 section{
     position: relative;
     top: -300px;
-    width: 1600px;
+    width: 100%;
     height: 650px;
     margin: auto;
     display: grid;
@@ -439,10 +443,10 @@ div:nth-child(1) .precios p:nth-child(3){
     font-size: 15px;
 }
 .ofertas{
-    position: absolute;
+    position: relative;
     display: block;
-    left: 223px;
-    top: 1580px;
+    margin: auto;
+    top: -200px;
     border-top: 5px solid #e90000;
     width: 1180px;
 }
@@ -664,7 +668,7 @@ footer{
     width: 100%;
 }
 .contenedor .contenedor-items .item:hover{
-    box-shadow: 0 0 10px #666;
+    box-shadow: 0 0 15px #b4b4b4;
     scale: 1.05;
 }
 .contenedor .contenedor-items .item .titulo-item{
@@ -686,10 +690,17 @@ footer{
     border: none;
     background-color: #FF9F23;
     color: #fff;
-    padding: 5px 5px;
+    padding: 10px 8px;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    font-size: 14px;
+}
+.contenedor .contenedor-items .item .boton-item i{
+    color: #FFFFFF;
+    font-size: 15px;
+    position: absolute;
+    margin-left: -18px;
 }
 .contenedor .contenedor-items .item p{
     color: #aaaaaa;
@@ -700,7 +711,7 @@ footer{
 /* seccion carrito */
 .carrito{
     border: 1px solid #666;
-    width: 26%;
+    width: 30%;
     margin-top: 30px;
     border-radius: 10px;
     overflow: hidden;
@@ -835,6 +846,17 @@ footer{
     }
     .carrito{
         width: 100%;
+    }
+  }
+  @media screen and (max-width: 1600px) {
+    .contenedor {
+      display: block;
+    }
+    .contenedor-items{
+        width: 100% ;
+    }
+    .carrito{
+        width: 23%;
     }
   }
   
@@ -1221,8 +1243,78 @@ footer{
 
 }
 /* seccion responsive */
-@media screen and (max-width:1000px){
-
+@media screen and (min-width:1900px){
+    .container{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .navegacion .admin{
+        position: absolute;
+        padding-left: 675px;
+    }
+    .navegacion .li-3{
+        position:absolute ;
+        margin-left: 390px;
+    }
+    .navegacion .cuenta{
+        position: absolute;
+        padding-left: 594px;
+    }
+    .navegacion .li-2{
+        position:absolute ;
+        margin-left: 380px;
+    }
+    .navegacion .carro{
+        position: absolute;
+        padding-left: 450px;
+    }
+    .navegacion .li-1{
+        position:absolute ;
+        margin-left: 370px;
+    }
+    .navegacion input{
+        margin-left: 200px;
+        width: 750px;
+        height:45px ;
+        border-radius: 10px;
+    }
+    .navegacion input::placeholder{
+       text-align: center;
+       letter-spacing: 4px;
+       font-weight: bold;
+    }
+    .navegacion span{
+        margin-left: 340px;
+    }
+    .navegacion div{
+        margin-left: 270px;
+    }
+    .navegacion p img{
+        width: 300px;
+        height: 80px;
+        top: 0px;
+        margin-left: 100px;
+    }
+    .navegacion .fa-bars{
+        font-size: 60px;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+    .carrito{
+        width: 20%;
+    }
+    .carrusel{
+        width: 60%;
+        margin: auto;
+    }
+    #menu{
+        width: 18%;
+    }
+    #menu li{
+        margin-right: 100px;
+    }
     section{
         display: block;
         top: -250px;
@@ -1230,8 +1322,7 @@ footer{
         grid-template-columns: repeat(2, 280px);
         grid-template-rows: repeat(1, -200px);
         grid-area: 20px;
-        margin-left: 200px;
-        
+        margin-left: 200px;  
     }
     .promociones{
         margin-bottom: 20px;
@@ -1239,65 +1330,4 @@ footer{
         height: 380px;
     }
 }
-@media screen and (max-width:1900px) {
-    .container{
-        width: 100%;
-    }
-    .navegacion{
-        width: 100%;
-    }
-    header{
-        width: 100%;
-    }
-}
-@media screen and (max-width:1600px) {
-    .container{
-        width: 100%;
-    }
-    .navegacion{
-        width: 100%;
-    }
-    .carrusel{
-        width: 850px;
-        margin-left: 250px;
-    }
-    header{
-        width: 100%;
-    }
-}
-@media screen and (max-width:800px) {
-    .container{
-        width: 100%;
-    }
-    header{
-        width: 100%;
-    }
-    .navegacion{
-        width: 100%;
-    }
-    .carrusel{
-        width: 600px;
-        height: 300px;
-    }
-    .navegacion .fa-bars{
-        left: 20px;
-        font-size: 30px;
-    }
-    .navegacion p a img{
-        width: 100px;
-        height: 50px;
-        top: 0px;
-        left: 60px;
-    }
-    .navegacion input{
-        width: 180px;
-        left: 270px;
-    }
-    .navegacion .carro{
-        left: -750px;
-    }
-    .navegacion .cuenta{
-        left: -760px;
-    }
 
-}
