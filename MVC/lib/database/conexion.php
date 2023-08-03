@@ -1,14 +1,14 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$namedb = "komorebi"; 
-
-$conectar = mysqli_connect($host, $user, $pass, $namedb) or die("Error de conexion");
-
-echo "Conectado";
-
-
+class conexionDatabase{
+    public static function conexion(){
+        $localhost = "localhost"; 
+        $db = "komorebi"; 
+        $usuario = "root"; 
+        $pass = ""; 
+        $conexion = mysqli_connect($localhost, $usuario, $pass, $db);
+        return $conexion; 
+    }
+}
 
 ?>
