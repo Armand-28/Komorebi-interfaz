@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Komorebi</title>
-    <link rel="stylesheet" href="../index/main.css">
+    <?php echo (isset($style)) ? $style : "" ?>
     <script src="https://kit.fontawesome.com/96f9a4100d.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -322,7 +322,7 @@
       src="https://kit.fontawesome.com/72ac7502a0.js"
       crossorigin="anonymous"
     ></script>
-    <script src="helper.js"></script>
-    <script src="main.js"></script>
+    <script src="assets/js/helper.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
