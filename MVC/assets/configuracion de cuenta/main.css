@@ -1,0 +1,921 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --Caveat: "Caveat", cursive;
+    --YanoneKaffeesatz: "Yanone Kaffeesatz", sans-serif;
+    --OpenSans: "Open Sans", sans-serif;    
+}
+.container{
+    position: relative;
+    max-width: 1600px;
+    height: 100vh; 
+    margin: auto;
+    font-family: var(--YanoneKaffeesatz);
+}
+header{
+    position: relative;
+    background-color: #D2D2D2;
+    width: 1600px;
+    height: 30px;
+    overflow: hidden;
+}
+header p{
+    position: relative;
+    display:inline-flex ;
+    align-items:center ;
+    font-size: 20px;
+    padding-left: 25px; 
+    top: 5px;
+    left: 15px;
+    color: #777777;
+}
+.navegacion{
+    position: relative;
+    background-color: #e90000;
+    width: 1600px;
+    height: 120px;
+}
+.navegacion .seguir{
+    position: absolute;
+    top: 40px;
+    font-size: 17px;
+    font-family: var(--YanoneKaffeesatz);
+    color: #FFFFFF;
+    left: -10px;
+    cursor: pointer;
+}
+.navegacion .seguir i{
+    color: #FF9F23;
+    font-size: 25px;
+}
+
+.navegacion p img{
+    position: absolute;
+    top: -30px;
+    width: 200px;
+    height: 100px;
+    left: 180px;
+}
+.navegacion input{
+    position: absolute;
+    width: 580px;
+    height: 40px;
+    left: 507px;
+    top: 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: var(--YanoneKaffeesatz);
+}
+.navegacion input::placeholder{
+    color: #aaaaaa;
+    font-family: var(--YanoneKaffeesatz);
+}
+.navegacion span{
+    position: absolute;
+    top: 30px;
+    left: 1055px;
+    font-size: 23px;
+    color: #000000; 
+    cursor: pointer;
+}
+.carro .fa-cart-shopping{
+    position: relative;
+    left: 1240px;
+    top:30px;
+    color: #FFFFFF;
+    font-size: 40px;
+}
+.navegacion .li-1{
+position: absolute;
+list-style: none;
+left: 1305px;
+top: 80px;
+font-size: 16px;
+}
+.li-1 a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cuenta .fa-circle-user{
+    position: relative;
+    left: 1210px;
+    top: 30px;
+    color: #FFFFFF;
+    font-size:  40px;
+}
+.navegacion .li-2{
+    position: absolute;
+    list-style: none;
+    left: 1400px;
+    top: 80px;
+    font-size: 16px;
+    z-index: 1;
+    }
+.li-2 a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 14px;
+    font-weight: bold;
+}
+.navegacion div{
+position: absolute;
+top: 70px;
+left: 538px;
+display: flex;
+width: 500px;
+height: 40px;
+justify-content: space-between;
+}
+.navegacion div .modoentrega{
+    position: absolute;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 180px;
+    height: 28px;
+    top: 6px;
+    font-size: 14px;
+    font-family: var(--OpenSans);
+    font-weight: 600;
+}
+.modoentrega a{
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+div .modoentrega .fa-shop{
+    position: absolute;
+    color: #000000;
+    font-size: 20px;
+    left: 15px;
+    top: 4px;
+}
+.navegacion div .quienessomos{
+    position: absolute;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 180px;
+    height: 28px;
+    top: 6px;
+    left: 350px;
+    font-size: 14px;
+    font-family: var(--YanoneKaffeesatz);
+    font-weight: 600;
+}
+.quienessomos a{
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px
+}
+div .quienessomos .fa-store{
+    position: absolute;
+    color: #000000;
+    font-size: 20px;
+    left: 15px;
+    top: 4px;
+}
+.container2{
+    position: relative;
+    top: 0px;
+    margin: auto;
+    width: 1600px;
+    height: 100vh;
+}
+aside{
+    position: absolute;
+    width: 250px;
+    top: 80px;
+    height: 500px;
+}
+aside p i{
+    position: absolute;
+    font-size: 80px;
+    left: 50px;
+    color: #777777;
+}
+aside p:nth-child(2){
+    position: absolute;
+    top: 90px;
+    left: 58px;
+    font-size: 14px;
+}
+aside p:nth-child(3){
+position: absolute;
+top: 110px;
+left: 54px;
+font-size: 22px;
+font-weight: bolder;
+}
+aside ul{
+    position: absolute;
+    top: 150px;
+    left: 58px;
+    list-style: none;
+}
+aside ul li{
+    border-left:3px solid #FF9F23 ;
+    height: 29px;
+    margin-top: 30px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+aside ul a{
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+    left: 0px;
+    border-left: 3px solid #FF9F23;
+    padding: 5px 5px;
+    color: #000000;
+    width: 30px;
+}
+#perfil{
+    top: 100px;
+    display: none;
+    z-index: 7;
+    transition: all .3s linear;
+}
+/* aside ul { */
+section{
+    position: relative;
+    margin: auto;
+    top: 200px;
+    box-shadow: 0px 0px 25px 0px #00000073;
+    border-radius: 10px;
+    width:500px;
+    height: 500px;
+}
+section input:hover{
+    border: 1px solid rgb(0, 156, 204);
+}
+section input{
+    border: 1px solid #000000;
+}
+section label:nth-child(1){
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(1) input{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+    width: 220px;
+
+}
+#contraseña{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+    width: 180px;
+
+}
+section label:nth-child(2){
+    position: absolute;
+    left: 280px;
+    top: 30px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+section label:nth-child(3){
+    position: absolute;
+    left: 30px;
+    top: 120px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(3) input{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    width: 438px;
+    border-radius: 10px;
+}
+section label:nth-child(4){
+    position: absolute;
+    left: 30px;
+    top: 230px;
+    font-weight: bolder;
+    font-size: 20px; 
+}
+section select{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+section label:nth-child(5){
+    position: absolute;
+    left: 240px;
+    top: 230px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(5) input{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    width: 230px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+}
+section label:nth-child(6){
+    position: absolute;
+    left: 30px;
+    top: 350px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+section label:nth-child(6) input{
+    position: absolute;
+    display: block;
+    height: 30px;
+    top: 25px;
+    width: 230px;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+section button{
+    position: absolute;
+    border: none;
+    background-color: #FF9F23;
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    top: 370px;
+    right: 30px;
+}
+section button a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+/* carrito de compras  reutilice el codigo pero cambia las clases que puso en el de direcciones*/
+.carritoCompras{
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 0 10px #000000;
+    background: #FFFFFF;
+    position: absolute;
+    left: 600px;
+    top:100px;
+    border-radius: 10px;
+}
+.carritoCompras .contenido{
+    display: block;
+    margin: 50px 80px ;
+    line-height: 80px;
+    text-align: center;
+}
+.carritoCompras .contenido i{
+    color: #e90000;
+    font-size: 130px;
+}
+.carritoCompras .contenido p{
+    font-family: var(--YanoneKaffeesatz);
+    font-weight: 500;
+    width: 380px;
+    margin-left: -60px;
+    font-size: 18px;
+}
+.carritoCompras .contenido button{
+    background: #FF9F23;
+    width: 190px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    top: 70px;
+}
+.carritoCompras .contenido button a{
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#carritoCompras{
+    display: none;
+    transition: all .3s  ;
+}
+/* parte 2 */
+#direccion{
+    display: none;
+    transition: all .3s;
+}
+/* pedidos */
+#pedidos{
+    display: none;
+    transition: all .3s;
+}
+footer{
+    position: relative;
+    top: -300px;
+    height: 400px;
+    overflow: hidden;
+}
+footer button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 60px;
+    top: 270px;
+    font-size: 40px;
+    font-weight: normal;
+    color: #e90000;
+    cursor: pointer;
+}
+.emerguente{
+    position: relative;
+    border: 2px solid #000000;
+    width: 350px;
+    height: 220px;
+    top: -300px;
+    left: -600px;
+    opacity: 0;
+    transition: all .2s ease-in;
+}
+.emerguente.active{
+    opacity: 1;
+    left: 80px;
+    top: -300px;
+}
+.emerguente .fa-circle-xmark{
+    position: absolute;
+    font-size: 23px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+footer button .emerguente .ayuda{
+    position: absolute;
+    font-size: 23px;
+    display: flex;
+    font-family: var(--YanoneKaffeesatz);
+    color: #000000;
+    left: 10px;
+    top: 50px;
+    width: 270px;
+    letter-spacing: 1px;
+    padding-left: -50px;
+    display: flex;
+}
+footer button .emerguente .ayuda a{
+    position: absolute;
+    padding-left: 50px;
+    text-decoration: none;
+    color: #000000;
+    left: 30px; 
+}
+footer button .emerguente .ayuda i{
+    position: absolute;
+    color: #e90000 ;
+    left: 0;
+    top: -10px;
+font-size: 35px
+}
+footer button .emerguente .ayuda2{
+    position: absolute;
+    display: flex;
+    font-size: 23px;
+    font-family: var(--YanoneKaffeesatz);
+    color: #000000;
+    left: 10px;
+    top: 50px;
+    display: flex;
+    width: 380px;
+    padding-left: 50px;
+    margin-top: 80px;
+}
+footer button .emerguente .ayuda2 a{
+    position: absolute;
+    padding-left: 34px;
+    text-decoration: none;
+    color: #000000;
+    left: 30px; 
+}
+footer button .emerguente .ayuda2 i{
+    position: absolute;
+    color: #e90000 ;
+    left: -10px;
+    font-size: 35px
+}
+
+/* modo entrega */
+.modo-entrega{
+    position: absolute;
+    background-color: #FFFFFF;
+    opacity: 0.2;
+    left: 550px;
+    width: 380px;
+    overflow: hidden;
+    height: 450px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px #000000;
+}
+#modo-entrega{
+    top: -450px;
+    opacity:0;
+    transition: all .4s linear;
+}
+#modo-entrega.active{
+    top: 150px;
+    opacity: 1;
+}
+.modo-entrega .fa-circle-xmark{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.modo-entrega .header-titulo{
+    background-color: #e90000;
+    color: #FFFFFF;
+    display: flex;
+    font-size: 12px;
+    margin-left: -80px;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+.modo-entrega .opc-modo-entrega{
+    display: flex;
+    width: 390px;
+    height: 360px;
+    border-radius: 10px;
+    justify-content: space-around;
+    padding-left: 0px;
+    border-radius: 10px;
+}
+.modo-entrega .opc-modo-entrega .recoger-tienda{
+    width: 120;
+    margin-top: 40px;
+    margin-left: -10px;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modo-entrega .opc-modo-entrega .recoger-tienda:hover{
+    transform: scale(1.02);
+}
+.modo-entrega .opc-modo-entrega .recoger-tienda img{
+    position: relative;
+    padding-left: -130px;
+    width: 160px;
+    height: 200px;
+}
+.modo-entrega .opc-modo-entrega .recoger-tienda p{
+    position: relative;
+    width: 160px;
+    left: 25px;
+    font-weight: bold;
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 17px;
+    top: 30px;
+
+}
+.modo-entrega .opc-modo-entrega .recoger-domicilio{
+    width: 120;
+    height: 320px;
+    margin-left: -20px;
+    margin-top: 40px;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modo-entrega .opc-modo-entrega .recoger-domicilio:hover{
+    transform:scale(1.02) ;
+}
+.modo-entrega .opc-modo-entrega .recoger-domicilio p{
+    position: relative;
+    width: 160px;
+    left: 25px;
+    font-weight: bold;
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 17px;
+    top: 30px; 
+}
+.modo-entrega .opc-modo-entrega .recoger-domicilio img{
+    width: 180px;
+    height: 200px;
+}
+/* verificar correo */
+.verificar{
+    position: absolute;
+    top: 350px;
+    width: 450px;
+    height: 220px;
+    box-shadow: 0px 0px 10px #000000;
+    z-index: 4;
+    background-color: #FFFFFF;
+    left:550px;
+}
+#verificar{
+    display: none;
+}
+.verificar.active{
+    opacity: 1;
+    top: 350px;
+}
+.verificar .header-titulo{
+    background-color: #e90000;
+    color: #FFFFFF;
+    height: 60px;
+    padding: 15px 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.verificar p{
+    font-size: 13px;
+    padding: 20px 25px;
+}
+.verificar div{
+    display: flex;
+    position: relative;
+    padding: 30px 20px;
+    justify-content: space-between;
+}
+.verificar div input{
+    height: 40px;
+    width: 300px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    outline: none;
+    padding: 0px 30px ;
+}
+.verificar div input::placeholder{
+    font-size: 14px;
+}
+.verificar div i{
+    position: absolute;
+    font-size: 25px;
+    padding: 7px 5px;
+}
+.verificar div .btn-verificar{
+    background-color: #FF9F23;
+    border: none;
+    height: 40px;
+    width: 90px;
+    border-radius: 10px;
+}
+.verificar div .btn-verificar a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 17px;
+}
+
+.verificar{
+    position: absolute;
+    top: 350px;
+    width: 450px;
+    height: 220px;
+    box-shadow: 0px 0px 10px #000000;
+    z-index: 10;
+    background-color: #FFFFFF;
+    left:550px;
+}
+#verificar{
+    display: none;
+}
+.verificar.active{
+    opacity: 1;
+    top: 350px;
+}
+.verificar .header-titulo{
+    background-color: #e90000;
+    color: #FFFFFF;
+    height: 60px;
+    padding: 15px 10px;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.verificar p{
+    font-size: 13px;
+    padding: 20px 25px;
+}
+.verificar div{
+    display: flex;
+    position: relative;
+    padding: 30px 20px;
+    justify-content: space-between;
+}
+.verificar div input{
+    height: 40px;
+    width: 300px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    outline: none;
+    padding: 0px 30px ;
+}
+.verificar div input::placeholder{
+    font-size: 14px;
+}
+.verificar div i{
+    position: absolute;
+    font-size: 25px;
+    padding: 7px 5px;
+}
+.verificar div .btn-verificar{
+    background-color: #FF9F23;
+    border: none;
+    height: 40px;
+    width: 90px;
+    border-radius: 10px;
+}
+.verificar div .btn-verificar a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 17px;
+}
+/* donde te encuentras */
+.donde-encuentras{
+    position: absolute;
+    width: 650px;
+    height: 390px;
+    box-shadow: 0px 0px 10px inset;
+    background-color: #FFFFFF;
+    top: 150px;
+    left: 500px;
+    border: 1px solid #000000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all .3s linear;
+}
+#donde-encuentras{
+    top: -350px;
+    opacity: 0;
+}
+#donde-encuentras.active{
+    top: 150px;
+    opacity: 1;
+}
+.donde-encuentras .header-titulo{
+    background-color: #e90000;
+    height: 70px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.donde-encuentras .contenido{
+    position: relative;
+    display: inline-block;
+    top: -20px;
+    padding: 0px -50px;
+    color: #000000;
+    line-height: 35px;
+    margin: 20px;
+}
+.donde-encuentras .contenido p{
+    font-size: 15px;
+    margin: 10px 0px 10px 0px;
+}
+.formulario-dir{
+    display: inline-block;
+}
+.formulario-dir label{
+    font-weight: bold;
+    font-size: 14px;
+}
+.formulario-dir input{
+    height: 30px;
+    border-radius: 5px;
+}
+.formulario-dir .barrio{
+    display: block;
+}
+.formulario-dir .barrio input{
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+}
+.formulario-dir .direccion{
+    position: relative;
+    top: 20px;
+    padding: 0 0px;
+    display: inline-block;
+}
+.formulario-dir .direccion select{
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+}
+.formulario-dir .direccion input[type="number"]{
+    width: 70px;
+}
+.formulario-dir .textarea{
+    display: inline-block;
+    position: relative;
+    top: 20px;
+}
+.formulario-dir .textarea textarea{
+    position: relative;
+    top: 20px;
+    height: 50px;
+    width: 520px;
+    padding: 10px 0;
+}
+.formulario-dir .textarea textarea::placeholder{
+    font-size: 15px;
+}
+.donde-encuentras .contenido .btn-guardar{
+    position: relative;
+    top: 40px;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    background: #FF9F23;
+    border: none;
+    cursor: pointer;
+}
+.donde-encuentras .contenido .btn-guardar a{
+    font-size: 17px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+/* Seguir comprando */
+
+.cuadro-seguir{
+    position: absolute;
+    top: 850px;
+    width: 450px;
+    height: 550px;
+    box-shadow: 0px 0px 20px #000000;
+    background-color: #FFFFFF;
+    left:600px;
+    border-radius: 10px;
+    transition: all .3s linear;
+}
+#cuadro-seguir{
+    top: -600px;
+    opacity: 1;
+}
+#cuadro-seguir.active{
+    opacity: 1;
+    top: 200px;
+    transition: all .3s linear;
+    z-index: 5;
+}
+.cuadro-seguir .fa-circle-check{
+    font-size: 215px;
+    color: #e90000;
+    padding: 35px 112px;
+}
+.cuadro-seguir h3{
+    text-align: center;
+    font-size: 20px;
+}
+.cuadro-seguir .btn-seguir{
+    background-color: #FF9F23;
+    border: none;
+    width: 140px;
+    height: 40px;
+    border-radius: 8px;
+    position: absolute;
+    left: 150px;
+    top: 400px;
+}
+.cuadro-seguir .btn-seguir a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+}
