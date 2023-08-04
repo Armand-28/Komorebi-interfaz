@@ -12,6 +12,7 @@
     --color-3: #777777;  
     --color-4: black; 
     --color-5: white;
+    --color-6: #FF9F23;
     --font-1: "Open Sans", sans-serif;
     --font-2: "Yanone Kaffeesatz", sans-serif;   
 }
@@ -47,7 +48,7 @@ a:link{
 
 .header-top .logo img{
     width: 150px;
-    height: 20px;
+    height: 30px;
     padding-right: 50px;
     padding-top: 5px;
 }
@@ -67,6 +68,7 @@ a:link{
 .header-bottom .icon-menu{
     margin-left: 50%;
     transform: translateX(-50%);
+    font-size: 40px;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
