@@ -1,5 +1,7 @@
 /* Global Configuration */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -14,17 +16,16 @@
     --color-5: white;
     --color-6: #FF9F23;
     --font-1: "Open Sans", sans-serif;
-    --font-2: "Yanone Kaffeesatz", sans-serif;   
+    --font-2: "Yanone Kaffeesatz", sans-serif;
+    --font-3: 'Poppins', sans-serif;
 }
 
 a:link{
     color: black;
 }
-
 /* Header */
 
 /* Header Top */
-
 .header-top{
     background: var(--color-2);
     display: flex;
@@ -57,7 +58,7 @@ a:link{
 
 .header-bottom{
     display: grid;
-    grid-template-columns: 10% 10% 50% 30%;
+    grid-template-columns: 19% 0% 50% 30%;
     align-items: center;
     justify-content: center;
     background: var(--color1);
@@ -99,7 +100,8 @@ a:link{
     border-radius: 10px;
     color: var(--color-3);
     padding: 8px 5px 8px 5px ;
-    font-family: var(--font-2);
+    font-family: var(--font-3);
+    font-size: 15px;
     border: none;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
