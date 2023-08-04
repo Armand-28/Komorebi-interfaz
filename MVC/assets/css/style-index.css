@@ -178,4 +178,5 @@ a:link{
 .services > a > p{
     margin-top: 10px;
     font-size: 16px;
+    font-family: var(--font-3);
 }
