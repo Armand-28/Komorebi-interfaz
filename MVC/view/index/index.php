@@ -17,7 +17,7 @@
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <div class="logo">
-                    <img src="assets/images/logo-white.png" alt="">
+                    <img src="../" alt="">
                 </div>
                 <div class="search">
                     <div id="search-bar">
@@ -47,7 +47,7 @@
     </div>
 
     <!-- Scripts Js-->
-    <script src="assets/js/helper.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/indexHelper.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html> 
