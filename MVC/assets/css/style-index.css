@@ -69,7 +69,7 @@ a:link{
 .header-bottom .icon-menu{
     margin-left: 50%;
     transform: translateX(-50%);
-    font-size: 40px;
+    font-size: 30px;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -103,6 +103,7 @@ a:link{
     font-family: var(--font-3);
     font-size: 15px;
     border: none;
+    text-align: center;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -114,7 +115,7 @@ a:link{
 .search .other-services {
     display: flex;
     margin-top: 10px;
-    gap: 10px;
+    gap: 15px;
     padding-bottom: 10px;
 }
 
@@ -129,13 +130,13 @@ a:link{
     text-decoration: none;
     padding: 7px;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: width 0.3s ease;
     cursor: pointer;
 }
 .search .other-services a .link-text{
     display: none;
-    font-family: var(--font-1);
+    font-family: var(--font-3   );
     font-size: 10px;
     margin-left: 5px;
 }
@@ -177,6 +178,10 @@ a:link{
 
 .services > a > p{
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: var(--font-3);
+}
+
+.services > a > i{
+    font-size: 25px;
 }
