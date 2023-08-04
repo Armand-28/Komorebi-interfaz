@@ -47,7 +47,11 @@ a:link{
 
 
 .header-top .logo img{
+<<<<<<< HEAD
     width: 150px;
+=======
+    width: 155px;
+>>>>>>> ed993f855831770432f5337324a943cd5acb1352
     height: 30px;
     padding-right: 50px;
     padding-top: 5px;

@@ -9,7 +9,7 @@
                     <a href="#"><i class="fa-solid fa-message"></i></a>
                 </div>
                 <div class="logo">
-                    <img src="assets\images\logo rojo.png" alt="">
+                    <img src="assets/images/logo rojo.png" alt="">
                 </div>
             </div>
             <div class="header-bottom">
@@ -45,7 +45,7 @@
             </div>
         </header>
     </div>
-
+    <div></div>
 
     <!-- Scripts Js-->
     <script src="assets/js/indexHelper.js"></script>
