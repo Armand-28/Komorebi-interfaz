@@ -9,7 +9,7 @@
                     <a href="#"><i class="fa-solid fa-message"></i></a>
                 </div>
                 <div class="logo">
-                    <img src="assets/images/" alt="">
+                    <img src="assets\images\logo rojo.png" alt="">
                 </div>
             </div>
             <div class="header-bottom">
@@ -17,7 +17,7 @@
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <div class="logo">
-                    <img src="../MVC/assets/images/logo rojo.png" alt="">
+                    <img src="../" alt="">
                 </div>
                 <div class="search">
                     <div id="search-bar">
