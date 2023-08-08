@@ -136,7 +136,7 @@ a:link{
 }
 .search .other-services a .link-text{
     display: none;
-    font-family: var(--font-3   );
+    font-family: var(--font-3);
     font-size: 10px;
     margin-left: 5px;
 }
@@ -146,13 +146,15 @@ a:link{
 }
 
 .search .other-services a:hover .link-text{
-    transition: 1s ease;
+    transition: 5s ease;
     display: block;
     -webkit-transition: 1s ease;
     -moz-transition: 1s ease;
     -ms-transition: 1s ease;
     -o-transition: 1s ease;
 }
+
+
 
 
 /* Services */
@@ -166,6 +168,7 @@ a:link{
 
 .services > a{
     display: flex;
+    height: 50%;
     flex-direction: column;
     align-items: center;
     font-family: var(--font-1);
@@ -174,14 +177,25 @@ a:link{
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    transition: height 0.3s ease ;
+}
+.services > a:hover{
+    height: 100%;
+}
+
+.services > a:hover p{
+    display: block;
+    transition: 3s ease;
 }
 
 .services > a > p{
     margin-top: 10px;
     font-size: 14px;
     font-family: var(--font-3);
+    display: none;
 }
 
 .services > a > i{
-    font-size: 25px;
+    font-size: 30px;
+    height: 50%;
 }
