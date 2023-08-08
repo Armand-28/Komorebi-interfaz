@@ -131,7 +131,7 @@ a:link{
     padding: 7px;
     overflow: hidden;
     border-radius: 10px;
-    transition: width 0.3s ease;
+    transition: width 0.8s ease;
     cursor: pointer;
 }
 .search .other-services a .link-text{
@@ -146,12 +146,8 @@ a:link{
 }
 
 .search .other-services a:hover .link-text{
-    transition: 5s ease;
+    transition: 2s ease;
     display: block;
-    -webkit-transition: 1s ease;
-    -moz-transition: 1s ease;
-    -ms-transition: 1s ease;
-    -o-transition: 1s ease;
 }
 
 
