@@ -1,3 +1,27 @@
+// botones de ayuda
+// Obtener todos los enlaces de íconos
+const iconLinks = document.querySelectorAll('.icon-link');
+
+// Agregar un evento de clic a cada enlace de ícono
+iconLinks.forEach(iconLink => {
+    iconLink.addEventListener('click', () => {
+        // Ocultar la información en todos los enlaces de íconos
+        iconLinks.forEach(link => {
+            if (link !== iconLink) {
+                link.removeAttribute('data-active');
+            }
+        });
+
+        // Mostrar u ocultar información según el estado actual
+        if (iconLink.getAttribute('data-active') === 'true') {
+            iconLink.removeAttribute('data-active');
+        } else {
+            iconLink.setAttribute('data-active', 'true');
+        }
+    });
+});
+
+// funciones de carrito
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
