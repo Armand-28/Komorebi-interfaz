@@ -419,36 +419,6 @@ a:link{
     .contenedor-items{
         width: 100%;
     }
-<<<<<<< HEAD
-    .carousel-image {
-        height: 400px;
-    }
-    
-  }
-
-/* Media query para dispositivos pequeños */
-@media (max-width: 768px) {
-  /* .container-fliud {
-    padding: 20px;
-  } */
-  .carousel-image {
-    height: 350px;
-    }
-}
-
-/* Media query para dispositivos extra pequeños */
-@media (max-width: 576px) {
-  .social-networks {
-    text-align: center;
-  }
-  .carousel-image {
-    height: 200px;
-    }
-}
-
-
-
-=======
     .carrito{
         width: 80%;
         top: auto;
@@ -468,4 +438,3 @@ a:link{
           width: 100%;
       }
 }
->>>>>>> 3553c52800dc1190e3a6446a68ada9cf534fe78c
