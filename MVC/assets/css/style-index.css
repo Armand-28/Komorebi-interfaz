@@ -218,8 +218,8 @@ a:link{
 .contenedor .contenedor-items{
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
-    grid-gap:10px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 5fr));
+    grid-gap:30px;
     grid-row-gap: 30px;
     /* width: 60%; */
     width: 100%;
@@ -266,17 +266,19 @@ a:link{
 /* seccion carrito */
 .carrito{
     border: 1px solid #666;
-    width: 35%;
+    width: 26%;
     margin-top: 30px;
     border-radius: 10px;
     margin-bottom: auto;
-    position: static !important;
+    position: absolute;
     top: 0;
     transition: .3s;
     /* Estilos para ocultar */
-    right: 0;
+    right: 10%;
     overflow: hidden;
-    opacity: 1;
+}
+#carrito{
+    display: none;
 }
 .carrito .header-carrito{
     background-color: #e90000;
@@ -391,6 +393,8 @@ a:link{
         width: 100% ;
     }
     .carrito{
-        width: 100%;
+        width: 80%;
+        top: auto;
+        margin: 40px;
     }
   }
