@@ -412,11 +412,12 @@ a:link{
     }
     .contenedor-items{
         width: 100% ;
+        margin: auto;
     }
     .carrito{
-        width: 100%;
+        width: 80%;
+        margin: 10%;
     }
-<<<<<<< HEAD
     .carousel-image {
         height: 400px;
     }
@@ -445,24 +446,3 @@ a:link{
 
 
 
-=======
-    .carrito{
-        width: 80%;
-        top: auto;
-        right: 10%;
-       
-    }
-  }
-@media screen and (min-width: 1100px){
-    .carrito{
-        width: 38%;
-        right: 0;
-    }
-    .contenedor {
-        display: block;
-      }
-      .contenedor-items{
-          width: 100%;
-      }
-}
->>>>>>> 3553c52800dc1190e3a6446a68ada9cf534fe78c
