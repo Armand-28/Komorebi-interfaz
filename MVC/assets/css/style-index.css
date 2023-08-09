@@ -266,19 +266,23 @@ a:link{
 /* seccion carrito */
 .carrito{
     border: 1px solid #666;
-    width: 26%;
+    width: 32%;
     margin-top: 30px;
     border-radius: 10px;
     margin-bottom: auto;
-    position: absolute;
-    top: 0;
+    position: absolute; 
+    top: 119px;
+    background-color: #fff;
     transition: .3s;
     /* Estilos para ocultar */
-    right: 10%;
+    right: 0;
+    opacity: 0;
     overflow: hidden;
 }
-#carrito{
-    display: none;
+#carrito.active{
+    opacity: 1;
+    top: 127px;
+
 }
 .carrito .header-carrito{
     background-color: #e90000;
@@ -390,11 +394,24 @@ a:link{
       display: block;
     }
     .contenedor-items{
-        width: 100% ;
+        width: 100%;
     }
     .carrito{
         width: 80%;
         top: auto;
-        margin: 40px;
+        right: 10%;
+       
     }
   }
+@media screen and (min-width: 1100px){
+    .carrito{
+        width: 38%;
+        right: 0;
+    }
+    .contenedor {
+        display: block;
+      }
+      .contenedor-items{
+          width: 100%;
+      }
+}
