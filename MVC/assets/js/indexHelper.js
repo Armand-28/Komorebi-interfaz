@@ -1,18 +1,4 @@
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(";");
-  for (let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == " ") {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
+//Variable que mantiene el estado visible del carrito
 var carritoVisible = false;
 
 //Espermos que todos los elementos de la pàgina cargen para ejecutar el script
@@ -23,11 +9,6 @@ if(document.readyState == 'loading'){
 }
 
 function ready(){
-
-    var carrito = getCookie("carrito") !== "" ? JSON.parse(getCookie("carrito")) : [];
-    carrito.forEach(element => {
-        agregarItemAlCarrito(element.titulo, element.precio, element.imagenSrc, false);
-    });
     
     //Agregremos funcionalidad a los botones eliminar del carrito
     var botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
@@ -35,8 +16,6 @@ function ready(){
         var button = botonesEliminarItem[i];
         button.addEventListener('click',eliminarItemCarrito);
     }
-
-    console.log(botonesEliminarItem)
 
     //Agrego funcionalidad al boton sumar cantidad
     var botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
@@ -93,21 +72,19 @@ function hacerVisibleCarrito(){
     var carrito = document.getElementsByClassName('carrito')[0];
     carrito.style.marginRight = '0';
     carrito.style.opacity = '1';
-    carrito.style.display = "block"
 
     var items =document.getElementsByClassName('contenedor-items')[0];
-    items.style.width = '100%';
+    items.style.width = '60%';
 }
 
 //Funciòn que agrega un item al carrito
-function agregarItemAlCarrito(titulo, precio, imagenSrc, esNuevo = true){
+function agregarItemAlCarrito(titulo, precio, imagenSrc){
     var item = document.createElement('div');
     item.classList.add = ('item');
     var itemsCarrito = document.getElementsByClassName('carrito-items')[0];
 
     //controlamos que el item que intenta ingresar no se encuentre en el carrito
     var nombresItemsCarrito = itemsCarrito.getElementsByClassName('carrito-item-titulo');
-
     for(var i=0;i < nombresItemsCarrito.length;i++){
         if(nombresItemsCarrito[i].innerText==titulo){
             alert("El item ya se encuentra en el carrito");
@@ -146,17 +123,6 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc, esNuevo = true){
     var botonSumarCantidad = item.getElementsByClassName('sumar-cantidad')[0];
     botonSumarCantidad.addEventListener('click',sumarCantidad);
 
-    //Actualizar carrito en la cookie
-    if (esNuevo) {
-        var carrito = getCookie("carrito") !== "" ? JSON.parse(getCookie("carrito")) : [];
-        carrito.push({
-            titulo: titulo,
-            imagenSrc: imagenSrc,
-            precio: precio
-        })
-        document.cookie = `carrito=${JSON.stringify(carrito)};path=/`
-    }
-
     //Actualizamos total
     actualizarTotalCarrito();
 }
@@ -186,18 +152,7 @@ function restarCantidad(event){
 //Elimino el item seleccionado del carrito
 function eliminarItemCarrito(event){
     var buttonClicked = event.target;
-    var item = buttonClicked.parentElement.parentElement;
-    var carrito = getCookie("carrito") !== "" ? JSON.parse(getCookie("carrito")) : [];
-
-    carrito.forEach((element, indice) => {
-        var titulo = item.querySelector(".carrito-item-titulo").innerHTML
-        if (element.titulo == titulo) {
-            carrito.splice(indice, 1);
-        }
-    });
-
-    item.remove();
-    document.cookie = `carrito=${JSON.stringify(carrito)};path=/`
+    buttonClicked.parentElement.parentElement.remove();
     //Actualizamos el total del carrito
     actualizarTotalCarrito();
 
@@ -240,3 +195,10 @@ function actualizarTotalCarrito(){
     document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es") + ",00";
 
 }
+
+
+
+
+
+
+
