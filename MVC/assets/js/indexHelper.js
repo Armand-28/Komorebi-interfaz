@@ -1,4 +1,42 @@
-//Variable que mantiene el estado visible del carrito
+// botones de ayuda
+// Obtener todos los enlaces de íconos
+const iconLinks = document.querySelectorAll('.icon-link');
+
+// Agregar un evento de clic a cada enlace de ícono
+iconLinks.forEach(iconLink => {
+    iconLink.addEventListener('click', () => {
+        // Ocultar la información en todos los enlaces de íconos
+        iconLinks.forEach(link => {
+            if (link !== iconLink) {
+                link.removeAttribute('data-active');
+            }
+        });
+
+        // Mostrar u ocultar información según el estado actual
+        if (iconLink.getAttribute('data-active') === 'true') {
+            iconLink.removeAttribute('data-active');
+        } else {
+            iconLink.setAttribute('data-active', 'true');
+        }
+    });
+});
+
+// funciones de carrito
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
 var carritoVisible = false;
 
 //Espermos que todos los elementos de la pàgina cargen para ejecutar el script
@@ -195,10 +233,3 @@ function actualizarTotalCarrito(){
     document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es") + ",00";
 
 }
-
-
-
-
-
-
-
