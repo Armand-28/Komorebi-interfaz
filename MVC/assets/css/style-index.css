@@ -180,7 +180,7 @@ a:link{
     transition: height 0.3s ease ;
 }
 .services > a:hover{
-    height: 100%;
+    height: 90%;
 }
 
 .services > a:hover p{
@@ -223,7 +223,7 @@ a:link{
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
-    grid-gap:10px;
+    grid-gap:30px;
     grid-row-gap: 30px;
     /* width: 60%; */
     width: 100%;
@@ -256,7 +256,11 @@ a:link{
     font-weight: bold;
     font-size: 22px;
 }
-
+.contenedor .contenedor-items .item p{
+    text-align: center;
+    font-size: 14px;
+    color: #7a7a7a;
+}
 .contenedor .contenedor-items .item .boton-item{
     display: block;
     margin: 10px auto;
@@ -279,15 +283,12 @@ a:link{
     top: 119px;
     transition: .3s;
     /* Estilos para ocultar */
-    right: 100%;
-    opacity: 0.2;
+    right: 0;
+    opacity: 1;
+    display: none;
     overflow: hidden;
 }
-#carrito.active{
-    opacity: 1;
-    right: 0;
 
-}
 .carrito .header-carrito{
     background-color: #e90000;
     color: #fff;
@@ -415,7 +416,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 90%;
     margin: auto;
     margin-top: 120px;
 }
