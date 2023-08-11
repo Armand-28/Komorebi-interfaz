@@ -10,7 +10,6 @@ if(!isset($_REQUEST['a'])){
     $controller = new $controller;
     $controller -> Inicio();  
 }else{
-
     $controller = strtolower($_REQUEST['a']); 
     $action = isset($_REQUEST['b']) ? $_REQUEST['b'] : 'Inicio'; 
     require_once "controller/$controller.controller.php";

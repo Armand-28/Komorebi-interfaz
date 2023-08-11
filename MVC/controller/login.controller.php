@@ -25,22 +25,35 @@
 include_once "model/login.php"; 
 
 class loginController{
+    private $object; 
+    public function __construct()
+    {
+        $this->object = new login(); 
+    }
 
     public function Inicio(){
-        require_once "view/login/index.html"; 
+        require_once "view/login/login.php"; 
     }
 
-    public function Hola(){
-        echo "Funcion Hola"; 
+    public function validarFormulario(){
+        if(empty($_POST['user']) || empty($_POST['pass'])){ 
+            header("Location: ?a=login&b=Inicio"); 
+        }else{
+            $name = $_POST['user']; 
+            $pass = $_POST['pass'];  
+            if($this->object->usuarioExiste($name)){
+                if($this->object->passwordExiste($pass)){
+                    header("Location: ?a=paneladmin&b=Inicio"); 
+                }else{
+                    header("Location: ?a=login&b=Inicio"); 
+                }
+            }else{
+                header("Location: ?a=login&b=Inicio"); 
+            }
+        }
     }
 
-    public function Verificar(){
 
-        $login = new Login();
-        
-        $login->usuarioExiste(); 
-
-    }
 }
 
 ?>
