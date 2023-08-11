@@ -408,8 +408,9 @@ a:link{
 
 @media screen and (max-width: 850px) {
     .contenedor {
-      display: block;
+        display: block;
     }
+      
     .contenedor-items{
         width: 100% ;
         margin: auto;
