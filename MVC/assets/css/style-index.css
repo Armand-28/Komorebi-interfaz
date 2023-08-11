@@ -279,12 +279,13 @@ a:link{
     top: 119px;
     transition: .3s;
     /* Estilos para ocultar */
-    right: 0;
-    opacity: 1;
+    right: 100%;
+    opacity: 0.2;
     overflow: hidden;
 }
-#carrito{
-    display: block;
+#carrito.active{
+    opacity: 1;
+    right: 0;
 
 }
 .carrito .header-carrito{
@@ -292,6 +293,13 @@ a:link{
     color: #fff;
     text-align: center;
     padding: 30px 0;
+}
+p > .fa-xmark{
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    font-size: 20px;
+    cursor: pointer;        
 }
 .carrito .carrito-item{
     display: flex;
@@ -391,14 +399,14 @@ a:link{
     scale: 1.05;
 }
 
-/* init footer */
+/* footer de la */
 
 footer{
     width: 100%;
     padding: 50px 0px;
     background-image: url('../../assets/images/background-footer.svg');
     background-size: cover;
-    margin-top: 950px;
+    
     /*background-color: #d0f0f8;
     -webkit-mask-image: url("../Images/background-footer.svg");
     mask-image: url("../Images/background-footer.svg");
@@ -412,29 +420,29 @@ footer{
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 .box__footer{
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 35px;
 }
 
 .box__footer .logo img{
-    width: 180px;
+    width: 200px;
 }
 
 .box__footer .terms{
-    max-width: 350px;
+    max-width: 330px;
     margin-top: 20px;
     font-weight: 500;
     color: #7a7a7a;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .box__footer h2{
-    margin-bottom: 30px;
+    margin-bottom: 55px;
     color: #343434;
     font-weight: 700;
 }
@@ -451,6 +459,7 @@ footer{
 
 .box__footer a .fab{
     font-size: 20px;
+    margin-top: 10;
 }
 
 .box__copyright{
@@ -461,7 +470,7 @@ footer{
 }
 
 .box__copyright p{
-    margin-top: 20px;
+    margin-top: 10px;
     color: #7a7a7a;
 }
 
@@ -472,100 +481,6 @@ footer{
 }
 /*Aquí termina el FOOTER*/
 
-.emerguente{
-    position: absolute;
-    box-shadow: 0px 1px 10px 0px #000000;
-    border-radius: 5px;
-    background-color: #FFFFFF;
-    width: 300px;
-    height: 150px;
-    top: 250px;
-    left: 50px;
-    opacity: 0;
-    transition: all .2s ease-in;
-    z-index: 1;
-}
-.emerguente.active{
-    opacity: 1;
-    left: 55px;
-    top: 0px;
-}
-.emerguente .fa-circle-xmark{
-    position: absolute;
-    font-size: 23px;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-}
-footer button .emerguente .ayuda{
-    position: absolute;
-    font-size: 18px;
-    font-family: var(--YanoneKaffeesatz);
-    color: #000000;
-    left: 5px;
-    top: 30px;
-    width: 330px;
-    letter-spacing: 1px;
-    padding-left: 0px;
-    display: flex;
-}
-footer button .emerguente .ayuda a{
-    position: absolute;
-    padding-left: 50px;
-    text-decoration: none;
-    color: #000000;
-    left: 30px; 
-}
-footer button .emerguente .ayuda i{
-    position: absolute;
-    color: #e90000 ;
-    left: 0;
-font-size: 35px
-}
-footer button .emerguente .ayuda2{
-    position: absolute;
-    font-size: 18px;
-    font-family: var(--YanoneKaffeesatz);
-    color: #000000;
-    left: 5px;
-    top: 20px;
-    display: flex;
-    width: 350px;
-    padding-left: 30px;
-    margin-top: 80px;
-}
-footer button .emerguente .ayuda2 a{
-    position: absolute;
-    padding-left: 50px;
-    text-decoration: none;
-    color: #000000;
-    left: 30px; 
-}
-footer button .emerguente .ayuda2 i{
-    position: absolute;
-    color: #e90000 ;
-    left: 0;
-    font-size: 35px
-}
-.dir{
-    position: absolute;
-    top: 30px;
-    right: 600px;
-    text-align: center;
-    line-height: 40px;
-    font-family: var(--YanoneKaffeesatz);
-    font-weight: normal;
-}
-footer span{
-    position: absolute;
-    top: 180px;
-    left: 20px;
-    font-size: 45px;
-    color: #e90000;
-}
-footer span i{
-    padding-left: 14px;
-}
 
 /* SECCION RESPONSIVE */
 
@@ -597,17 +512,16 @@ footer span i{
     }
     .carrito{
         width: 60%;
-        margin: 10%;
     }
     .carrito .carrito-item{
-        margin: 5%;
+        margin: 5% ;
     }
     .carrito .carrito-item img{
         margin-left:-10%;
     }
     .carrito .carrito-item .btn-eliminar{
-        right: 0;
-        top: 2%;
+        right: -5%;
+        top: -5%;
         
     }
     .carousel-image {
