@@ -7,14 +7,14 @@ class login
     private $conexion;
 
 
-    public function __construct()
-    {
-        try {
-            $this->conexion = databaseConexion::conexion();
-        } catch (Exception $e) {
-            echo "Error al conectar la base de datos: " . $e->getMessage();
-        }
-    }
+    // public function __construct()
+    // {
+    //     try {
+    //         $this->conexion = databaseConexion::conexion();
+    //     } catch (Exception $e) {
+    //         echo "Error al conectar la base de datos: " . $e->getMessage();
+    //     }
+    // }
 
     public function guardar($name, $email, $tel, $fNac, $genero, $user, $pass)
     {
@@ -31,4 +31,9 @@ class login
             echo "Error al guardar Cliente: " . $e->getMessage();
         }
     }
+
+    public function usuarioExiste(){
+        
+    }
+
 }

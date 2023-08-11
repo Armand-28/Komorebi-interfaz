@@ -400,11 +400,14 @@ p > .fa-xmark{
     scale: 1.05;
 }
 
+/* footer de la */
+
 footer{
     width: 100%;
-    padding: 50px 0px;
+    padding: 5px 0px;
     background-image: url('../../assets/images/background-footer.svg');
     background-size: cover;
+    
     /*background-color: #d0f0f8;
     -webkit-mask-image: url("../Images/background-footer.svg");
     mask-image: url("../Images/background-footer.svg");
@@ -424,7 +427,7 @@ footer{
 .box__footer{
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: 35px;
 }
 
 .box__footer .logo img{
@@ -432,8 +435,8 @@ footer{
 }
 
 .box__footer .terms{
-    max-width: 350px;
-    margin-top: 5px;
+    max-width: 330px;
+    margin-top: 20px;
     font-weight: 500;
     color: #7a7a7a;
     font-size: 17px;
@@ -498,7 +501,7 @@ footer{
     height: 500px;
     }
 }
- 
+
 @media screen and (max-width: 850px) {
     .contenedor {
         display: block;
