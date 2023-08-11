@@ -403,7 +403,7 @@ p > .fa-xmark{
 
 footer{
     width: 100%;
-    padding: 50px 0px;
+    padding: 5px 0px;
     background-image: url('../../assets/images/background-footer.svg');
     background-size: cover;
     
@@ -418,7 +418,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 90%;
     margin: auto;
     margin-top: 120px;
 }
@@ -500,7 +500,7 @@ footer{
     height: 500px;
     }
 }
- 
+
 @media screen and (max-width: 850px) {
     .contenedor {
         display: block;
