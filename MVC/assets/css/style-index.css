@@ -500,7 +500,7 @@ footer{
     height: 500px;
     }
 }
-
+ 
 @media screen and (max-width: 850px) {
     .contenedor {
         display: block;
