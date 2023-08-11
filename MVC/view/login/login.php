@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="assets/css/style-login.css">
 </head>
 <body>
-
         <main>
 
             <div class="contenedor__todo">
@@ -32,10 +31,10 @@
                 <!--Formulario de Login y registro-->
                 <div class="contenedor__login-register">
                     <!--Login-->
-                    <form action="" class="formulario__login" id="form">
-                        <a href="MVC/view/index/index.html"><img src="../../assets/imagenes/logo rojo.png" alt="Iniciar Sección"></a>
-                        <input type="text" placeholder="Correo Electronico" >
-                        <input type="password" placeholder="Contraseña">
+                    <form action="?a=login&b=validarFormulario" class="formulario__login" method="post" id="form">
+                        <a href="?a=index"><img src="assets/imagenes/logo rojo.png" alt="Iniciar Sección"></a>
+                        <input type="text" name="user" placeholder="Correo Electronico" required>
+                        <input type="password" name="pass" placeholder="Contraseña" required>
                         <button>Entrar</button>
                     </form>
 

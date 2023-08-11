@@ -1,20 +1,20 @@
 <?php
 
-include_once 'conexion.php';
+include_once 'lib/database/conexion.php';
 
 class login
 {
     private $conexion;
 
 
-    // public function __construct()
-    // {
-    //     try {
-    //         $this->conexion = databaseConexion::conexion();
-    //     } catch (Exception $e) {
-    //         echo "Error al conectar la base de datos: " . $e->getMessage();
-    //     }
-    // }
+    public function __construct()
+    {
+        try {
+            $this->conexion = conexionDatabase::conexion();
+        } catch (Exception $e) {
+            echo "Error al conectar la base de datos: " . $e->getMessage();
+        }
+    }
 
     public function guardar($name, $email, $tel, $fNac, $genero, $user, $pass)
     {
@@ -32,8 +32,34 @@ class login
         }
     }
 
-    public function usuarioExiste(){
-        
+    public function usuarioExiste($usuario){
+        try{
+            $sql = "SELECT usuario FROM users WHERE usuario = '".$usuario."' ";  
+            $resultado = mysqli_query($this->conexion, $sql); 
+
+            if(mysqli_num_rows($resultado)){
+                return true; 
+            }else{
+                return false; 
+            }
+        }catch(Exception $e){
+            echo "Error al validar usuario: ". $e->getMessage(); 
+        }
+    }
+
+    public function passwordExiste($pass){
+        try{
+            $sql = "SELECT usuario FROM users WHERE password = '".$pass."' ";  
+            $resultado = mysqli_query($this->conexion, $sql); 
+
+            if(mysqli_num_rows($resultado)){
+                return true; 
+            }else{
+                return false; 
+            }
+        }catch(Exception $e){
+            echo "Error al validar usuario: ". $e->getMessage(); 
+        }
     }
 
 }

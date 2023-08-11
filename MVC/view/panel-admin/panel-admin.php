@@ -1,5 +1,5 @@
 <?php
-include "../includes/header.php";
+include "view/panel-admin/includes/header.php";
 ?>
 <!-- Begin Page Content -->
 <div class="container-fluid">
