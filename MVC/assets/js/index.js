@@ -4,5 +4,5 @@
 var aparecerCarrito = document.querySelector("micarrito");
 
 aparecerCarrito.addEventListener("click", () =>{
-        document.getElementById("carrito").style.display = "block";
+    document.getElementById("carrito").style.display = "block";
 })

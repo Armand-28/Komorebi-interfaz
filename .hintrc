@@ -34,9 +34,21 @@
       {
         "ignore": [
           "-webkit-text-size-adjust",
-          "text-align: -webkit-match-parent"
+          "text-align: -webkit-match-parent",
+          "scale",
+          "backdrop-filter"
         ]
       }
-    ]
-  }
+    ],
+    "css-prefix-order": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_chr <= 114",
+    "not chrome <= 114",
+    "not edge <= 114",
+    "not opera <= 99",
+    "not samsung <= 21"
+  ]
 }

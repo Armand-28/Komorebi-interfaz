@@ -53,6 +53,10 @@ a:link{
     padding-right: 50px;
     padding-top: 5px;
 }
+/* Carrucel de imagenes */
+.carousel-image {
+    height: 750px;
+}
 
 /* Header Bottom */
 
@@ -218,8 +222,8 @@ a:link{
 .contenedor .contenedor-items{
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 5fr));
-    grid-gap:30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+    grid-gap:10px;
     grid-row-gap: 30px;
     /* width: 60%; */
     width: 100%;
@@ -266,8 +270,9 @@ a:link{
 /* seccion carrito */
 .carrito{
     border: 1px solid #666;
-    width: 26%;
+    width: 35%;
     margin-top: 30px;
+    background-color: #FFFFFF;
     border-radius: 10px;
     margin-bottom: auto;
     position: absolute; 
@@ -563,16 +568,73 @@ footer span i{
 }
 
 /* SECCION RESPONSIVE */
+
+/* Media query para dispositivos medianos */
+@media (max-width: 1300px) {
+    .carousel-image {
+      height: 550px;
+      }
+  }
+
+/* Media query para dispositivos medianos */
+@media (max-width: 992px) {
+  body {
+    font-size: 14px;
+  }
+  .carousel-image {
+    height: 500px;
+    }
+}
+
 @media screen and (max-width: 850px) {
     .contenedor {
-      display: block;
+        display: block;
     }
+      
     .contenedor-items{
         width: 100% ;
+        margin: auto;
     }
     .carrito{
-        width: 80%;
-        top: auto;
-        margin: 40px;
+        width: 60%;
+        margin: 10%;
     }
+    .carrito .carrito-item{
+        margin: 5%;
+    }
+    .carrito .carrito-item img{
+        margin-left:-10%;
+    }
+    .carrito .carrito-item .btn-eliminar{
+        right: 0;
+        top: 2%;
+        
+    }
+    .carousel-image {
+        height: 400px;
+    }
+    
   }
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 768px) {
+  /* .container-fliud {
+    padding: 20px;
+  } */
+  .carousel-image {
+    height: 350px;
+    }
+}
+
+/* Media query para dispositivos extra pequeños */
+@media (max-width: 576px) {
+  .social-networks {
+    text-align: center;
+  }
+  .carousel-image {
+    height: 200px;
+    }
+}
+
+
+
