@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 26-07-2023 a las 17:58:25
--- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 8.0.25
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 15-08-2023 a las 23:03:55
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,24 +48,26 @@ INSERT INTO `categorias` (`id`, `categoria`, `fecha`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `clientes`
+-- Estructura de tabla para la tabla `cliente`
 --
 
-CREATE TABLE `clientes` (
-  `id` int(11) NOT NULL,
-  `cliente` varchar(150) NOT NULL,
-  `telefono` varchar(50) NOT NULL,
-  `correo` varchar(50) NOT NULL,
-  `direccion` varchar(150) NOT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+CREATE TABLE `cliente` (
+  `idcli` int(11) NOT NULL,
+  `namecli` varchar(255) NOT NULL,
+  `emailcli` varchar(255) NOT NULL,
+  `telcli` int(10) NOT NULL,
+  `datecli` varchar(255) NOT NULL,
+  `gencli` varchar(255) NOT NULL,
+  `usercli` varchar(255) NOT NULL,
+  `passcli` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `clientes`
+-- Volcado de datos para la tabla `cliente`
 --
 
-INSERT INTO `clientes` (`id`, `cliente`, `telefono`, `correo`, `direccion`, `fecha`) VALUES
-(1, 'Ernesto Castillo', '9911165670', 'example@gmail.com', 'Merida YUcatan MX', '2023-05-31 00:32:42');
+INSERT INTO `cliente` (`idcli`, `namecli`, `emailcli`, `telcli`, `datecli`, `gencli`, `usercli`, `passcli`) VALUES
+(1, 'Jose Alejandro Cuellar Menza', 'jcuellarmenza@gmail.com', 2147483647, '2005-06-21', 'Masculino', 'Asalejo1', '66a5f56f816e63c0724d9b7890db6dff');
 
 -- --------------------------------------------------------
 
@@ -262,8 +264,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `usuario`, `correo`, `telefono`, `password`, `fecha`, `id_rol`) VALUES
-(5, 'Administrador', 'admin@softcodepm.com', '45354356', '$2y$05$Lu7WwzfDYDplQCiyfePEHu.qd171Bo7CAJHbqsqlYWldMITAVffu6', '2023-07-24 16:03:20', 1),
-(6, 'juan', 'juan23@gmail.com', '3225136051', '$2y$05$zwn2qLkw9NMkpSdr8lzgs.fdn1Y8RfPyLSgr4.sq3W.qh/wDuZ6Ca', '2023-07-24 14:40:12', 2),
+(5, 'Administrador', 'admin@softcodepm.com', '45354356', 'alejo123', '2023-08-11 20:29:44', 1),
+(6, 'juan', 'juan23@gmail.com', '3225136051', 'juan123', '2023-08-11 20:38:35', 2),
 (7, 'Jhan Franco Diaz', 'jhanfrancoo123@gmail.com ', '3225136051', '$2y$05$POYzRzQhY8JYw0lrsOp08uZUzHLjNTkPXssJkRlYRcDYOxQ1ZPC8u', '2023-07-24 13:25:12', 2);
 
 -- --------------------------------------------------------
@@ -304,10 +306,10 @@ ALTER TABLE `categorias`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `clientes`
+-- Indices de la tabla `cliente`
 --
-ALTER TABLE `clientes`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `cliente`
+  ADD PRIMARY KEY (`idcli`);
 
 --
 -- Indices de la tabla `factura`
@@ -394,10 +396,10 @@ ALTER TABLE `categorias`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
--- AUTO_INCREMENT de la tabla `clientes`
+-- AUTO_INCREMENT de la tabla `cliente`
 --
-ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `cliente`
+  MODIFY `idcli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `factura`
