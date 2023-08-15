@@ -177,27 +177,15 @@ a:link{
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    transition: height 0.3s ease ;
 }
-.services > a:hover{
-    height: 90%;
-}
-
-.services > a:hover p{
-    display: block;
-    transition: 3s ease;
-}
-
 .services > a > p{
     margin-top: 10px;
     font-size: 14px;
     font-family: var(--font-3);
-    display: none;
 }
 
 .services > a > i{
     font-size: 30px;
-    height: 50%;
 }
 .titulo-promociones{
     position: relative;
@@ -285,8 +273,10 @@ a:link{
     /* Estilos para ocultar */
     right: 0;
     opacity: 1;
-    display: none;
     overflow: hidden;
+}
+#carrito{
+    display: none;
 }
 
 .carrito .header-carrito{
