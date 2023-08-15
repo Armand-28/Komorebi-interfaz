@@ -1,7 +1,9 @@
 // codigo para hacer aparecer y desaparecer el carrito
 
+function mostrarCarrito(){
+    document.getElementById("carrito").style.display = "block";
+}
 
-var aparecerCarrito = document.getElementsByClassName("fa-xmark");
-
-aparecerCarrito.addEventListener("click", () =>{
-    document.getElementById("carrito").classList.toggle("active")})
+function ocultarCarrito(){
+    document.getElementById("carrito").style.display = "none";
+}
