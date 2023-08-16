@@ -16,7 +16,7 @@
               <i class="fa-solid fa-bars"></i>
           </div>
           <div class="logo">
-              <img src="../" alt="">
+              <img src="assets/images/logo-white.png" alt="">
           </div>
           <div class="search">
               <div id="search-bar">

@@ -476,14 +476,17 @@ footer{
 /* SECCION RESPONSIVE */
 
 /* Media query para dispositivos medianos */
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
     .carousel-image {
       height: 550px;
       }
+      .header-bottom .logo img{
+        display: none;
+    } 
   }
 
 /* Media query para dispositivos medianos */
-@media (max-width: 992px) {
+@media screen and  (max-width: 992px) {
   body {
     font-size: 14px;
   }
@@ -496,7 +499,6 @@ footer{
     .contenedor {
         display: block;
     }
-      
     .contenedor-items{
         width: 100% ;
         margin: auto;
@@ -522,7 +524,7 @@ footer{
   }
 
 /* Media query para dispositivos pequeños */
-@media (max-width: 768px) {
+@media screen and  (max-width: 768px) {
   /* .container-fliud {
     padding: 20px;
   } */
@@ -532,7 +534,7 @@ footer{
 }
 
 /* Media query para dispositivos extra pequeños */
-@media (max-width: 576px) {
+@media screen and  (max-width: 576px) {
   .social-networks {
     text-align: center;
   }

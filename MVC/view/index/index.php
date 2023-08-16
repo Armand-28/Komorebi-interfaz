@@ -107,7 +107,7 @@
        <div class="carrito" id="carrito">
         <div class="header-carrito">
             <h2>Carrito de Compras</h2>
-            <p><i class="fa-solid fa-xmark"onclick="ocultarCarrito();"></i></p>
+            <p><i class="fa-solid fa-xmark" onclick="ocultarCarrito();"></i></p>
         </div>
 
         <div class="carrito-items">
