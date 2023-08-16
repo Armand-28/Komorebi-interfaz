@@ -38,8 +38,8 @@
                         <button>Entrar</button>
                     </form>
 
-                    <!--Register-->
-                    <form action="../controller/vform.php" class="formulario__register" method="post">
+                    <!--Fomulario de Registro Cliente-->
+                    <form action="?a=login&b=newAccount" class="formulario__register" method="post">
                         <h2>Regístrarse</h2>
                         <input type="text" name="ctNombre" id="name" placeholder="Nombre completo">
                         <input type="email" name="ctEmail" id="email" placeholder="Correo Electronico">
@@ -53,7 +53,13 @@
                           </select>
                         <input type="text" name="ctUser" id="user" placeholder="Usuario">
                         <input type="password" name="ctPass" id="password" placeholder="Contraseña">
-                        <input type="password" name="ctPass" id="password" placeholder="Confirmar Contraseña">
+                        <ul>
+                            <li>Minimo 8 caracteres</li>
+                            <li>Minimo una mayuscula</li>
+                            <li>Minimo una minuscula</li>
+                            <li>Minimo un numero</li>
+                        </ul>
+                        <input type="password" name="ctPass2" id="password" placeholder="Confirmar Contraseña">
                         <button>Regístrarse</button>
                     </form>
                 </div>

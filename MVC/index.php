@@ -1,9 +1,5 @@
 <?php
-
-
-
 $controller = "index"; 
-
 if(!isset($_REQUEST['a'])){
     require_once "controller/$controller.controller.php";
     $controller = ucwords($controller).'controller'; 
@@ -17,6 +13,4 @@ if(!isset($_REQUEST['a'])){
     $controller = new $controller;
     call_user_func(array($controller, $action)); 
 } 
-
-
 ?>

@@ -252,27 +252,15 @@ a:link{
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    transition: height 0.3s ease ;
 }
-.services > a:hover{
-    height: 100%;
-}
-
-.services > a:hover p{
-    display: block;
-    transition: 3s ease;
-}
-
 .services > a > p{
     margin-top: 10px;
     font-size: 14px;
     font-family: var(--font-3);
-    display: none;
 }
 
 .services > a > i{
     font-size: 30px;
-    height: 50%;
 }
 .titulo-promociones{
     position: relative;
@@ -298,7 +286,7 @@ a:link{
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
-    grid-gap:10px;
+    grid-gap:30px;
     grid-row-gap: 30px;
     /* width: 60%; */
     width: 100%;
@@ -331,7 +319,11 @@ a:link{
     font-weight: bold;
     font-size: 22px;
 }
-
+.contenedor .contenedor-items .item p{
+    text-align: center;
+    font-size: 14px;
+    color: #7a7a7a;
+}
 .contenedor .contenedor-items .item .boton-item{
     display: block;
     margin: 10px auto;
@@ -354,15 +346,14 @@ a:link{
     top: 119px;
     transition: .3s;
     /* Estilos para ocultar */
-    right: 100%;
-    opacity: 0.2;
+    right: 0;
+    opacity: 1;
     overflow: hidden;
 }
-#carrito.active{
-    opacity: 1;
-    right: 0;
-
+#carrito{
+    display: none;
 }
+
 .carrito .header-carrito{
     background-color: #e90000;
     color: #fff;

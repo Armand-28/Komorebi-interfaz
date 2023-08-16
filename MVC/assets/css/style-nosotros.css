@@ -1,8 +1,29 @@
+/* Global Configuration */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-3);
 }
+:root{
+    --color1: #e90000;
+    --color-2: #D2D2D2; 
+    --color-3: #777777;  
+    --color-4: black; 
+    --color-5: white;
+    --color-6: #FF9F23;
+    --font-1: "Open Sans", sans-serif;
+    --font-2: "Yanone Kaffeesatz", sans-serif;
+    --font-3: 'Poppins', sans-serif;
+}
+
+a:link{
+    color: black;
+}
+
 :root {
     --Caveat: "Caveat", cursive;
     --YanoneKaffeesatz: "Yanone Kaffeesatz", sans-serif;
@@ -15,196 +36,181 @@
     margin: auto; 
 }
 
-header{
-    position: relative;
-    background-color: #D2D2D2;
-    width: 1600px;
-    height: 30px;
-    overflow: hidden;
-    margin: auto;
-}
-header p{
-    position: relative;
-    display:inline-flex ;
-    align-items:center ;
-    font-size: 20px;
-    padding-left: 25px; 
-    top: 5px;
-    left: 15px;
-    color: #777777;
-}
-.navegacion{
-    position: relative;
-    background-color: #e90000;
-    width: 1600px;
-    height: 120px;
-    margin: auto;
-}
-.navegacion p i{
-    position: absolute;
-    top: 0px;
-    font-size: 40px;
-    color: #FFFFFF;
-    left: 72px;
-    cursor: pointer;
+/* Header Top */
+.header-top{
+    background: var(--color-2);
+    display: flex;
+    justify-content: space-between;
 }
 
-.navegacion p img{
-    position: absolute;
-    top: -14px;
-    width: 210px;
-    height: 70px;
-    left: 150px;
-}
-.navegacion input{
-    position: absolute;
-    width: 580px;
-    height: 40px;
-    left: 507px;
-    top: 20px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    padding-left: 20px;
-    font-size: 16px;
-    font-family: var(--YanoneKaffeesatz); 
-}
-.navegacion input::placeholder{
-    color: #aaaaaa;
-    font-family: var(--YanoneKaffeesatz);
-}
-.navegacion span{
-    position: absolute;
-    top: 30px;
-    left: 1055px;
-    font-size: 23px;
-    color: #000000; 
-    cursor: pointer;
-
-}
-.cuenta .fa-circle-user{
-    position: relative;
-    left: 1310px;
-    top: 30px;
-    color: #FFFFFF;
-}
-.navegacion .li-2{
-    position: absolute;
-    list-style: none;
-    left: 1400px;
-    top: 80px;
-    font-size: 16px;
-    z-index: 1;
-    }
-.li-2 a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 14px;
-    font-weight: bold;
-}
-.navegacion div{
-position: absolute;
-top: 70px;
-left: 530px;
-display: flex;
-width: 500px;
-height: 40px;
-justify-content: space-between;
-}
-.navegacion div .modoentrega{
-    background-color: #FFFFFF;
-    border-radius: 20px;
-    width: 180px;
-    height: 28px;
-    top: 6px;
-    font-size: 14px;
-    font-family: var(--OpenSans);
-    font-weight: 600;
-}
-.modoentrega a{
-    text-decoration: none;
-    color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-}
-div .modoentrega .fa-shop{
-    position: absolute;
-    color: #000000;
-    font-size: 20px;
-    left: 15px;
-    top: 4px;
-}
-.navegacion div .quienessomos{
-    background-color: #FFFFFF;
-    border-radius: 20px;
-    width: 180px;
-    height: 28px;
-    top: 6px;
-    font-size: 14px;
-    font-family: var(--OpenSans);
-    font-weight: 600;
-}
-.quienessomos a{
-    text-decoration: none;
-    color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px
-}
-div .quienessomos .fa-store{
-    position: absolute;
-    color: #000000;
-    font-size: 20px;
-    left: 15px;
-    top: 4px;
-}
-#menu{
-    position: relative;
-    background-color: #e90000;
-    width: 200px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    left: -200px;
-    transition: all .3s linear;
-    z-index: 2;
-}
-#menu.active{
-    opacity: 1;
-    left: 0;
-}
-.fa-xmark{
-    position: absolute;
-    right: -10px;
-    top: 18px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-#menu ul{
-    position: absolute;
-    list-style: none;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 15px;
-    color: #FFFFFF;
-    top: -10px;
-}
-#menu ul li{
-    border-bottom: 2px solid #FF9F23;
+.header-top .social-networks{
     padding: 10px;
-    padding-top: 35px;
-    padding-left: 10px;
+    display: flex;
 }
-#menu ul li a{
-    color: #FFFFFF;
-    text-decoration: none;   
+
+.header-top .social-networks a {
+    color: var(--color-3);
+    margin-left: 40%;
 }
+
+.header-top .social-networks a:hover{
+    color: var(--color-4);
+}
+
+
+.header-top .logo img{
+    width: 155px;
+    height: 30px;
+    padding-right: 50px;
+    padding-top: 5px;
+}
+/* Carrucel de imagenes */
+.carousel-image {
+    height: 750px;
+}
+
+/* Header Bottom */
+
+.header-bottom{
+    display: grid;
+    grid-template-columns: 19% 0% 50% 30%;
+    align-items: center;
+    justify-content: center;
+    background: var(--color1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header-bottom .icon-menu{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.header-bottom .logo img{
+    display: none;
+}
+
+/* Icon Menu */
+
+.icon-menu {
+    color: var(--color-5);
+    display: flex;
+    justify-content: center;
+}
+
+/* Search */
+
+.search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search #search-bar input{
+    border-radius: 10px;
+    color: var(--color-3);
+    padding: 8px 5px 8px 5px ;
+    font-family: var(--font-3);
+    font-size: 15px;
+    border: none;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* Other Services */
+
+.search .other-services {
+    display: flex;
+    margin-top: 10px;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.search .other-services a {
+    width: 50%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-5);
+    color: var(--color-4);
+    text-decoration: none;
+    padding: 7px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: width 0.8s ease;
+    cursor: pointer;
+}
+.search .other-services a .link-text{
+    display: none;
+    font-family: var(--font-3);
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.search .other-services a:hover {
+    width: 100%;
+}
+
+.search .other-services a:hover .link-text{
+    transition: 2s ease;
+    display: block;
+}
+
+
+
+
+/* Services */
+
+.services{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    gap: 10%;
+
+}
+
+.services > a{
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-1);
+    color: var(--color-5);
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: height 0.3s ease ;
+}
+.services > a:hover{
+    height: 100%;
+}
+
+.services > a:hover p{
+    display: block;
+    transition: 3s ease;
+}
+
+.services > a > p{
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: var(--font-3);
+    display: none;
+}
+
+.services > a > i{
+    font-size: 30px;
+    height: 50%;
+}
+
 .quienes-somos{
     position: absolute;
     top: 950px;

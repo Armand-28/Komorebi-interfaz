@@ -1,76 +1,3 @@
-<!-- Estructura header -->
-<body>
-  <div class="container-fliud">
-    <header>
-      <div class="header-top">
-        <!-- <div class="social-networks">
-            <ul>
-                <li><a href="#"><i class="fa fa-phone"></i></a></li>
-                <li><a href="#"><i class="fa fa-user"></i></a></li>
-                <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-            </ul>
-        </div>    -->
-        
-        <!-- icons -->
-        <div class="wrapper">
-            <div class="button">
-               <div class="icon">
-                  <i class="fa-solid fa-phone"></i>
-               </div>
-               <span>Telefono</span>
-            </div>
-            <div class="button">
-               <div class="icon">
-                <i class="fa-solid fa-address-book"></i>
-               </div>
-               <span>Contacto</span>
-            </div>
-            <div class="button">
-               <div class="icon">
-                <i class="fa-solid fa-message"></i>
-               </div>
-               <span>Mensaje</span>
-            </div>  
-         </div>
-        <!-- icons fin -->
-
-          <div class="logo">
-              <img src="assets/images/logo rojo.png" alt="">
-          </div>    
-      </div>
-      <div class="header-bottom">
-          <div class="icon-menu">
-              <i class="fa-solid fa-bars"></i>
-          </div>
-          <div class="logo">
-              <img src="../" alt="">
-          </div>
-          <div class="search">
-              <div id="search-bar">
-                  <input type="search" name="searchInput" placeholder="¿Que buscas hoy?">
-              </div>
-              <div class="other-services">
-                  <a href="#">
-                    <i class="fa-sharp fa-solid fa-shop"></i><span class="link-text">Modo de Entrega</span>
-                  </a>
-                  <a href="#">
-                    <i class="fa-solid fa-store"></i><span class="link-text">¿Quienes somos?</span>
-                  </a>
-                </div>
-          </div>
-          <div class="services">
-              <a href="#">
-                  <i class="fa-solid fa-cart-shopping micarrito"></i>
-                  <p>Mi carrito</p>
-              </a>
-              <a href="?a=login&b=Inicio">
-                  <i class="fa-solid fa-circle-user mi-cuenta"></i>
-                  <p>Mi cuenta</p>
-              </a>
-          </div>
-      </div>
-    </header>      
-  </div>
 
       <!-- carrucel de imagenes-->
       <br>
@@ -116,63 +43,63 @@
                   <img src="assets\images\papel.jpg" alt="" class="img-item">
                   <span class="precio-item">$15.000</span>
                   <p>Docena (10 x unidad)</p>
-                  <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i></button>
+                  <button class="boton-item">Agregar <i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="item">
                   <span class="titulo-item">Jabón</span>
                   <img src="assets/images/jabon.jpg" alt="" class="img-item">
                   <span class="precio-item">$25.000</span>
                   <p>Docena (10 x unidad)</p>
-                  <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i></button>
+                  <button class="boton-item">Agregar <i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="item">
                   <span class="titulo-item">Pañuelos</span>
                   <img src="assets/images/pañuelos.jpg" alt="" class="img-item">
                   <span class="precio-item">$35.000</span>
                   <p>Docena (10 x unidad)</p>
-                  <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i></button>
+                  <button class="boton-item">Agregar <i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="item">
                   <span class="titulo-item">Arveja</span>
                   <img src="assets/images/arveja.png" alt="" class="img-item">
                   <span class="precio-item">$18.000</span>
                   <p>Docena (10 x unidad)</p>
-                  <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i></button>
+                  <button class="boton-item">Agregar <i class="fa-solid fa-cart-shopping"></i></button>
               </div>
               <div class="item">
                 <span class="titulo-item">Papel Higuienico</span>
                 <img src="assets\images\papel.jpg" alt="" class="img-item">
                 <span class="precio-item">$15.000</span>
                 <p>Docena (10 x unidad)</p>
-                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="boton-item">Agregar <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             <div class="item">
                 <span class="titulo-item">Jabón</span>
                 <img src="assets/images/jabon.jpg" alt="" class="img-item">
                 <span class="precio-item">$25.000</span>
                 <p>Docena (10 x unidad)</p>
-                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="boton-item">Agregar <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             <div class="item">
                 <span class="titulo-item">Pañuelos</span>
                 <img src="assets/images/pañuelos.jpg" alt="" class="img-item">
                 <span class="precio-item">$35.000</span>
                 <p>Docena (10 x unidad)</p>
-                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="boton-item">Agregar <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             <div class="item">
                 <span class="titulo-item">Arveja</span>
                 <img src="assets/images/arveja.png" alt="" class="img-item">
                 <span class="precio-item">$18.000</span>
                 <p>Docena (10 x unidad)</p>
-                <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="boton-item">Agregar <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             <div class="item">
               <span class="titulo-item">Cereal</span>
               <img src="assets/images/arveja.png" alt="" class="img-item">
               <span class="precio-item">$18.000</span>
               <p>Docena (10 x unidad)</p>
-              <button class="boton-item">Agregar<i class="fa-solid fa-cart-shopping"></i></button>
+              <button class="boton-item">Agregar <i class="fa-solid fa-cart-shopping"></i></button>
           </div>
       </section>
       
@@ -180,7 +107,7 @@
        <div class="carrito" id="carrito">
         <div class="header-carrito">
             <h2>Carrito de Compras</h2>
-            <p><i class="fa-solid fa-xmark"></i></p>
+            <p><i class="fa-solid fa-xmark"onclick="ocultarCarrito();"></i></p>
         </div>
 
         <div class="carrito-items">
