@@ -9,7 +9,7 @@ class nosotrosController{
         require_once "view/header.php";
         require_once "view/nosotros/nosotros.php";  
     }
-
+    
 }
 
 ?>
