@@ -11,7 +11,11 @@ class loginController{
     }
 
     public function Inicio(){
+        $style = "<link rel='stylesheet' href='assets/css/style-login.css'>"; 
+        require_once "view/head.php"; 
+        require_once "view/header.php"; 
         require_once "view/login/login.php"; 
+        require_once "view/footer-login.php"; 
     }
 
     public function validarFormulario(){
@@ -62,7 +66,7 @@ class loginController{
                                         $l->pass = md5($_POST['ctPass']);
                                         
                                         if($this->object->saveCliente($l)){
-                                            echo "Cliente Registrado con exito!"; 
+                                            header("Location: ?a=login&b=Inicio&c=true");  
                                         }else{
                                             echo "No se pudo registrar el cliente"; 
                                         }
