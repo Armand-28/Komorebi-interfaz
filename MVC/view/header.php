@@ -32,7 +32,7 @@
                 </div>
           </div>
           <div class="services">
-              <a href="#">
+              <a href="#" onclick="mostrarCarrito();">
                   <i class="fa-solid fa-cart-shopping micarrito"></i>
                   <p>Mi carrito</p>
               </a>
