@@ -15,7 +15,7 @@ class loginController{
         require_once "view/head.php"; 
         require_once "view/header.php"; 
         require_once "view/login/login.php"; 
-        require_once "view/footer-login.php"; 
+        require_once "view/footer-login.php";
     }
 
     public function validarFormulario(){

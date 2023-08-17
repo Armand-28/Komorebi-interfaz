@@ -1,7 +1,7 @@
 <footer>
       <div class="box__copyright">
-          <hr>
           <p>Todos los derechos reservados © 2023 </p>
+          <hr>
       </div>
   </footer>   
 

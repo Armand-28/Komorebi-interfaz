@@ -1,4 +1,3 @@
-<body>
         <main>
             <?php
                 if(isset($_REQUEST['c'])){
@@ -43,13 +42,9 @@
                             <option>Otro</option> 
                           </select>
                         <input type="text" name="ctUser" id="user" placeholder="Usuario">
-                        <input type="password" name="ctPass" id="password" placeholder="Contraseña">
-                        <ul>
-                            <li>Minimo 8 caracteres</li>
-                            <li>Minimo una mayuscula</li>
-                            <li>Minimo una minuscula</li>
-                            <li>Minimo un numero</li>
-                        </ul>
+                        <input type="password" name="ctPass" id="password" placeholder="Contraseña minima 8 caracteres">
+                      
+                        
                         <input type="password" name="ctPass2" id="password" placeholder="Confirmar Contraseña">
                         <button>Regístrarse</button>
                     </form>
@@ -60,5 +55,3 @@
 
         <script src="assets/js/indexHelper.js"></script>
         <script src="https://kit.fontawesome.com/7cc00942f2.js" crossorigin="anonymous"></script>
-</body>
-</html>
