@@ -8,15 +8,15 @@
           <a href="#" class="icon-link" data-tooltip="Mensaje"><i class="fa fa-message"></i></a>
       </div>     
           <div class="logo">
-              <img src="assets/images/logo rojo.png" alt="">
+              <a href="?a=index&b=Inicio"><img src="assets/images/logo rojo.png" alt=""></a>
           </div>
       </div>
       <div class="header-bottom">
           <div class="icon-menu">
               <i class="fa-solid fa-bars"></i>
           </div>
-          <div class="logo">
-              <img src="assets/images/logo-white.png" alt="">
+          <div class="logoPrincipal">
+              <a href="?a=index&b=Inicio"><img src="assets/images/logo-white.png" alt=""></a>
           </div>
           <div class="search">
               <div id="search-bar">
