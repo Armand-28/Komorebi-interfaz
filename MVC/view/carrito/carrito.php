@@ -49,3 +49,6 @@
         <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
     </div>
 </div>
+
+<script src="assets/js/indexHelper.js"></script>
+<script src="assets/js/index.js"></script>

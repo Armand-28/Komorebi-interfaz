@@ -536,14 +536,17 @@ p > .fa-xmark{
 /* SECCION RESPONSIVE */
 
 /* Media query para dispositivos medianos */
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
     .carousel-image {
       height: 550px;
       }
+      .header-bottom .logo img{
+        display: none;
+    } 
   }
 
 /* Media query para dispositivos medianos */
-@media (max-width: 992px) {
+@media screen and  (max-width: 992px) {
   body {
     font-size: 14px;
   }
@@ -556,7 +559,6 @@ p > .fa-xmark{
     .contenedor {
         display: block;
     }
-      
     .contenedor-items{
         width: 100% ;
         margin: auto;
@@ -582,7 +584,7 @@ p > .fa-xmark{
   }
 
 /* Media query para dispositivos pequeños */
-@media (max-width: 768px) {
+@media screen and  (max-width: 768px) {
   /* .container-fliud {
     padding: 20px;
   } */
@@ -592,13 +594,91 @@ p > .fa-xmark{
 }
 
 /* Media query para dispositivos extra pequeños */
-@media (max-width: 576px) {
+@media screen and  (max-width: 576px) {
   .social-networks {
     text-align: center;
   }
   .carousel-image {
     height: 200px;
     }
+}
+
+footer{
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url('../images/background-footer.svg');
+    background-size: cover;
+    
+    /*background-color: #d0f0f8;
+    -webkit-mask-image: url("../Images/background-footer.svg");
+    mask-image: url("../Images/background-footer.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;*/
+}
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+}
+
+.box__footer .logo img{
+    width: 180px;
+}
+
+.box__footer .terms{
+    max-width: 330px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+}
+
+.box__footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
 }
 
 

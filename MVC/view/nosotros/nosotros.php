@@ -1,5 +1,6 @@
-
-  <div class="banner">
+<div class="container-fluid m-auto">
+  
+<div class="banner">
     <div class="capa"></div>
     <div class="info">
       <h1>¿Quienes somos?</h1>
@@ -40,12 +41,12 @@
       <img src="assets/images/logo rojo.png">
     </div>
 <div class="text-miplaza">
-  <img src="../imagenes/logo blanco index.png">
+  <img src="assets/images/logo blanco.png">
 </div>
   <aside>
     <div class="card">
       <div class="card__content">
-        <p class="cards__title">Misión</p>
+        <p class="card__title">Misión</p>
         <p class="card__description">
           Nuestra misión es ofrecer a nuestros clientes una experiencia de compra conveniente y accesible,
           proporcionando productos frescos y de alta calidad a precios competitivos, así como un servicio excepcional
@@ -56,10 +57,10 @@
         </p>
       </div>
     </div>
-    <div class="cards">
-      <div class="cards__content">
-        <p class="cards__title">Visión</p>
-        <p class="cards__description">
+    <div class="card">
+      <div class="card__content">
+        <p class="card__title">Visión</p>
+        <p class="card__description">
           Ser líderes en la industria de supermercados al ofrecer una experiencia de compra excepcionalmente conveniente
           y personalizada que inspire a nuestros clientes a volver una y otra vez. Nos esforzamos por proporcionar una
           amplia gama de productos frescos y de alta calidad a precios competitivos, mientras nos enfocamos en la
@@ -71,4 +72,5 @@
   </aside>
 <div class="mapa mapa-5">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.14657365297396!2d-75.89373716153203!3d2.3908583314610987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3ad2ac036e74d3%3A0x58ab2ab5055378ec!2sSENA%20CDATH!5e0!3m2!1ses-419!2sco!4v1691868926223!5m2!1ses-419!2sco" width="1650" height="750" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 </div>
