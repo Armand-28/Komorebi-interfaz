@@ -43,3 +43,5 @@
           <p>Todos los derechos reservados © 2023 </p>
       </div>
   </footer>   
+<script src="assets/js/indexHelper.js"></script>
+<script src="assets/js/index.js"></script>
