@@ -27,6 +27,7 @@ a:link{
 
 /* Header Top */
 .header-top{
+    display: none;
     background: var(--color-2);
     display: flex;
     justify-content: space-between;
@@ -152,6 +153,7 @@ a:link{
     color: var(--color-5);
     display: flex;
     justify-content: center;
+    display: none;
 }
 
 /* Search */
@@ -170,6 +172,7 @@ a:link{
     font-size: 15px;
     border: none;
     text-align: center;
+    display: none;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -200,6 +203,9 @@ a:link{
     transition: width 0.8s ease;
     cursor: pointer;
 }
+.search .other-services a:first-child{
+    display: none;
+}
 .search .other-services a .link-text{
     display: none;
     font-family: var(--font-3);
@@ -222,6 +228,7 @@ a:link{
     display: grid;
     grid-template-columns: 40% 40%;
     gap: 10%;
+    display: none;
 
 }
 
@@ -451,5 +458,10 @@ footer{
 
     .contenedor__login-register form{
         position: relative;
+    }
+}
+@media screen and (max-width: 768px){
+    .logoPrincipal{
+        display: none;
     }
 }

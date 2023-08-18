@@ -12,7 +12,7 @@
           </div>
       </div>
       <div class="header-bottom">
-          <div class="icon-menu">
+          <div class="icon-menu" onclick="menuAparecer();">
               <i class="fa-solid fa-bars"></i>
           </div>
           <div class="logoPrincipal">

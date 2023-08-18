@@ -1,4 +1,4 @@
-<div id="menu">
+<div id="menu" class="$zindex-fixed: 1030;">
         <ul>
           <p><i class="fa-sharp fa-solid fa-xmark"></i></p>
           <li><a href="#"> Resfrigerados</a></li>

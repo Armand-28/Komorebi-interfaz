@@ -7,3 +7,12 @@ function mostrarCarrito(){
 function ocultarCarrito(){
     document.getElementById("carrito").style.display = "none";
 }
+// menu desplegable
+
+function menuAparecer(){
+    document.getElementById("menu").style.display = "block";
+}
+
+function menuDesaparecer(){
+    document.getElementById("menu").style.display = "none";
+}

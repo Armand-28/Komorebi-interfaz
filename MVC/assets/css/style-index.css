@@ -143,9 +143,10 @@ a:link{
 }
 
 .header-bottom .icon-menu{
-    margin-left: 35%;
+    margin-left: 34%;
     transform: translateX(-50%);
     font-size: 35px;
+    cursor: pointer;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -462,6 +463,51 @@ p > .fa-xmark{
     scale: 1.05;
 }
 
+#menu{
+    position: absolute;
+    background-color: #e90000;
+    width: 230px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    top: 137px;
+    left: 0px;
+    transition: all .3s linear;
+    border: 2px solid rgba(0, 0, 0, 0.101);
+}
+#menu{
+display: none;
+}
+p .fa-xmark{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#menu ul{
+    position: absolute;
+    list-style: none;
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 15px;
+    color: #FFFFFF;
+    top: -10px;
+}
+#menu ul li{
+    border-bottom: 2px solid #FF9F23;
+    padding: 10px;
+    padding-top: 35px;
+    padding-left: 10px;
+}
+#menu ul li a{
+    color: #FFFFFF;
+    text-decoration: none;   
+}
+
+
     /* Aqui inicia el footer */
     footer{
         width: 100%;
@@ -561,6 +607,21 @@ p > .fa-xmark{
         width: 0px;
         height: 0px;
     }
+    #menu{
+        position: absolute;
+        top: 137px;
+        width: 260px;
+        height: 500px;
+    }
+    #menu ul{
+        padding: 0 20px;
+        
+    }
+    .fa-xmark{
+        right: 0;
+        top: 5px;
+    }
+
   }
 
 /* Media query para dispositivos medianos */
@@ -578,6 +639,21 @@ p > .fa-xmark{
         padding-top: 6px;
         margin-left: -80px;
     }
+    #menu{
+        position: absolute;
+        top: 137px;
+        width: 250px;
+        height: 500px;
+    }
+    #menu ul{
+        padding: 0 20px;
+        
+    }
+    .fa-xmark{
+        right: 0;
+        top: 5px;
+    }
+
 }
 
 /* @media screen and (max-width: 850px) {
@@ -614,7 +690,7 @@ p > .fa-xmark{
     padding: 20px;
   } */
     .carousel-image {
-        height: 350px;
+        height: 200px;
     }
     .logoPrincipal img{
         width: 210px;
@@ -623,6 +699,21 @@ p > .fa-xmark{
         padding-top: 4px;
         margin-left: -65px;
     }
+       
+    #menu{
+        position: absolute;
+        top: 137px;
+        width: 250px;
+        height: 480px;
+    }
+    #menu ul{
+        padding: 0 20px;
+    }
+    .fa-xmark{
+        right: 0;
+        top: 5px;
+    }
+
 }
 
 /* Media query para dispositivos extra pequeños */
@@ -643,6 +734,20 @@ p > .fa-xmark{
         padding-right: 50px;
         padding-top: 5px;
     }
+    #menu{
+        position: absolute;
+        top: 145px;
+        width: 250px;
+        height: 480px;
+    }
+    #menu ul{
+        padding: 0 20px;
+    }
+    .fa-xmark{
+        right: 0;
+        top: 5px;
+    }
+ 
 }
 
 /* termina seccion responsive */

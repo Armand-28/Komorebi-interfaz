@@ -17,6 +17,7 @@ class IndexController{
         require_once "view/index/index.php";
         require_once "view/footer.php"; 
         require_once "view/carrito/carrito.php";
+        require_once "view/menuDesplegable/menu.php";
     }
 
 }
