@@ -108,14 +108,21 @@ a:link{
   color: #ff0000;
 }
 
-/* icons fin */
-
 .header-top .logo img{
-    width: 155px;
-    height: 30px;
-    padding-right: 50px;
-    padding-top: 5px;
+    width: 0px;
+    height: 0px;
 }
+
+/* logo index */
+
+.logoPrincipal img{
+    width: 300px;
+    height: 65px;
+    padding-right: 60px;
+    padding-top: 6px;
+    margin-left: -50px;
+}
+
 /* Carrucel de imagenes */
 .carousel-image {
     height: 750px;
@@ -429,39 +436,78 @@ footer{
 
 /*Aquí termina el FOOTER*/
 
-@media screen and (max-width: 850px){
+/* SECCION RESPONSIVE */
 
-    main{
-        margin-top: 50px;
+/* Media query para dispositivos medianos */
+@media screen and (max-width: 1440px) {
+    .carousel-image {
+      height: 650px;
+      }
+    .logoPrincipal img{
+        width: 340px;
+        height: 70px;
+        padding-right: 60px;
+        padding-top: 6px;
+        margin-left: -100px;
     }
-
-    .caja__trasera{
-        max-width: 350px;
-        height: 300px;
-        flex-direction: column;
-        margin: auto;
+    .header-top .logo img {
+        width: 0px;
+        height: 0px;
     }
+  }
 
-    .caja__trasera div{
-        margin: 0px;
-        position: absolute;
+/* Media query para dispositivos medianos */
+@media screen and  (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+    .carousel-image {
+        height: 450px;
     }
-
-
-    /*Formularios*/
-
-    .contenedor__login-register{
-        top: -10px;
-        left: -5px;
-        margin: auto;
-    }
-
-    .contenedor__login-register form{
-        position: relative;
+    .logoPrincipal img{
+        width: 260px;
+        height: 55px;
+        padding-right: 60px;
+        padding-top: 6px;
+        margin-left: -80px;
     }
 }
-@media screen and (max-width: 768px){
-    .logoPrincipal{
-        display: none;
+
+/* Media query para dispositivos pequeños */
+@media screen and  (max-width: 768px) {
+    .carousel-image {
+        height: 350px;
+    }
+    .logoPrincipal img{
+        width: 0px;
+        height: 0px;
+    }
+    .header-top .logo img {
+        width: 155px;
+        height: 30px;
+        padding-right: 50px;
+        padding-top: 5px;
     }
 }
+
+/* Media query para dispositivos extra pequeños */
+@media screen and  (max-width: 425px) {
+  .social-networks {
+    text-align: center;
+  }
+    .carousel-image {
+        height: 200px;
+    }
+    .logoPrincipal img{
+        width: 0px;
+        height: 0px;
+    }
+    .header-top .logo img {
+        width: 155px;
+        height: 30px;
+        padding-right: 50px;
+        padding-top: 5px;
+    }
+}
+
+/* termina seccion responsive */    
