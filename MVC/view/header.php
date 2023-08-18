@@ -24,7 +24,7 @@
               </div>
               <div class="other-services">
                   <a href="#">
-                    <i class="fa-sharp fa-solid fa-shop"></i><span class="link-text">Modo de Entrega</span>
+                  <i class="fa-solid fa-truck-moving"></i><span class="link-text">Modo de Entrega</span>
                   </a>
                   <a href="?a=nosotros&b=Inicio">
                     <i class="fa-solid fa-store"></i><span class="link-text">¿Quienes somos?</span>
