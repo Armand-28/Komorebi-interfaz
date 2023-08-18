@@ -633,7 +633,7 @@ aside .vision p{
     margin: auto;
     margin-top: 700px;
     padding: 10px;
-    width: 90%;
+    width: 95%;
     height: 100%;
     display: grid;
     grid-template-rows: 100px 500px 1fr 100px;
@@ -658,9 +658,10 @@ aside .vision p{
 
 footer{
     width: 100%;
-    padding: 50px 0px;
+    padding: 10px 0px;
     background-image: url('../images/background-footer.svg');
     background-size: cover;
+    margin-top: 5%;
     
     /*background-color: #d0f0f8;
     -webkit-mask-image: url("../Images/background-footer.svg");
