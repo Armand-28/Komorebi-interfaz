@@ -23,18 +23,7 @@
 a:link{
     color: black;
 }
-
-:root {
-    --Caveat: "Caveat", cursive;
-    --YanoneKaffeesatz: "Yanone Kaffeesatz", sans-serif;
-    --OpenSans: "Open Sans", sans-serif;    
-}
-.container{
-    position: relative;
-    max-width: 1600px;
-    height: 100vh;
-    margin: auto; 
-}
+/* Header */
 
 /* Header Top */
 .header-top{
@@ -43,28 +32,100 @@ a:link{
     justify-content: space-between;
 }
 
-.header-top .social-networks{
-    padding: 10px;
-    display: flex;
+
+/* icons*/
+
+.wrapper .button{
+  display: inline-block;
+  height: 60px;
+  width: 30px;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 100px;
+}
+.wrapper .button .icon{
+  display: inline-block;
+  height: 50px;
+  width: 20px;
+  margin-right: 20px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 90px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon{
+  background: #1DA1F2;
+}
+.wrapper .button:nth-child(3):hover .icon{
+  background: #E1306C;
+}
+.wrapper .button:nth-child(4):hover .icon{
+  background: #333;
+}
+.wrapper .button:nth-child(5):hover .icon{
+  background: #ff0000;
+}
+.wrapper .button .icon i{
+  font-size: 15px;
+  line-height: 40px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i{
+  color: #fff;
+}
+.wrapper .button span{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span{
+  color: #4267B2;
+}
+.wrapper .button:nth-child(2) span{
+  color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span{
+  color: #E1306C;
+}
+.wrapper .button:nth-child(4) span{
+  color: #333;
+}
+.wrapper .button:nth-child(5) span{
+  color: #ff0000;
 }
 
-.header-top .social-networks a {
-    color: var(--color-3);
-    margin-left: 40%;
-}
-
-.header-top .social-networks a:hover{
-    color: var(--color-4);
-}
-
+/* icons fin */
 
 .header-top .logo img{
-    width: 155px;
-    height: 30px;
-    padding-right: 50px;
-    padding-top: 5px;
+    width: 0px;
+    height: 0px;
 }
+
+/* logo index */
+
+.logoPrincipal img{
+    width: 300px;
+    height: 65px;
+    padding-right: 60px;
+    padding-top: 6px;
+    margin-left: -50px;
+}
+
 /* Carrucel de imagenes */
+
 .carousel-image {
     height: 750px;
 }
@@ -82,16 +143,16 @@ a:link{
 }
 
 .header-bottom .icon-menu{
-    margin-left: 50%;
+    margin-left: 35%;
     transform: translateX(-50%);
-    font-size: 30px;
+    font-size: 35px;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
 }
 
-.header-bottom .logo img{
+.header-bottom .logo .logoPrincipal img{
     display: none;
 }
 
@@ -188,153 +249,250 @@ a:link{
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    transition: height 0.3s ease ;
 }
-.services > a:hover{
-    height: 100%;
-}
-
-.services > a:hover p{
-    display: block;
-    transition: 3s ease;
-}
-
 .services > a > p{
     margin-top: 10px;
     font-size: 14px;
     font-family: var(--font-3);
-    display: none;
 }
 
 .services > a > i{
     font-size: 30px;
-    height: 50%;
 }
-
-.quienes-somos{
-    position: absolute;
-    top: 950px;
-    width: 1600px;
-    border-top: 2px solid #777777;
-
-}
-
-.quienes-somos p{
-    position: absolute;
-    text-align: center;
-    top: 100px;
-    right: 300px;
-    color: #000000;
-    font-size: 30px;
-    text-transform: capitalize;
-    font-family: var(--YanoneKaffeesatz);
-}
-.quienes-somos p span{
-    position: absolute;
-    color: #FF9F23;
-    left: 65px;
-    font-size: 60px;
-    letter-spacing: 1px;
-}
-.quienes-somos div{
-position: absolute;
-left: 120px;
-width: 1000px;
-height: 400px;
-top: 550px;
-color: #000000;
-z-index: 999;
-}
-.quienes-somos div h1{
-    position: absolute;
-    color: #e90000;
-    font-size: 30px;
-    font-family: var(--YanoneKaffeesatz);
-}
-.quienes-somos div p{
-    position: absolute;
-    display: inline-block;
-    width: 980px;
-    text-align: justify;
-    line-height: 30px;
-    top: 60px;
-    left: 10px;
-    color: #000000;
-    font-size: 18px;
-    font-family: var(--YanoneKaffeesatz);
-    text-transform: none;
-}
-aside{
+.titulo-promociones{
     position: relative;
-    display:flex ;
+    text-decoration: none;
+    color: #e90000;
+    text-align: center;
+    display: flex;
     justify-content: center;
-    background-color: #343434b4;
-    top: 590px;
+    align-items: center;
+    font-size: 40px;
+    
+}
+
+.contenedor{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    /* oculto lo que queda fuera del .contenedor */
+}
+/* SECCION CONTENEDOR DE ITEMS */
+.contenedor .contenedor-items{
+    margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(2, 600px);
-    grid-template-rows: repeat(2, 200px);
-    gap: 150px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+    grid-gap:30px;
+    grid-row-gap: 30px;
+    /* width: 60%; */
+    width: 100%;
+    transition: .3s;
+}
+.contenedor .contenedor-items .item{
+    max-width: 230px;
+    margin: auto;
+    border: 1px solid #666;
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+}
+.contenedor .contenedor-items .item .img-item{
     width: 100%;
 }
-aside .mision{
-    position: relative;
-    top: 40px;
-    width: 550px;
-    height: 320px;
+.contenedor .contenedor-items .item:hover{
+    box-shadow: 0 0 10px #666;
+    scale: 1.05;
+}
+.contenedor .contenedor-items .item .titulo-item{
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contenedor .contenedor-items .item .precio-item{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+.contenedor .contenedor-items .item p{
+    text-align: center;
+    font-size: 14px;
+    color: #7a7a7a;
+}
+.contenedor .contenedor-items .item .boton-item{
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: #FF9F23;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* seccion carrito */
+.carrito{
+    border: 1px solid #666;
+    width: 35%;
+    margin-top: 30px;
     background-color: #FFFFFF;
     border-radius: 10px;
-    box-shadow: 1px 2px 20px 4px #00000082;
+    margin-bottom: auto;
+    position: absolute; 
+    top: 119px;
+    transition: .3s;
+    /* Estilos para ocultar */
+    right: 0;
+    opacity: 1;
+    overflow: hidden;
 }
-aside .mision h2{
+#carrito{
+    display: none;
+}
+
+.carrito .header-carrito{
+    background-color: #e90000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+p > .fa-xmark{
     position: absolute;
-    color: #FF9F23;
-    font-size: 30px;
-    font-family: var(--YanoneKaffeesatz);
-    font-weight: bold;
-    display: block;
-    left: 35px;
-    top: 40px;
+    right: 5%;
+    top: 2%;
+    font-size: 20px;
+    cursor: pointer;        
 }
-aside .mision p{
-    position: absolute;
-    top: 90px;
-    left: 35px;
-    width: 450px;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 25px;
-    text-transform: none;
-}
-aside .vision{
+.carrito .carrito-item{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
     position: relative;
-    top: 40px;
-    width: 550px;
-    height: 320px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 1px 2px 20px 4px #00000082;
+    border-bottom: 1px solid #666;
+    padding: 20px;
 }
-aside .vision h2{
-    position: absolute;
-    color: #FF9F23;
-    font-size: 30px;
-    font-family: var(--YanoneKaffeesatz);
-    font-weight: bold;
+.carrito .carrito-item img{
+    margin-right: 20px;
+}
+.carrito .carrito-item .carrito-item-titulo{
     display: block;
-    left: 35px;
-    top: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
-aside .vision p{
+.carrito .carrito-item .selector-cantidad{
+    display: inline-block;
+    margin-right: 25px;
+}
+.carrito .carrito-item .carrito-item-cantidad{
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    display: inline-block;
+    width:30px;
+    padding: 5px;
+    text-align: center;
+}
+.carrito .carrito-item .selector-cantidad i{
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.carrito .carrito-item .carrito-item-precio{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.carrito .carrito-item .btn-eliminar{
     position: absolute;
-    top: 90px;
-    left: 35px;
-    width: 470px;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 25px;
-    text-transform: none;
+    right: 15px;
+    top: 15px;
+    color: #000;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+}
+.carrito .carrito-item .btn-eliminar i{
+    pointer-events: none;
+}
+
+.carrito-total{
+    background-color: #f3f3f3;
+    padding: 30px;
+}
+.carrito-total .fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.carrito-total .btn-pagar{
+    display: block;
+    width: 100%;
+    border: none;
+    background: #FF9F23;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.carrito-total .btn-pagar:hover{
+    scale: 1.05;
+}
+
+/* seccion quines somos */
+/* Global Configuration */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-3);
+}
+:root{
+    --color1: #e90000;
+    --color-2: #D2D2D2; 
+    --color-3: #777777;  
+    --color-4: black; 
+    --color-5: white;
+    --color-6: #FF9F23;
+    --font-1: "Open Sans", sans-serif;
+    --font-2: "Yanone Kaffeesatz", sans-serif;
+    --font-3: 'Poppins', sans-serif;
+}
+
+a:link{
+    color: black;
+}
+
+:root {
+    --Caveat: "Caveat", cursive;
+    --YanoneKaffeesatz: "Yanone Kaffeesatz", sans-serif;
+    --OpenSans: "Open Sans", sans-serif;    
 }
 
 
@@ -458,6 +616,80 @@ aside .vision p{
     max-width: 100%;
     max-height: 100%;
   }
+
+  /* contenedor de mision y vision */
+  aside{
+    position: relative;
+    display:flex ;
+    justify-content: center;
+    background-color: #343434b4;
+    top: 590px;
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 150px;
+    width: 100%;
+}
+aside .mision{
+    position: relative;
+    top: 40px;
+    width: 550px;
+    height: 320px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 1px 2px 20px 4px #00000082;
+}
+aside .mision h2{
+    position: absolute;
+    color: #FF9F23;
+    font-size: 30px;
+    font-family: var(--YanoneKaffeesatz);
+    font-weight: bold;
+    display: block;
+    left: 35px;
+    top: 40px;
+}
+aside .mision p{
+    position: absolute;
+    top: 90px;
+    left: 35px;
+    width: 450px;
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    text-transform: none;
+}
+aside .vision{
+    position: relative;
+    top: 40px;
+    width: 550px;
+    height: 320px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 1px 2px 20px 4px #00000082;
+}
+aside .vision h2{
+    position: absolute;
+    color: #FF9F23;
+    font-size: 30px;
+    font-family: var(--YanoneKaffeesatz);
+    font-weight: bold;
+    display: block;
+    left: 35px;
+    top: 40px;
+}
+aside .vision p{
+    position: absolute;
+    top: 90px;
+    left: 35px;
+    width: 470px;
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    text-transform: none;
+}
 /* ¿QUIENES SOMOS? TEXTO */
 .card {
     position: relative;
@@ -1221,4 +1453,523 @@ footer{
 }
 
 /* termina seccion responsive */
+.quienes-somos{
+    position: absolute;
+    top: 950px;
+    width: 1600px;
+    border-top: 2px solid #777777;
+
+}
+
+.quienes-somos p{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    right: 300px;
+    color: #000000;
+    font-size: 30px;
+    text-transform: capitalize;
+    font-family: var(--YanoneKaffeesatz);
+}
+.quienes-somos p span{
+    position: absolute;
+    color: #FF9F23;
+    left: 65px;
+    font-size: 60px;
+    letter-spacing: 1px;
+}
+.quienes-somos div{
+position: absolute;
+left: 120px;
+width: 1000px;
+height: 400px;
+top: 550px;
+color: #000000;
+z-index: 999;
+}
+.quienes-somos div h1{
+    position: absolute;
+    color: #e90000;
+    font-size: 30px;
+    font-family: var(--YanoneKaffeesatz);
+}
+.quienes-somos div p{
+    position: absolute;
+    display: inline-block;
+    width: 980px;
+    text-align: justify;
+    line-height: 30px;
+    top: 60px;
+    left: 10px;
+    color: #000000;
+    font-size: 18px;
+    font-family: var(--YanoneKaffeesatz);
+    text-transform: none;
+}
+aside{
+    position: relative;
+    display:flex ;
+    justify-content: center;
+    background-color: #343434b4;
+    top: 590px;
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 150px;
+    width: 100%;
+}
+aside .mision{
+    position: relative;
+    top: 40px;
+    width: 550px;
+    height: 320px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 1px 2px 20px 4px #00000082;
+}
+aside .mision h2{
+    position: absolute;
+    color: #FF9F23;
+    font-size: 30px;
+    font-family: var(--YanoneKaffeesatz);
+    font-weight: bold;
+    display: block;
+    left: 35px;
+    top: 40px;
+}
+aside .mision p{
+    position: absolute;
+    top: 90px;
+    left: 35px;
+    width: 450px;
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    text-transform: none;
+}
+aside .vision{
+    position: relative;
+    top: 40px;
+    width: 550px;
+    height: 320px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 1px 2px 20px 4px #00000082;
+}
+aside .vision h2{
+    position: absolute;
+    color: #FF9F23;
+    font-size: 30px;
+    font-family: var(--YanoneKaffeesatz);
+    font-weight: bold;
+    display: block;
+    left: 35px;
+    top: 40px;
+}
+aside .vision p{
+    position: absolute;
+    top: 90px;
+    left: 35px;
+    width: 470px;
+    font-family: var(--YanoneKaffeesatz);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    text-transform: none;
+}
+
+
+/* contenido de nosotros */
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    animation: banner 10s infinite linear alternate;
+    background-size: 100% 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    right: 0;
+    top: 150px;
+    object-fit: cover;
+}
+
+@keyframes banner {
+
+    0%,
+    20% {
+        background-image: url("../images/komorebi-quienes-somos.jpg");
+    }
+
+    25%,
+    45% {
+        background-image: url("../images/quienes-fotos.jpg");
+    }
+
+    50%,
+    70% {
+        background-image: url("../images/quienes-som22.jpg");
+    }
+
+    75%,
+    100% {
+        background-image: url("../images/quienes-somos-mk.jpg");
+    }
+}
+
+.capa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    object-fit: contain;
+}
+
+.info {
+    z-index: 1;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 300px;
+
+}
+
+.info h1 {
+    color: #fff;
+    font-size: 69px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.info p {
+    color: #c7c7c7;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.info a {
+    color: #fff;
+    text-decoration: none;
+    background: #e90000;
+    padding: 16px 37px;
+    display: inline-block;
+    border-radius: 50px;
+}
+/* logo en contenedor */
+.logo-solo {
+    top: 400px;
+    position: relative;
+    width: 30%;
+    height: 250px;
+    margin-top: 230px;
+    margin-left: 70%;
+    align-items: center;
+    background: #f2f2f3;
+    border-radius: 12px;
+    box-shadow: inset 5px 5px 10px #a9a9aa77,
+                             inset -5px -5px 10px #ffffff7e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-solo img {
+        width: 70%;
+        height: 30%;
+  }
+  
+  .text-miplaza{
+    width: 100%;
+    height: 50%;
+    /* background: url('../images/komorebi-quienes-somos.jpg'); */
+    margin-top: 150px;
+    display: flex;
+    background-position: center center;
+    background-size: auto;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-miplaza img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+/* ¿QUIENES SOMOS? TEXTO */
+.card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url('../images/quienes_somos.jpg');
+    background-position: center center;
+    object-fit: contain;
+    perspective: 1000px;
+    margin:auto;
+    margin-top: 100px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card__image {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .card:hover svg {
+    scale: 0;
+  }
+  
+  .card__description {
+    margin: 10px 0 10px;
+    font-size: 12px;
+    color: #777;
+    line-height: 1.4;
+  }
+  
+  .card__button {
+    padding: 15px;
+    border-radius: 8px;
+    background: #777;
+    border: none;
+    color: white;
+  }
+  
+  .secondary {
+    background: transparent;
+    color: #777;
+    border: 1px solid #777;
+  } 
+.card-quienes {
+    left: 0px;
+    top: 900px;
+    position: relative;
+    padding: 20px;
+    width: 60%;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 5px 5px 8px #cbc5c5,
+               -5px -5px 8px #cbc5c5;
+    transition: 0.4s;
+  }
+  
+  .card-somos:hover {
+    translate: 0 -10px;
+  }
+  
+  .cardsom-title {
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 15px 0 0 10px;
+  }
+  
+  .cardsom-body {
+    margin: 13px 0 0 10px;
+    color: #7b7575;
+    font-size: 17px;
+  }
+/* termina quienes somos */
+
+/* SECCION RESPONSIVE */
+
+/* Media query para dispositivos medianos */
+@media screen and (max-width: 1440px) {
+    .carousel-image {
+      height: 650px;
+      }
+    .logoPrincipal img{
+        width: 340px;
+        height: 70px;
+        padding-right: 60px;
+        padding-top: 6px;
+        margin-left: -100px;
+    }
+    .header-top .logo img {
+        width: 0px;
+        height: 0px;
+    }
+  }
+
+/* Media query para dispositivos medianos */
+@media screen and  (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+    .carousel-image {
+        height: 450px;
+    }
+    .logoPrincipal img{
+        width: 260px;
+        height: 55px;
+        padding-right: 60px;
+        padding-top: 6px;
+        margin-left: -80px;
+    }
+}
+
+/* Media query para dispositivos pequeños */
+@media screen and  (max-width: 768px) {
+    .carousel-image {
+        height: 350px;
+    }
+    .logoPrincipal img{
+        width: 0px;
+        height: 0px;
+    }
+    .header-top .logo img {
+        width: 155px;
+        height: 30px;
+        padding-right: 50px;
+        padding-top: 5px;
+    }
+}
+
+/* Media query para dispositivos extra pequeños */
+@media screen and  (max-width: 425px) {
+  .social-networks {
+    text-align: center;
+  }
+    .carousel-image {
+        height: 200px;
+    }
+    .logoPrincipal img{
+        width: 0px;
+        height: 0px;
+    }
+    .header-top .logo img {
+        width: 155px;
+        height: 30px;
+        padding-right: 50px;
+        padding-top: 5px;
+    }
+}
+
+/* termina seccion responsive */
+
+footer{
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url('../images/background-footer.svg');
+    background-size: cover;
+    
+    /*background-color: #d0f0f8;
+    -webkit-mask-image: url("../Images/background-footer.svg");
+    mask-image: url("../Images/background-footer.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;*/
+}
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.box__footer .logo img{
+    width: 200px;
+}
+
+.box__footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 16px;
+}
+
+.box__footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+
+
 

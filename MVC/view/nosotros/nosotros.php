@@ -41,7 +41,6 @@
       <img src="assets/images/logo rojo.png">
     </div>
 <div class="text-miplaza">
-  <img src="assets/images/logo blanco.png">
 </div>
   <aside>
     <div class="card">
