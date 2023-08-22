@@ -32,9 +32,9 @@
                 </div>
           </div>
           <div class="services">
-              <a href="#" onclick="mostrarCarrito();">
+              <a class="carro" href="#" onclick="mostrarCarrito();">
                   <i class="fa-solid fa-cart-shopping micarrito"></i>
-                  <p>Mi carrito</p>
+                  <p id="texto-carrito">Mi carrito</p>
               </a>
               <a href="?a=login&b=Inicio">
                   <i class="fa-solid fa-circle-user mi-cuenta"></i>
