@@ -337,16 +337,14 @@ a:link{
 .carrito{
     border: 1px solid #666;
     width: 35%;
-    margin-top: 30px;
+    margin-top: 13px;
     background-color: #FFFFFF;
-    border-radius: 10px;
-    margin-bottom: auto;
+    border-radius: 5px;
     position: absolute; 
     top: 119px;
     transition: .3s;
     /* Estilos para ocultar */
     right: 0;
-    opacity: 1;
     overflow: hidden;
 }
 #carrito{
@@ -359,9 +357,9 @@ a:link{
     text-align: center;
     padding: 30px 0;
 }
-p > .fa-xmark{
+.header-carrito p .fa-xmark{
     position: absolute;
-    right: 5%;
+    right: 10px;
     top: 2%;
     font-size: 20px;
     cursor: pointer;        
@@ -468,12 +466,13 @@ p > .fa-xmark{
     position: absolute;
     background-color: #e90000;
     width: 230px;
+    padding: 0;
     height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 1;
-    top: 137px;
+    top: 17.5%;
     left: 0px;
     transition: all .3s linear;
     border: 2px solid rgba(0, 0, 0, 0.101);
@@ -483,8 +482,8 @@ display: none;
 }
 p .fa-xmark{
     position: absolute;
-    right: 0;
-    top: 10px;
+    right: -6px;
+    top: 15px;
     font-size: 20px;
     cursor: pointer;
 }
@@ -610,19 +609,15 @@ p .fa-xmark{
     }
     #menu{
         position: absolute;
-        top: 137px;
-        width: 260px;
-        height: 500px;
+        top: 15%;
+        width: 230px;
+        height: 450px;
     }
     #menu ul{
         padding: 0 20px;
         
     }
-    .fa-xmark{
-        right: 0;
-        top: 5px;
-    }
-    .search{
+    /* .search{
         margin-left: 200px;
         display: flex;
         flex-direction: column;
@@ -658,7 +653,7 @@ p .fa-xmark{
         transition: 2s ease;
         display: block;
     }
-    
+     */
 
   }
 
@@ -679,18 +674,15 @@ p .fa-xmark{
     }
     #menu{
         position: absolute;
-        top: 137px;
-        width: 250px;
-        height: 500px;
+        top: 19.8%;
+        width: 230px;
+        height: 450px;
     }
     #menu ul{
         padding: 0 20px;
         
     }
-    .fa-xmark{
-        right: 0;
-        top: 5px;
-    }
+
 
 }
 
@@ -712,18 +704,18 @@ p .fa-xmark{
        
     #menu{
         position: absolute;
-        top: 137px;
-        width: 250px;
-        height: 480px;
+        top: 22.9%;
+        width: 230px;
+        height: 450px;
     }
     #menu ul{
         padding: 0 20px;
     }
-    .fa-xmark{
-        right: 0;
-        top: 5px;
+ 
+    .carrito{
+        width: 300px;
+        top: 139px;
     }
-
 }
 
 /* Media query para dispositivos extra pequeños */
@@ -737,25 +729,25 @@ p .fa-xmark{
     .logoPrincipal img{
         width: 0px;
         height: 0px;
+        display: none;
     }
     .header-top .logo img {
         width: 155px;
         height: 30px;
-        padding-right: 50px;
-        padding-top: 5px;
+        padding: 5px 50px;
     }
     #menu{
         position: absolute;
-        top: 145px;
-        width: 250px;
-        height: 480px;
+        width: 230px;
+        height: 450px;
+        top: 166px;
     }
     #menu ul{
         padding: 0 20px;
     }
-    .fa-xmark{
-        right: 0;
-        top: 5px;
+    .carrito{
+        width: 300px;
+        top: 154px;
     }
  
 }
