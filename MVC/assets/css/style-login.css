@@ -118,9 +118,7 @@ a:link{
 .logoPrincipal img{
     width: 300px;
     height: 65px;
-    padding-right: 60px;
-    padding-top: 6px;
-    margin-left: -50px;
+    margin-left: 100px;
 }
 
 /* Carrucel de imagenes */
@@ -191,44 +189,34 @@ a:link{
 .search .other-services {
     display: flex;
     margin-top: 10px;
-    gap: 15px;
+    margin-left: 1600px;
     padding-bottom: 10px;
 }
 
 .search .other-services a {
-    width: 50%;
+    width: 600px;
     height: 35px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background: var(--color-5);
     color: var(--color-4);
     text-decoration: none;
-    padding: 7px;
+    padding: 10px ;
     overflow: hidden;
     border-radius: 10px;
-    transition: width 0.8s ease;
     cursor: pointer;
 }
 .search .other-services a:first-child{
     display: none;
 }
 .search .other-services a .link-text{
-    display: none;
+    display: flex;
     font-family: var(--font-3);
-    font-size: 10px;
-    margin-left: 5px;
-}
-
-.search .other-services a:hover {
+    font-size: 13px;
     width: 100%;
+    margin-left: 200px;
 }
-
-.search .other-services a:hover .link-text{
-    transition: 2s ease;
-    display: block;
-}
-
 /* Services */
 
 .services{
@@ -446,9 +434,7 @@ footer{
     .logoPrincipal img{
         width: 340px;
         height: 70px;
-        padding-right: 60px;
-        padding-top: 6px;
-        margin-left: -100px;
+        margin-left: 200px;
     }
     .header-top .logo img {
         width: 0px;
@@ -465,11 +451,16 @@ footer{
         height: 450px;
     }
     .logoPrincipal img{
-        width: 260px;
-        height: 55px;
-        padding-right: 60px;
-        padding-top: 6px;
-        margin-left: -80px;
+        width: 200px;
+        height: 40px;
+        margin-left: 40px;
+    }
+    .search .other-services a{
+        position: relative;
+        width: 400px;
+    }
+    .search .other-services{
+        margin-left: 700px;
     }
 }
 
@@ -479,14 +470,24 @@ footer{
         height: 350px;
     }
     .logoPrincipal img{
-        width: 0px;
-        height: 0px;
+        width: 200px;
+        margin-left: 40px;
+        height: 60px;
+        display: none;
     }
     .header-top .logo img {
-        width: 155px;
-        height: 30px;
-        padding-right: 50px;
-        padding-top: 5px;
+        width: 100px;
+        position: relative;
+        height: 28px;
+        right: 25px;
+        top: 0px;
+    }
+    .search .other-services{
+        margin-left: -140px;
+    }
+    .search .other-services a{
+        position: relative;
+        width: 800px;
     }
 }
 
@@ -508,6 +509,38 @@ footer{
         padding-right: 50px;
         padding-top: 5px;
     }
+    .search .other-services{
+        margin-left: 250px;
+    }
+    .search .other-services a{
+        position: relative;
+        width: 400px;
+    }
+}
+@media screen and  (max-width: 600px) {
+    .social-networks {
+        text-align: center;
+      }
+        .carousel-image {
+            height: 200px;
+        }
+        .logoPrincipal img{
+            width: 0px;
+            height: 0px;
+        }
+        .header-top .logo img {
+            width: 155px;
+            height: 30px;
+            padding-right: 50px;
+            padding-top: 5px;
+        }
+        .search .other-services{
+            margin-left: 250px;
+        }
+        .search .other-services a{
+            position: relative;
+            width: 400px;
+        }
 }
 
 /* termina seccion responsive */    
