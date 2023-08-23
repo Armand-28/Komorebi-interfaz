@@ -748,6 +748,9 @@ p .fa-xmark{
         right: 0;
         top: 5px;
     }
+    .search #search-bar input{
+        width: 400px;
+    }
 
 }
 
@@ -765,9 +768,9 @@ p .fa-xmark{
         display: none;
     }
     .header-top .logo img {
-        width: 155px;
-        height: 30px;
-        padding: 5px 50px;
+        width: 190px;
+        height: 40px;
+        padding: 5px 40px;
     }
     #menu{
         position: absolute;
@@ -795,11 +798,33 @@ p .fa-xmark{
         cursor: pointer;
     }
     .services > a > p{
-        margin-top: 10px;
         margin-left: 30%;
         font-size: 14px;
         font-family: var(--font-3);
     }
+    .search #search-bar input{
+        width: 200px;
+    }
+    .search{
+        margin-left: -10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .services{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        gap: 10%;
+        margin-top: 0%;
+    }
+    #texto-carrito {
+        opacity: 1; 
+        transition: opacity 0.3s; 
+    }
+    .carro:hover #texto-carrito {
+        opacity: 0; 
+    }
+
  
 }
 /* termina seccion responsive */

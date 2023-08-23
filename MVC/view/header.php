@@ -38,7 +38,7 @@
               </a>
               <a href="?a=login&b=Inicio">
                   <i class="fa-solid fa-circle-user mi-cuenta"></i>
-                  <p>Mi cuenta</p>
+                  <p id="texto-carrito">Mi cuenta</p>
               </a>
           </div>
       </div>
