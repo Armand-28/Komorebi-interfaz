@@ -249,6 +249,15 @@ a:link{
     font-size: 30px;
 }
 
+/* estilos login */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
 body{
     background-image: url(../imagenes/persona-comprando.jpg);
     background-size: cover;
@@ -261,7 +270,7 @@ main{
     width: 100%;
     padding: 20px;
     margin: auto;
-    margin-top: 8%;
+    margin-top: 100px;
 }
 
 .contenedor__todo{
@@ -269,17 +278,18 @@ main{
     max-width: 800px;
     margin: auto;
     position: relative;
+    margin-top: 8%;
 }
 
 .caja__trasera{
     width: 100%;
-    padding: 1px 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: #ee3c3c;
-    background-image: url(../images/images/bg4.jpg);
+    background-image: url(assets/images/images/bg4.jpg);
     
 }
 
@@ -292,7 +302,7 @@ main{
 
 .caja__trasera div p,
 .caja__trasera button{
-    margin-top: 30px;
+    margin-top: 13px;
 }
 
 .caja__trasera div h3{
@@ -316,7 +326,6 @@ main{
     outline: none;
     transition: all 300ms;
 }
-
 .caja__trasera button:hover{
     background: #fff;
     color: #e90000;
@@ -394,6 +403,45 @@ main{
     display: none;
 }
 
+.contenedor__login-register a{
+    text-decoration: none;
+    color: rgba(174, 14, 14, 0.741);
+    font-size: 14px;
+}
+
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+
+    .caja__trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+
+    /*Formularios*/
+
+    .contenedor__login-register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor__login-register form{
+        position: relative;
+    }
+}
+/* fin login */
+
 /* footer de la */
 
 footer{
@@ -405,7 +453,7 @@ footer{
 }
 
 .box__copyright{
-    max-width: 30%;
+    max-width: 90%;
     margin: auto;
     text-align: center;
     padding: 20px 40px;
@@ -432,8 +480,8 @@ footer{
       height: 650px;
       }
     .logoPrincipal img{
-        width: 340px;
-        height: 70px;
+        width: 330px;
+        height: 60px;
         margin-left: 200px;
     }
     .header-top .logo img {
@@ -504,9 +552,10 @@ footer{
         height: 0px;
     }
     .header-top .logo img {
-        width: 155px;
-        height: 30px;
+        width: 160px;
+        height: 35px;
         padding-right: 50px;
+        margin-left: 30%;
         padding-top: 5px;
     }
     .search .other-services{
@@ -514,33 +563,15 @@ footer{
     }
     .search .other-services a{
         position: relative;
-        width: 400px;
+        width: 200px;
     }
-}
-@media screen and  (max-width: 600px) {
-    .social-networks {
-        text-align: center;
-      }
-        .carousel-image {
-            height: 200px;
-        }
-        .logoPrincipal img{
-            width: 0px;
-            height: 0px;
-        }
-        .header-top .logo img {
-            width: 155px;
-            height: 30px;
-            padding-right: 50px;
-            padding-top: 5px;
-        }
-        .search .other-services{
-            margin-left: 250px;
-        }
-        .search .other-services a{
-            position: relative;
-            width: 400px;
-        }
+    .search .other-services a .link-text {
+        display: flex;
+        font-family: var(--font-3);
+        font-size: 13px;
+        width: 100%;
+        margin-left: 20px;
+    }
 }
 
 /* termina seccion responsive */    
