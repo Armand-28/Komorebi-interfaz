@@ -1,4 +1,25 @@
-
+// Función para guardar el estado del carrito en una cookie
+function saveCartStateToCookie(cartItems) {
+    const cartItemsJSON = JSON.stringify(cartItems);
+    document.cookie = `contenedor-items=${cartItemsJSON}; expires=Thu, 01 Jan 2099 00:00:00 UTC; path=/`;
+  }
+  
+  // Función para cargar el estado del carrito desde una cookie
+  function loadCartStateFromCookie() {
+    const cookies = document.cookie.split("; ");
+    for (const cookie of cookies) {
+      const [name, value] = cookie.split("=");
+      if (name === "cart") {
+        return JSON.parse(value);
+      }
+    }
+    return [];
+  }
+  
+  // Agregar evento clic a los botones de eliminación
+  const removeButtons = document.querySelectorAll(".remove-button");
+  const productList = document.getElementById("product-list");
+  const cartItems = loadCartStateFromCookie(); 
 //Variable que mantiene el estado visible del carrito
 var carritoVisible = false;
 
@@ -13,7 +34,7 @@ function ready(){
     
     //Agregremos funcionalidad a los botones eliminar del carrito
     var botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
-    for(var i=0;i<botonesEliminarItem.length; i++){
+    for(var i=0; i<botonesEliminarItem.length; i++){
         var button = botonesEliminarItem[i];
         button.addEventListener('click',eliminarItemCarrito);
     }
@@ -141,7 +162,6 @@ function sumarCantidad(event){
 function restarCantidad(event){
     var buttonClicked = event.target;
     var selector = buttonClicked.parentElement;
-    console.log(selector.getElementsByClassName('carrito-item-cantidad')[0].value);
     var cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
     cantidadActual--;
     if(cantidadActual>=1){

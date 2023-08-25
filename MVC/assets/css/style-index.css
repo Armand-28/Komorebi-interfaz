@@ -351,12 +351,13 @@ a:link{
 /* seccion carrito */
 .carrito{
     border: 1px solid #666;
-    width: 35%;
+    width: 25%;
     margin-top: 13px;
     background-color: #FFFFFF;
     border-radius: 5px;
     position: absolute; 
     top: 119px;
+    z-index: 999;
     transition: .3s;
     /* Estilos para ocultar */
     right: 0;
@@ -445,6 +446,9 @@ a:link{
 .carrito .carrito-item .btn-eliminar i{
     pointer-events: none;
 }
+.carrito .carrito-item .btn-eliminar i:hover{
+    color: #FF9F23;
+}
 
 .carrito-total{
     background-color: #f3f3f3;
@@ -480,7 +484,7 @@ a:link{
 #menu{
     position: absolute;
     background-color: #e90000;
-    width: 230px;
+    width: 15%;
     padding: 0;
     height: 450px;
     display: flex;
@@ -623,8 +627,8 @@ p .fa-xmark{
     }
     #menu{
         position: absolute;
-        top: 15%;
-        width: 230px;
+        top: 17%;
+        width: 16%;
         height: 450px;
     }
     #menu ul{
@@ -706,7 +710,7 @@ p .fa-xmark{
     #menu{
         position: absolute;
         top: 19.8%;
-        width: 230px;
+        width: 23%;
         height: 450px;
     }
     #menu ul{
@@ -750,6 +754,10 @@ p .fa-xmark{
         margin-top: 5%;
         margin-left: -15%;
     }
+    .carrito{
+        width: 40%;
+        top: 18.5%;
+    }
 }
 
 /* Media query para dispositivos pequeños */
@@ -769,8 +777,8 @@ p .fa-xmark{
     }
     #menu{
         position: absolute;
-        top: 22.9%;
-        width: 230px;
+        top: 21.5%;
+        width: 30%;
         height: 450px;
     }
     #menu ul{
@@ -784,8 +792,8 @@ p .fa-xmark{
         width: 400px;
     }
     .carrito{
-        width: 300px;
-        top: 157px;
+        width: 45%;
+        top: 19.6%;
     }
     .services > a{
         display: flex;
@@ -820,10 +828,11 @@ p .fa-xmark{
         margin-top: 5%;
         margin-left: -20%;
     }
+    
 }
 
 /* Media query para dispositivos extra pequeños */
-@media screen and  (max-width: 425px) {
+@media screen and  (max-width: 426px) {
     .social-networks {
     text-align: center;
     }
@@ -842,9 +851,9 @@ p .fa-xmark{
     }
     #menu{
         position: absolute;
-        width: 230px;
+        width: 54%;
         height: 450px;
-        top: 166px;
+        top: 24.4%;
     }
     #menu ul{
         padding: 0 20px;
@@ -888,5 +897,9 @@ p .fa-xmark{
     .carro:hover #texto-carrito {
         opacity: 0  ; 
     } 
+    .carrito{
+        width: 65%;
+        top: 25%;
+    }
 }
 /* termina seccion responsive */
