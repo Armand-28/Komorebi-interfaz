@@ -274,21 +274,6 @@ a:link{
     
 }
 
-#texto-carrito {
-    display: none;
-    opacity: 0;
-    transition: opacity 2s ease;
-    -webkit-transition: opacity 2s ease;
-    -moz-transition: opacity 2s ease;
-    -ms-transition: opacity 2s ease;
-    -o-transition: opacity 2s ease;
-}
-
-.carro:hover #texto-carrito {
-    display: block;
-    opacity: 1; 
-}
-
 .contenedor{
     width: 80%;
     margin: auto;
@@ -365,6 +350,7 @@ a:link{
 }
 #carrito{
     display: none;
+    z-index: 2;
 }
 
 .carrito .header-carrito{
@@ -495,10 +481,12 @@ a:link{
     left: 0px;
     transition: all .3s linear;
     border: 2px solid rgba(0, 0, 0, 0.101);
+    z-index: 2;
 }
 #menu{
-display: none;
+    display: none;
 }
+
 p .fa-xmark{
     position: absolute;
     right: -6px;
@@ -689,7 +677,6 @@ p .fa-xmark{
         font-size: 14px;
         font-family: var(--font-3);
     }
-    
   }
 
 /* Media query para dispositivos medianos */
@@ -738,11 +725,18 @@ p .fa-xmark{
         font-size: 14px;
         font-family: var(--font-3);
     }
+    .search .other-services {
+        display: flex;
+        margin-top: 10px;
+        gap: 15px;
+        padding-bottom: 10px;
+        margin-left: 30%;
+    }
     .search #search-bar input{
-        width: 400px;
+        width: 180%;
     }
     .search{
-        margin-left: auto;
+        margin-left: -5%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -790,6 +784,13 @@ p .fa-xmark{
     }
     .search #search-bar input{
         width: 400px;
+    }
+    .search .other-services {
+        display: flex;
+        margin-top: 10px;
+        gap: 15px;
+        padding-bottom: 10px;
+        margin-left: 0%;
     }
     .carrito{
         width: 45%;
@@ -876,7 +877,7 @@ p .fa-xmark{
         font-family: var(--font-3);
     }
     .search #search-bar input{
-        width: 200px;
+        width: auto;
     }
     .search{
         margin-left: -10px;
@@ -884,22 +885,25 @@ p .fa-xmark{
         flex-direction: column;
         align-items: center;
     }
+    .search .other-services {
+        display: flex;
+        margin-top: 10px;
+        gap: 15px;
+        padding-bottom: 10px;
+        margin-left: 0%;
+    }
     .services{
         display: grid;
-        grid-template-columns: 40% 40%;
-        gap: 10%;
+        grid-template-columns: 30% 30%;
+        gap: 20%;
         margin-top: 0%;
-    }
-    #texto-carrito {
-        opacity: 0; 
-        transition: opacity 0.3s; 
+        margin-left: 5%
     }
     .carro:hover #texto-carrito {
-        opacity: 0  ; 
-    } 
-    .carrito{
-        width: 65%;
-        top: 25%;
+        display: none;
+    }
+    #texto-carrito {
+        display: none;
     }
 }
 /* termina seccion responsive */

@@ -10,6 +10,7 @@
                         <h3>¿Ya tienes una cuenta?</h3>
                         <p>Inicia sesión para entrar en la página</p>
                         <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                    
                     </div>
                     <div class="caja__trasera-register">
                         <h3>¿Aún no tienes una cuenta?</h3>
