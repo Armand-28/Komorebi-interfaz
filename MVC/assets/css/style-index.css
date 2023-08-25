@@ -623,61 +623,12 @@ p .fa-xmark{
         padding: 0 20px;
         
     }
-    /* .search{
-        margin-left: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .carrito{
+        width: 30%;
+        top: 120.5px;
     }
-    .search .other-services a {
-        width: 50%;
-        height: 35px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: var(--color-5);
-        color: var(--color-4);
-        text-decoration: none;
-        padding: 7px;
-        overflow: hidden;
-        border-radius: 10px;
-        transition: width 0.8s ease;
-        cursor: pointer;
-    }
-    .search .other-services a .link-text{
-        display: block;
-        font-family: var(--font-3);
-        font-size: 10px;
-        margin-left: 10px;
-    }
-    
-    .search .other-services a:hover {
-        width: 100%;
-    }
-    
-    .search .other-services a:hover .link-text{
-        transition: 2s ease;
-        display: block;
-    }
-    .services > a{
-        display: flex;
-        height: 50%;
-        flex-direction: column;
-        align-items: center;
-        font-family: var(--font-1);
-        color: var(--color-5);
-        font-size: 18px;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    .services > a > p{
-        margin-top: 10px;
-        margin-left: 30%;
-        font-size: 14px;
-        font-family: var(--font-3);
-    }
-  }
+
+}
 
 /* Media query para dispositivos medianos */
 @media screen and  (max-width: 1024px) {
@@ -696,7 +647,7 @@ p .fa-xmark{
     }
     #menu{
         position: absolute;
-        top: 19.8%;
+        top: 20.2%;
         width: 23%;
         height: 450px;
     }
@@ -749,8 +700,8 @@ p .fa-xmark{
         margin-left: -15%;
     }
     .carrito{
-        width: 40%;
-        top: 18.5%;
+        width: 35%;
+        top: 124px;
     }
 }
 
@@ -794,7 +745,7 @@ p .fa-xmark{
     }
     .carrito{
         width: 45%;
-        top: 19.6%;
+        top: 131px;
     }
     .services > a{
         display: flex;
@@ -904,6 +855,10 @@ p .fa-xmark{
     }
     #texto-carrito {
         display: none;
+    }
+    .carrito{
+        width: 65%;
+        top: 150px;
     }
 }
 /* termina seccion responsive */

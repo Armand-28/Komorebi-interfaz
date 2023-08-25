@@ -178,6 +178,7 @@ a:link{
     border: none;
     text-align: center;
     display: none;
+    width: auto;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -488,6 +489,13 @@ footer{
         width: 0px;
         height: 0px;
     }
+    .search .other-services a{
+        position: relative;
+        width: 400px;
+    }
+    .search .other-services{
+        margin-left:1400px;
+    }
   }
 
 /* Media query para dispositivos medianos */
@@ -518,29 +526,29 @@ footer{
         height: 350px;
     }
     .logoPrincipal img{
-        width: 200px;
+        /* width: 200px;
         margin-left: 40px;
-        height: 60px;
+        height: 60px; */
         display: none;
     }
     .header-top .logo img {
         width: 100px;
         position: relative;
         height: 28px;
-        right: 25px;
+        right: 90px;
         top: 0px;
     }
     .search .other-services{
-        margin-left: -140px;
+        margin:auto;
     }
     .search .other-services a{
         position: relative;
-        width: 800px;
+        width: 500px;
     }
 }
 
 /* Media query para dispositivos extra pequeños */
-@media screen and  (max-width: 425px) {
+@media screen and  (max-width: 426px) {
   .social-networks {
     text-align: center;
   }
@@ -559,7 +567,7 @@ footer{
         padding-top: 5px;
     }
     .search .other-services{
-        margin-left: 250px;
+        margin:auto;
     }
     .search .other-services a{
         position: relative;
