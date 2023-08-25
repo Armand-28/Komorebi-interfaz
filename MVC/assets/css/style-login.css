@@ -289,7 +289,7 @@ main{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: #ee3c3c;
-    background-image: url(assets/images/images/bg4.jpg);
+    background-image: url(../../assets/images/images/bg4.jpg);
     
 }
 
@@ -453,7 +453,7 @@ footer{
 }
 
 .box__copyright{
-    max-width: 90%;
+    max-width: 50%;
     margin: auto;
     text-align: center;
     padding: 20px 40px;
@@ -479,14 +479,33 @@ footer{
     .carousel-image {
       height: 650px;
       }
-    .logoPrincipal img{
-        width: 330px;
-        height: 60px;
-        margin-left: 200px;
-    }
-    .header-top .logo img {
+      .logoPrincipal img{
         width: 0px;
         height: 0px;
+    }
+    .header-top .logo img {
+        width: 160px;
+        height: 35px;
+        padding-right: 50px;
+        margin-left: 30%;
+        padding-top: 5px;
+    }
+    .search .other-services{
+        margin-left: 250px;
+    }
+    .search .other-services a{
+        position: relative;
+        width: 200px;
+    }
+    .search .other-services a .link-text {
+        display: flex;
+        font-family: var(--font-3);
+        font-size: 13px;
+        width: 100%;
+        margin-left: 20px;
+    }
+    .box__copyright{
+        max-width: auto;
     }
   }
 
@@ -497,55 +516,6 @@ footer{
   }
     .carousel-image {
         height: 450px;
-    }
-    .logoPrincipal img{
-        width: 200px;
-        height: 40px;
-        margin-left: 40px;
-    }
-    .search .other-services a{
-        position: relative;
-        width: 400px;
-    }
-    .search .other-services{
-        margin-left: 700px;
-    }
-}
-
-/* Media query para dispositivos pequeños */
-@media screen and  (max-width: 768px) {
-    .carousel-image {
-        height: 350px;
-    }
-    .logoPrincipal img{
-        width: 200px;
-        margin-left: 40px;
-        height: 60px;
-        display: none;
-    }
-    .header-top .logo img {
-        width: 100px;
-        position: relative;
-        height: 28px;
-        right: 25px;
-        top: 0px;
-    }
-    .search .other-services{
-        margin-left: -140px;
-    }
-    .search .other-services a{
-        position: relative;
-        width: 800px;
-    }
-}
-
-/* Media query para dispositivos extra pequeños */
-@media screen and  (max-width: 425px) {
-  .social-networks {
-    text-align: center;
-  }
-    .carousel-image {
-        height: 200px;
     }
     .logoPrincipal img{
         width: 0px;
@@ -571,6 +541,76 @@ footer{
         font-size: 13px;
         width: 100%;
         margin-left: 20px;
+    }
+    .box__copyright{
+        max-width: auto;
+    }
+}
+
+/* Media query para dispositivos pequeños */
+@media screen and  (max-width: 768px) {
+    .carousel-image {
+        height: 350px;
+    }
+    .logoPrincipal img{
+        width: 0px;
+        height: 0px;
+    }
+    .header-top .logo img {
+        width: 0px;
+        height: 0px;
+    }
+    .search .other-services{
+        margin: auto;
+        position: relative;
+    }
+    .search .other-services a .link-text {
+        display: flex;
+        font-family: var(--font-3);
+        font-size: 13px;
+        width: 100%;
+        margin-left: 20px;
+    }
+    .box__copyright{
+        max-width: auto;
+    }
+}
+
+/* Media query para dispositivos extra pequeños */
+@media screen and  (max-width: 425px) {
+  .social-networks {
+    text-align: center;
+  }
+    .carousel-image {
+        height: 200px;
+    }
+    .logoPrincipal img{
+        width: 0px;
+        height: 0px;
+    }
+    .header-top .logo img {
+        width: 165px;
+        height: 35px;
+        padding-right: 50px;
+        margin-left: 20%;
+        padding-top: 5px;
+    }
+    .search .other-services{
+        margin-left: 250px;
+    }
+    .search .other-services a{
+        position: relative;
+        width: 200px;
+    }
+    .search .other-services a .link-text {
+        display: flex;
+        font-family: var(--font-3);
+        font-size: 13px;
+        width: 100%;
+        margin-left: 20px;
+    }
+    .box__copyright{
+        max-width: auto;
     }
 }
 

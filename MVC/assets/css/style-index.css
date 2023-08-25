@@ -833,7 +833,7 @@ p .fa-xmark{
 }
 
 /* Media query para dispositivos extra pequeños */
-@media screen and  (max-width: 426px) {
+@media screen and  (max-width: 425px) {
     .social-networks {
     text-align: center;
     }
