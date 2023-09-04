@@ -336,7 +336,7 @@ a:link{
     border-radius: 5px;
     cursor: pointer;
 }
-/* seccion carrito */
+seccion carrito
 .carrito{
     border: 1px solid #666;
     width: 35%;
@@ -583,12 +583,12 @@ a:link{
 }
 /* logo en contenedor */
 .logo-solo {
-    top: 400px;
+    top: 510px;
     position: relative;
-    width: 30%;
     height: 250px;
+    width: 420px;
     margin-top: 230px;
-    margin-left: 70%;
+    margin-left: 68%;
     align-items: center;
     background: #f2f2f3;
     border-radius: 12px;
@@ -607,7 +607,6 @@ a:link{
   .text-miplaza{
     width: 100%;
     height: 50%;
-    /* background: url('../images/komorebi-quienes-somos.jpg'); */
     margin-top: 150px;
     display: flex;
     background-position: center center;
@@ -706,7 +705,7 @@ aside .vision p{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-image: url('../images/quienes_somos.jpg');
+    background-image: url('../../assets/images/MISION.png'); 
     background-position: center center;
     object-fit: contain;
     perspective: 1000px;
@@ -714,8 +713,29 @@ aside .vision p{
     margin-top: 100px;
     box-shadow: 0 0 0 5px #ffffff80;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  
+    background-size: cover;
+}
+.card2 {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url('../../assets/images/Vision.png ');
+    background-position: center center;
+    object-fit: contain;
+    perspective: 1000px;
+    margin:auto;
+    margin-top: 100px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-size: cover;
+}
+
   .card svg {
     width: 48px;
     fill: #333;
@@ -783,15 +803,16 @@ aside .vision p{
   } 
 .card-quienes {
     left: 0px;
-    top: 900px;
+    top: 1020px;
     position: relative;
     padding: 20px;
-    width: 60%;
+    width: 45%;
     border-radius: 20px;
     background: white;
     box-shadow: 5px 5px 8px #cbc5c5,
                -5px -5px 8px #cbc5c5;
     transition: 0.4s;
+    left: 5%;
   }
   
   .card-somos:hover {
@@ -804,6 +825,7 @@ aside .vision p{
     color: black;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 15px 0 0 10px;
+    text-align: center;
   }
   
   .cardsom-body {
@@ -820,7 +842,6 @@ aside .vision p{
   height: 40px;
   border: none;
   top: 10px;
-  left: 260px;
   border-radius: 10px;
   background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
   background-size: 250%;
@@ -829,10 +850,11 @@ aside .vision p{
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   cursor: pointer;
   transition-duration: 1s;
   overflow: hidden;
+  margin: auto;
 }
 
 .Btn::before {
@@ -842,7 +864,7 @@ aside .vision p{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 97%;
+  width: 100%;
   height: 90%;
   border-radius: 8px;
   transition-duration: 1s;
@@ -870,13 +892,21 @@ aside .vision p{
     margin: auto;
     margin-top: 700px;
     padding: 10px;
-    width: 95%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
     display: grid;
     grid-template-rows: 100px 500px 1fr 100px;
     border-radius: 10px;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
     transition: all 0.2s;
+  }
+
+  .mapa h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666;
+    text-shadow: 0px 8px 12px #8b8585;
+    padding: 20px;
   }
   
   .mapa:hover {
@@ -889,7 +919,6 @@ aside .vision p{
     overflow: hidden;
   }
   
-
   
 /* Aqui inicia el footer */
     footer{
@@ -971,754 +1000,6 @@ aside .vision p{
     }
     /*Aquí termina el FOOTER*/
 
-/* modo entrega */
-.modo-entrega{
-    position: absolute;
-    background-color: #FFFFFF;
-    opacity: 0.2;
-    left: 550px;
-    width: 380px;
-    overflow: hidden;
-    height: 450px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0px 0px 10px #000000;
-}
-#modo-entrega{
-    top: -450px;
-    opacity:0;
-    transition: all .4s linear;
-}
-#modo-entrega.active{
-    top: 150px;
-    opacity: 1;
-}
-.modo-entrega .fa-circle-xmark{
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 22px;
-    cursor: pointer;
-}
-.modo-entrega .header-titulo{
-    background-color: #e90000;
-    color: #FFFFFF;
-    display: flex;
-    font-size: 12px;
-    margin-left: -80px;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-}
-.modo-entrega .opc-modo-entrega{
-    display: flex;
-    width: 390px;
-    height: 360px;
-    border-radius: 10px;
-    justify-content: space-around;
-    padding-left: 0px;
-    border-radius: 10px;
-}
-.modo-entrega .opc-modo-entrega .recoger-tienda{
-    width: 120;
-    margin-top: 40px;
-    margin-left: -10px;
-    box-shadow: 0px 0px 10px #000000;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.modo-entrega .opc-modo-entrega .recoger-tienda:hover{
-    transform: scale(1.02);
-}
-.modo-entrega .opc-modo-entrega .recoger-tienda img{
-    position: relative;
-    padding-left: -130px;
-    width: 160px;
-    height: 200px;
-}
-.modo-entrega .opc-modo-entrega .recoger-tienda p{
-    position: relative;
-    width: 160px;
-    left: 25px;
-    font-weight: bold;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 17px;
-    top: 30px;
-
-}
-.modo-entrega .opc-modo-entrega .recoger-domicilio{
-    width: 120;
-    height: 320px;
-    margin-left: -20px;
-    margin-top: 40px;
-    box-shadow: 0px 0px 10px #000000;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.modo-entrega .opc-modo-entrega .recoger-domicilio:hover{
-    transform:scale(1.02) ;
-}
-.modo-entrega .opc-modo-entrega .recoger-domicilio p{
-    position: relative;
-    width: 160px;
-    left: 25px;
-    font-weight: bold;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 17px;
-    top: 30px; 
-}
-.modo-entrega .opc-modo-entrega .recoger-domicilio img{
-    width: 180px;
-    height: 200px;
-}
-/* verificar correo */
-.verificar{
-    position: absolute;
-    top: 350px;
-    width: 450px;
-    height: 220px;
-    box-shadow: 0px 0px 10px #000000;
-    z-index: 4;
-    background-color: #FFFFFF;
-    left:550px;
-}
-#verificar{
-    display: none;
-}
-.verificar.active{
-    opacity: 1;
-    top: 350px;
-}
-.verificar .header-titulo{
-    background-color: #e90000;
-    color: #FFFFFF;
-    height: 60px;
-    padding: 15px 10px;
-    font-size: 20px;
-    text-transform: capitalize;
-}
-.verificar p{
-    font-size: 13px;
-    padding: 20px 25px;
-}
-.verificar div{
-    display: flex;
-    position: relative;
-    padding: 30px 20px;
-    justify-content: space-between;
-}
-.verificar div input{
-    height: 40px;
-    width: 300px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    outline: none;
-    padding: 0px 30px ;
-}
-.verificar div input::placeholder{
-    font-size: 14px;
-}
-.verificar div i{
-    position: absolute;
-    font-size: 25px;
-    padding: 7px 5px;
-}
-.verificar div .btn-verificar{
-    background-color: #FF9F23;
-    border: none;
-    height: 40px;
-    width: 90px;
-    border-radius: 10px;
-}
-.verificar div .btn-verificar a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 17px;
-}
-
-.verificar{
-    position: absolute;
-    top: 350px;
-    width: 450px;
-    height: 220px;
-    box-shadow: 0px 0px 10px #000000;
-    z-index: 10;
-    background-color: #FFFFFF;
-    left:550px;
-}
-#verificar{
-    display: none;
-}
-.verificar.active{
-    opacity: 1;
-    top: 350px;
-}
-.verificar .header-titulo{
-    background-color: #e90000;
-    color: #FFFFFF;
-    height: 60px;
-    padding: 15px 10px;
-    font-size: 20px;
-    text-transform: capitalize;
-}
-.verificar p{
-    font-size: 13px;
-    padding: 20px 25px;
-}
-.verificar div{
-    display: flex;
-    position: relative;
-    padding: 30px 20px;
-    justify-content: space-between;
-}
-.verificar div input{
-    height: 40px;
-    width: 300px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    outline: none;
-    padding: 0px 30px ;
-}
-.verificar div input::placeholder{
-    font-size: 14px;
-}
-.verificar div i{
-    position: absolute;
-    font-size: 25px;
-    padding: 7px 5px;
-}
-.verificar div .btn-verificar{
-    background-color: #FF9F23;
-    border: none;
-    height: 40px;
-    width: 90px;
-    border-radius: 10px;
-}
-.verificar div .btn-verificar a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 17px;
-}
-/* donde te encuentras */
-.donde-encuentras{
-    position: absolute;
-    width: 650px;
-    height: 390px;
-    box-shadow: 0px 0px 10px inset;
-    background-color: #FFFFFF;
-    top: 150px;
-    left: 500px;
-    border: 1px solid #000000;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    transition: all .3s linear;
-}
-#donde-encuentras{
-    top: -350px;
-    opacity: 0;
-}
-#donde-encuentras.active{
-    top: 150px;
-    opacity: 1;
-}
-.donde-encuentras .header-titulo{
-    background-color: #e90000;
-    height: 70px;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.donde-encuentras .contenido{
-    position: relative;
-    display: inline-block;
-    top: -20px;
-    padding: 0px -50px;
-    color: #000000;
-    line-height: 35px;
-    margin: 20px;
-}
-.donde-encuentras .contenido p{
-    font-size: 15px;
-    margin: 10px 0px 10px 0px;
-}
-.formulario-dir{
-    display: inline-block;
-}
-.formulario-dir label{
-    font-weight: bold;
-    font-size: 14px;
-}
-.formulario-dir input{
-    height: 30px;
-    border-radius: 5px;
-}
-.formulario-dir .barrio{
-    display: block;
-}
-.formulario-dir .barrio input{
-    width: 100%;
-    height: 30px;
-    padding: 0 10px;
-}
-.formulario-dir .direccion{
-    position: relative;
-    top: 20px;
-    padding: 0 0px;
-    display: inline-block;
-}
-.formulario-dir .direccion select{
-    width: 90px;
-    height: 30px;
-    border-radius: 5px;
-}
-.formulario-dir .direccion input[type="number"]{
-    width: 70px;
-}
-.formulario-dir .textarea{
-    display: inline-block;
-    position: relative;
-    top: 20px;
-}
-.formulario-dir .textarea textarea{
-    position: relative;
-    top: 20px;
-    height: 50px;
-    width: 520px;
-    padding: 10px 0;
-}
-.formulario-dir .textarea textarea::placeholder{
-    font-size: 15px;
-}
-.donde-encuentras .contenido .btn-guardar{
-    position: relative;
-    top: 40px;
-    width: 100%;
-    height: 30px;
-    border-radius: 5px;
-    background: #FF9F23;
-    border: none;
-    cursor: pointer;
-}
-.donde-encuentras .contenido .btn-guardar a{
-    font-size: 17px;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-/* Seguir comprando */
-
-.cuadro-seguir{
-    position: absolute;
-    top: 850px;
-    width: 450px;
-    height: 550px;
-    box-shadow: 0px 0px 20px #000000;
-    background-color: #FFFFFF;
-    left:600px;
-    border-radius: 10px;
-    transition: all .3s linear;
-}
-#cuadro-seguir{
-    top: -600px;
-    opacity: 1;
-}
-#cuadro-seguir.active{
-    opacity: 1;
-    top: 200px;
-    transition: all .3s linear;
-    z-index: 5;
-}
-.cuadro-seguir .fa-circle-check{
-    font-size: 215px;
-    color: #e90000;
-    padding: 35px 112px;
-}
-.cuadro-seguir h3{
-    text-align: center;
-    font-size: 20px;
-}
-.cuadro-seguir .btn-seguir{
-    background-color: #FF9F23;
-    border: none;
-    width: 140px;
-    height: 40px;
-    border-radius: 8px;
-    position: absolute;
-    left: 150px;
-    top: 400px;
-}
-.cuadro-seguir .btn-seguir a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 16px;
-
-}
-/* Quienes somos */
-
-.quienes-somos{
-    position: absolute;
-    top: 950px;
-    width: 1600px;
-    border-top: 2px solid #777777;
-
-}
-
-.quienes-somos p{
-    position: absolute;
-    text-align: center;
-    top: 100px;
-    right: 300px;
-    color: #000000;
-    font-size: 30px;
-    text-transform: capitalize;
-    font-family: var(--YanoneKaffeesatz);
-}
-.quienes-somos p span{
-    position: absolute;
-    color: #FF9F23;
-    left: 65px;
-    font-size: 60px;
-    letter-spacing: 1px;
-}
-.quienes-somos div{
-    position: absolute;
-    left: 120px;
-    width: 1000px;
-    height: 400px;
-    top: 550px;
-    color: #000000;
-    z-index: 999;
-}
-.quienes-somos div h1{
-    position: absolute;
-    color: #e90000;
-    font-size: 30px;
-    font-family: var(--YanoneKaffeesatz);
-}
-.quienes-somos div p{
-    position: absolute;
-    display: inline-block;
-    width: 980px;
-    text-align: justify;
-    line-height: 30px;
-    top: 60px;
-    left: 10px;
-    color: #000000;
-    font-size: 18px;
-    font-family: var(--YanoneKaffeesatz);
-    text-transform: none;
-}
-aside{
-    position: relative;
-    display:flex ;
-    justify-content: center;
-    background-color: #343434b4;
-    top: 590px;
-    display: grid;
-    grid-template-columns: repeat(2, 600px);
-    grid-template-rows: repeat(2, 200px);
-    gap: 150px;
-    width: 100%;
-}
-aside .mision{
-    position: relative;
-    top: 40px;
-    width: 550px;
-    height: 320px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 1px 2px 20px 4px #00000082;
-}
-aside .mision h2{
-    position: absolute;
-    color: #FF9F23;
-    font-size: 30px;
-    font-family: var(--YanoneKaffeesatz);
-    font-weight: bold;
-    display: block;
-    left: 35px;
-    top: 40px;
-}
-aside .mision p{
-    position: absolute;
-    top: 90px;
-    left: 35px;
-    width: 450px;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 25px;
-    text-transform: none;
-}
-aside .vision{
-    position: relative;
-    top: 40px;
-    width: 550px;
-    height: 320px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 1px 2px 20px 4px #00000082;
-}
-aside .vision h2{
-    position: absolute;
-    color: #FF9F23;
-    font-size: 30px;
-    font-family: var(--YanoneKaffeesatz);
-    font-weight: bold;
-    display: block;
-    left: 35px;
-    top: 40px;
-}
-aside .vision p{
-    position: absolute;
-    top: 90px;
-    left: 35px;
-    width: 470px;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 25px;
-    text-transform: none;
-}
-
-
-/* contenido de nosotros */
-
-.banner {
-    width: 100%;
-    height: 100vh;
-    animation: banner 10s infinite linear alternate;
-    background-size: 100% 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    right: 0;
-    top: 150px;
-    object-fit: cover;
-}
-
-@keyframes banner {
-
-    0%,
-    20% {
-        background-image: url("../images/komorebi-quienes-somos.jpg");
-    }
-
-    25%,
-    45% {
-        background-image: url("../images/quienes-fotos.jpg");
-    }
-
-    50%,
-    70% {
-        background-image: url("../images/quienes-som22.jpg");
-    }
-
-    75%,
-    100% {
-        background-image: url("../images/quienes-somos-mk.jpg");
-    }
-}
-
-.capa {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.6);
-    object-fit: contain;
-}
-
-.info {
-    z-index: 1;
-    width: 100%;
-    max-width: 550px;
-    text-align: center;
-    border-radius: 8px;
-    margin: 300px;
-
-}
-
-.info h1 {
-    color: #fff;
-    font-size: 69px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.info p {
-    color: #c7c7c7;
-    line-height: 1.7;
-    margin-bottom: 30px;
-}
-
-.info a {
-    color: #fff;
-    text-decoration: none;
-    background: #e90000;
-    padding: 16px 37px;
-    display: inline-block;
-    border-radius: 50px;
-}
-/* logo en contenedor */
-.logo-solo {
-    top: 400px;
-    position: relative;
-    width: 30%;
-    height: 250px;
-    margin-top: 230px;
-    margin-left: 70%;
-    align-items: center;
-    background: #f2f2f3;
-    border-radius: 12px;
-    box-shadow: inset 5px 5px 10px #a9a9aa77,
-                             inset -5px -5px 10px #ffffff7e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .logo-solo img {
-        width: 70%;
-        height: 30%;
-  }
-  
-  .text-miplaza{
-    width: 100%;
-    height: 50%;
-    /* background: url('../images/komorebi-quienes-somos.jpg'); */
-    margin-top: 150px;
-    display: flex;
-    background-position: center center;
-    background-size: auto;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .text-miplaza img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-/* ¿QUIENES SOMOS? TEXTO */
-.card {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16/9;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-image: url('../images/quienes_somos.jpg');
-    background-position: center center;
-    object-fit: contain;
-    perspective: 1000px;
-    margin:auto;
-    margin-top: 100px;
-    box-shadow: 0 0 0 5px #ffffff80;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  
-  .card svg {
-    width: 48px;
-    fill: #333;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  
-  .card__image {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-  }
-  
-  .card__content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #f2f2f2;
-    transform: rotateX(-90deg);
-    transform-origin: bottom;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  
-  .card:hover .card__content {
-    transform: rotateX(0deg);
-  }
-  
-  .card__title {
-    margin: 0;
-    font-size: 20px;
-    color: #333;
-    font-weight: 700;
-  }
-  
-  .card:hover svg {
-    scale: 0;
-  }
-  
-  .card__description {
-    margin: 10px 0 10px;
-    font-size: 12px;
-    color: #777;
-    line-height: 1.4;
-  }
-  
-  .card__button {
-    padding: 15px;
-    border-radius: 8px;
-    background: #777;
-    border: none;
-    color: white;
-  }
-  
-  .secondary {
-    background: transparent;
-    color: #777;
-    border: 1px solid #777;
-  } 
-.card-quienes {
-    left: 0px;
-    top: 900px;
-    position: relative;
-    padding: 20px;
-    width: 60%;
-    border-radius: 20px;
-    background: white;
-    box-shadow: 5px 5px 8px #cbc5c5,
-               -5px -5px 8px #cbc5c5;
-    transition: 0.4s;
-  }
-  
-  .card-somos:hover {
-    translate: 0 -10px;
-  }
-  
-  .cardsom-title {
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 15px 0 0 10px;
-  }
-  
-  .cardsom-body {
-    margin: 13px 0 0 10px;
-    color: #7b7575;
-    font-size: 17px;
-  }
-/* termina quienes somos */
 
 /* Footer */
 
