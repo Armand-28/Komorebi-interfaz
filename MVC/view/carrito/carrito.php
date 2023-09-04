@@ -1,8 +1,8 @@
 <!-- Carrito de Compras -->
 <div class="carrito" id="carrito">
-    <div class="header-carrito">
+    <div class="header-carrito" onclick="desaparecerCarrito();">
         <h2>Carrito de Compras</h2>
-        <p><i class="fa-solid fa-xmark"onclick="ocultarCarrito();"></i></p>
+        <p><i class="fa-solid fa-xmark"></i></p>
     </div>
 
     <div class="carrito-items">

@@ -21,7 +21,7 @@ class login
     {
         try {
             $sql = "INSERT INTO cliente(namecli, emailcli, telcli, datecli, gencli, usercli, passcli) VALUES (?, ?, ?, ?, ?, ?, ?)";
-            $result = $this->conexion->prepare($sql)->execute(array(
+            $result = $this->conexion->prepare($sql)->execute([
                 $data->name,
                 $data->email, 
                 $data->tel, 
@@ -29,7 +29,7 @@ class login
                 $data->gen, 
                 $data->user, 
                 $data->pass
-            )); 
+            ]); 
 
             if($result){
                 return true;

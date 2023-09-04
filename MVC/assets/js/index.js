@@ -1,10 +1,10 @@
 // codigo para hacer aparecer y desaparecer el carrito
 
-function mostrarCarrito(){
+function aparecerCarrito(){
     document.getElementById("carrito").style.display = "block";
 }
 
-function ocultarCarrito(){
+function desaparecerCarrito(){
     document.getElementById("carrito").style.display = "none";
 }
 // menu desplegable

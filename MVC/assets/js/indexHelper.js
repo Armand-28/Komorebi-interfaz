@@ -1,18 +1,3 @@
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }
 //Variable que mantiene el estado visible del carrito
 var carritoVisible = false;
 
@@ -27,7 +12,7 @@ function ready(){
     
     //Agregremos funcionalidad a los botones eliminar del carrito
     var botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
-    for(var i=0; i<botonesEliminarItem.length; i++){
+    for(var i=0;i<botonesEliminarItem.length; i++){
         var button = botonesEliminarItem[i];
         button.addEventListener('click',eliminarItemCarrito);
     }
@@ -155,6 +140,7 @@ function sumarCantidad(event){
 function restarCantidad(event){
     var buttonClicked = event.target;
     var selector = buttonClicked.parentElement;
+    console.log(selector.getElementsByClassName('carrito-item-cantidad')[0].value);
     var cantidadActual = selector.getElementsByClassName('carrito-item-cantidad')[0].value;
     cantidadActual--;
     if(cantidadActual>=1){
@@ -209,6 +195,38 @@ function actualizarTotalCarrito(){
     document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es") + ",00";
 
 }
+// Obtener una referencia al elemento donde se agregarán los elementos del carrito
+var itemsCarrito = document.getElementById("carrito-item");
+
+// Obtener una referencia al botón de eliminar
+var btnEliminar = document.getElementsByClassName("btn-eliminar");
+
+// Cargar los productos guardados en el carrito al cargar la página
+window.onload = function() {
+    // Obtener los productos guardados en localStorage
+    var productosGuardados = JSON.parse(localStorage.getItem("item")) || [];
+    
+    // Iterar a través de los productos guardados y agregarlos al carrito
+    productosGuardados.forEach(function(producto) {
+        var item = document.createElement("div");
+        item.classList.add("carrito-item");
+        // Construir el contenido del elemento item aquí utilizando los datos de 'producto'
+        itemsCarrito.appendChild(item);
+    });
+    
+    // Agregar event listener para el botón de eliminar
+    for (var i = 0; i < btnEliminar.length; i++) {
+        btnEliminar[i].addEventListener("click", function(event) {
+            // Lógica para eliminar el producto del carrito y actualizar localStorage
+        });
+    }
+};
+
+// Event listener para agregar productos al carrito
+// Debes implementar esta parte según cómo estés manejando la selección de productos
+
+// Event listener para el botón de eliminar productos
+// Debes implementar esta parte para eliminar productos del carrito y actualizar localStorage
 
 
 

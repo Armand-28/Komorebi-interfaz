@@ -117,11 +117,9 @@ a:link{
 /* logo index */
 
 .logoPrincipal img{
-    width: 300px;
-    height: 65px;
-    padding-right: 60px;
-    padding-top: 6px;
-    margin-left: -50px;
+    width: 270px;
+    height: 55px;
+    margin-left: -130px;
 }
 
 /* Carrucel de imagenes */
@@ -333,6 +331,7 @@ a:link{
     border-radius: 5px;
     cursor: pointer;
 }
+
 /* seccion carrito */
 .carrito{
     border: 1px solid #666;
@@ -342,7 +341,7 @@ a:link{
     border-radius: 5px;
     position: absolute; 
     top: 119px;
-    z-index: 999;
+    /* z-index: 999; */
     transition: .3s;
     /* Estilos para ocultar */
     right: 0;
@@ -432,7 +431,7 @@ a:link{
 .carrito .carrito-item .btn-eliminar i{
     pointer-events: none;
 }
-.carrito .carrito-item .btn-eliminar i:hover{
+.carrito .carrito-item .btn-eliminar:hover{
     color: #FF9F23;
 }
 
@@ -603,11 +602,9 @@ p .fa-xmark{
       height: 650px;
       }
     .logoPrincipal img{
-        width: 340px;
-        height: 70px;
-        padding-right: 60px;
-        padding-top: 6px;
-        margin-left: -125px;
+        width: 270px;
+        height: 60px;
+        margin-left: -130px;
     }
     .header-top .logo img {
         width: 0px;
@@ -627,6 +624,9 @@ p .fa-xmark{
         width: 30%;
         top: 120.5px;
     }
+    /* .search #search-bar input{
+        width: 500px;
+    } */
 
 }
 
@@ -639,10 +639,8 @@ p .fa-xmark{
         height: 450px;
     }
     .logoPrincipal img{
-        width: 260px;
-        height: 55px;
-        padding-right: 60px;
-        padding-top: 6px;
+        width: 200px;
+        height: 50px;
         margin-left: -80px;
     }
     #menu{
@@ -784,7 +782,7 @@ p .fa-xmark{
 }
 
 /* Media query para dispositivos extra pequeños */
-@media screen and  (max-width: 425px) {
+@media screen and  (max-width: 426px) {
     .social-networks {
     text-align: center;
     }

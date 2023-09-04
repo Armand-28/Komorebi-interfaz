@@ -31,8 +31,8 @@
                   </a>
                 </div>
           </div>
-          <div class="services">
-              <a class="carro" href="#" onclick="mostrarCarrito();">
+          <div class="services" onclick="aparecerCarrito();">
+              <a class="carro" href="#">
                   <i class="fa-solid fa-cart-shopping micarrito"></i>
                   <p id="texto-carrito">Mi carrito</p>
               </a>
@@ -44,3 +44,6 @@
       </div>
     </header>      
   </div>
+
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/indexHelper.js"></script>
