@@ -3,7 +3,7 @@
     <header>
       <div class="header-top">
         <div class="social-networks">
-          <a href="#" class="icon-link" data-tooltip="Llamar"><i class="fa fa-phone"></i></a>
+          <a href="#" class="icon-link" data-tooltip="Llamar"><i class="fa fa-phone">hola</i></a>
           <a href="#" class="icon-link" data-tooltip="Perfil"><i class="fa fa-user"></i></a>
           <a href="#" class="icon-link" data-tooltip="Mensaje"><i class="fa fa-message"></i></a>
       </div>     

@@ -477,88 +477,6 @@ footer{
 
 /* Media query para dispositivos medianos */
 @media screen and (max-width: 1440px) {
-    .carousel-image {
-      height: 650px;
-      }
-      .logoPrincipal img{
-        width: 0px;
-        height: 0px;
-    }
-  }
-
-/* Media query para dispositivos medianos */
-@media screen and  (max-width: 1024px) {
-  body {
-    font-size: 14px;
-  }
-    .carousel-image {
-        height: 450px;
-    }
-    .logoPrincipal img{
-        width: 0px;
-        height: 0px;
-    }
-    .header-top .logo img {
-        width: 160px;
-        height: 35px;
-        padding-right: 50px;
-        margin-left: 30%;
-        padding-top: 5px;
-    }
-    .search .other-services{
-        margin-left: 250px;
-    }
-    .search .other-services a{
-        position: relative;
-        width: 200px;
-    }
-    .search .other-services a .link-text {
-        display: flex;
-        font-family: var(--font-3);
-        font-size: 13px;
-        width: 100%;
-        margin-left: 20px;
-    }
-    .box__copyright{
-        max-width: auto;
-    }
-}
-
-/* Media query para dispositivos pequeños */
-@media screen and  (max-width: 768px) {
-    .carousel-image {
-        height: 350px;
-    }
-    .logoPrincipal img{
-        width: 200px;
-        margin-left: 40px;
-        height: 60px;
-        display: none;
-    }
-    .header-top .logo img {
-        width: 100px;
-        position: relative;
-        height: 28px;
-        right: 25px;
-        top: 0px;
-    }
-    .search .other-services{
-        margin-left: -140px;
-    }
-    .search .other-services a{
-        position: relative;
-        width: 800px;
-    }
-}
-
-/* Media query para dispositivos extra pequeños */
-@media screen and  (max-width: 426px) {
-  .social-networks {
-    text-align: center;
-  }
-    .carousel-image {
-        height: 200px;
-    }
     .logoPrincipal img{
         width: 0px;
         height: 0px;
@@ -577,12 +495,95 @@ footer{
         position: relative;
         width: 200px;
     }
+    .box__copyright{
+        max-width: auto;
+    }
+  }
+
+/* Media query para dispositivos medianos */
+@media screen and  (max-width: 1024px) {
+    .logoPrincipal img{
+        width: 260px;
+        height: 55px;
+        padding-right: 60px;
+        padding-top: 6px;
+        margin-left: 100px;
+    }
+    .header-top .logo img {
+        width: 0px;
+        height: 0px;
+    }
+    .search .other-services a{
+        position: relative;
+        width: 330px;
+        margin-left: 300px;
+    }
+    .search .other-services a .link-text {
+        display: flex;
+        font-family: var(--font-3);
+        font-size: 13px;
+        width: 100%;
+        margin-left: 80px;
+    }
+    .box__copyright{
+        max-width: auto;
+    }
+}
+
+/* Media query para dispositivos pequeños */
+@media screen and  (max-width: 768px) {
+    .logoPrincipal img{
+        width: 260px;
+        height: 55px;
+        padding-right: 60px;
+        padding-top: 6px;
+        margin-left: 50px;
+    }
+    .header-top .logo img {
+        width: 0px;
+        height: 0px;
+    }
+    .search .other-services a{
+        position: relative;
+        width: 330px;
+        margin-left: 200px;
+    }
+    .search .other-services a .link-text {
+        display: flex;
+        font-family: var(--font-3);
+        font-size: 13px;
+        width: 100%;
+        margin-left: 80px;
+    }
+    .box__copyright{
+        max-width: auto;
+    }
+}
+
+/* Media query para dispositivos extra pequeños */
+@media screen and  (max-width: 425px) {
+    .logoPrincipal img{
+        width: 0px;
+        height: 0px;
+    }
+    .header-top .logo img {
+        width: 165px;
+        height: 35px;
+        padding-right: 50px;
+        margin-left: 20%;
+        padding-top: 5px;
+    }
     .search .other-services a .link-text {
         display: flex;
         font-family: var(--font-3);
         font-size: 13px;
         width: 100%;
         margin-left: 20px;
+    }
+    .search .other-services a{
+        position: relative;
+        width: 200px;
+        margin-left: 30px;
     }
     .box__copyright{
         max-width: auto;

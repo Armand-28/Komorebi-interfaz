@@ -1,4 +1,4 @@
-<div class="container-fluid m-auto">
+<!-- <div class="container-fluid m-auto"> -->
   
 <div class="banner">
     <div class="capa"></div>
@@ -40,9 +40,11 @@
     <div class="logo-solo">
       <img src="assets/images/logo rojo.png">
     </div>
-<div class="text-miplaza">
-</div>
+
   <aside>
+  <div class="text-miplaza">
+  <img src="assets/images/logo-white.png">
+</div>
     <div class="card">
       <div class="card__content">
         <p class="card__title">Misión</p>
@@ -56,7 +58,7 @@
         </p>
       </div>
     </div>
-    <div class="card">
+    <div class="card2">
       <div class="card__content">
         <p class="card__title">Visión</p>
         <p class="card__description">
@@ -69,7 +71,11 @@
       </div>
     </div>
   </aside>
+  <div class="ubicacion" id="ubicacion">
+  </div>
 <div class="mapa mapa-5">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.14657365297396!2d-75.89373716153203!3d2.3908583314610987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3ad2ac036e74d3%3A0x58ab2ab5055378ec!2sSENA%20CDATH!5e0!3m2!1ses-419!2sco!4v1691868926223!5m2!1ses-419!2sco" width="1650" height="750" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<h1>Donde Encontrarnos</h1>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.14657365297396!2d-75.89373716153203!3d2.3908583314610987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3ad2ac036e74d3%3A0x58ab2ab5055378ec!2sSENA%20CDATH!5e0!3m2!1ses-419!2sco!4v1691868926223!5m2!1ses-419!2sco" width="100%" height="750" style="border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-</div>
+
+<!-- </div> -->
