@@ -817,7 +817,6 @@ footer {
     padding: 10px 15px;
     gap: 15px;
     background-color: orange;
-    /* outline: 1px rgb(240, 142, 15) solid; */
     outline-offset: -3px;
     border-radius: 12px;
     border: 1px solid black;
@@ -826,7 +825,8 @@ footer {
     transition: 400ms;
   }
   .boton-item svg path {
-    transition: 200ms;
+    transition: 200ms; 
+
 }
   
   .boton-item:hover {
