@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_POST['accion'])) {
     switch ($_POST['accion']) {
             //casos de registros
@@ -66,8 +67,8 @@ function insertar_proveedor()
     extract($_POST);
     include "db.php";
 
-    $consulta = "INSERT INTO proveedores (name, r_social, direccion, telefono, rfc, correo) 
-    VALUES ('$name', '$r_social','$direccion','$telefono','$rfc','$correo')";
+    $consulta = "INSERT INTO proveedores(name,r_social, direccion, telefono, nit, correo) 
+    VALUES ('$name', '$r_social','$direccion','$telefono','$nit','$correo')";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {
@@ -91,9 +92,24 @@ function insertar_inventario()
     extract($_POST);
     include "db.php";
 
-    $consulta = "INSERT INTO inventario (codigo, producto, existencia, minimo, venta, compra,unidad,id_categoria) 
-    VALUES ('$codigo', '$producto','$existencia','$minimo','$venta','$compra','$unidad','$id_categoria')";
-    $resultado = mysqli_query($conexion, $consulta);
+    // Obtener los datos del archivo enviado
+    $imagen = $_FILES['imagen']['tmp_name'];
+    $basename = basename($_FILES['imagen']['name']);
+    $image_ruta = "../img/productos/" . $basename;
+
+    // $imagen_contenido = file_get_contents($imagen);
+
+    // Escapar el contenido binario para evitar problemas de SQL Injection
+    // $imagen_contenido = mysqli_real_escape_string($conexion, $imagen_contenido);
+
+    $resultado = false;
+
+    if (move_uploaded_file($imagen, $image_ruta)) {
+        $consulta = "INSERT INTO inventario (codigo, imagen, producto, existencia, minimo, venta, compra, unidad, id_categoria) 
+    VALUES ('$codigo', '$basename', '$producto', '$existencia', '$minimo', '$venta', '$compra', '$unidad', '$id_categoria')";
+
+        $resultado = mysqli_query($conexion, $consulta);
+    };
 
     if ($resultado) {
         $response = array(
@@ -109,6 +125,7 @@ function insertar_inventario()
 
     echo json_encode($response);
 }
+
 
 function editar_inv()
 {
@@ -137,7 +154,7 @@ function editar_prov()
 
 
     $consulta = "UPDATE proveedores SET name = '$name', r_social = '$r_social', 
-    direccion = '$direccion',  telefono = '$telefono', rfc = '$rfc', correo = '$correo' WHERE id = '$id' ";
+    direccion = '$direccion',  telefono = '$telefono', nit = '$nit', correo = '$correo' WHERE id = '$id' ";
     $resultado = mysqli_query($conexion, $consulta);
 
     if ($resultado) {

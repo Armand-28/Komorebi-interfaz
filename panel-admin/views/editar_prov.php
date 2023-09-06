@@ -23,7 +23,7 @@
                         <div class="col-sm-6">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Razon Social</label>
-                                <input type="text" id="r_social" name="r_social" class="form-control" value="<?php echo $fila['r_social']; ?>" required>
+                                <input type="text" id="r_   social" name="r_social" class="form-control" value="<?php echo $fila['r_social']; ?>" required>
                             </div>
                         </div>
                     </div>
@@ -45,13 +45,12 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6">
+                    <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">RFC </label><br>
-                                <input type="text" name="rfc" id="rfc" class="form-control" value="<?php echo $fila['rfc']; ?>" required>
+                                <label for="nit">Nit </label><br>
+                                <input type="text" name="nit" id="nit" class="form-control" value="<?php echo $fila['nit']; ?>" required>
                             </div>
                         </div>
-
                         <div class="col-sm-6">
                             <div class="mb-3">
                                 <label for="password">Correo </label><br>

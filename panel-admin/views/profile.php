@@ -143,9 +143,9 @@ if ($usuarios->num_rows > 0) {
                                             </div>
 
                                             <div class="row mb-3">
-                                                <label for="Job" class="col-md-4 col-lg-3 col-form-label">Tipó de Usuario</label>
+                                                <label for="Job" class="col-md-4 col-lg-3 col-form-label">Contraseña</label>
                                                 <div class="col-md-8 col-lg-9">
-                                                    <input name="rol" type="text" class="form-control" id="rol" readonly value="<?php echo $fila['rol']; ?>">
+                                                    <input name="password" type="text" class="form-control" id="password" value="<?php echo $fila['password']; ?>">
                                                 </div>
                                             </div>
                                             <div class="text-center">

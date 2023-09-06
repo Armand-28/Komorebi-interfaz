@@ -2,18 +2,16 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
-                <h3 class="modal-title" id="exampleModalLabel">Agregar nuevo proveedor</h3>
+                <h3 class="modal-title" id="exampleModalLabel">Agregar Nuevo Proveedor</h3>
                 <button type="button" class="btn btn-primary" data-dismiss="modal">
                     <i class="fa fa-times" aria-hidden="true"></i></button>
             </div>
-            <div class="modal-body">
-
-                <form id="proveedorForm">
-
+            <form id="proveedorForm" action="" method="post">
+                <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
+                                <label for="name" class="form-label">Nombre</label>
                                 <input type="text" id="name" name="name" class="form-control" required>
 
                             </div>
@@ -22,7 +20,7 @@
 
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Razon Social</label>
+                                <label for="r_social" class="form-label">Razon Social</label>
                                 <input type="text" id="r_social" name="r_social" class="form-control" required>
                             </div>
                         </div>
@@ -31,47 +29,42 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Direccion</label><br>
+                                <label for="direccion">Direccion</label><br>
                                 <input type="text" name="direccion" id="direccion" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Telefono</label><br>
-                                <input type="tel" name="telefono" id="telefono" class="form-control" required>
+                                <label for="telefono">Telefono</label><br>
+                                <input type="text" name="telefono" id="telefono" class="form-control" required>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6">
+                    <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">RFC </label><br>
-                                <input type="text" name="rfc" id="rfc" class="form-control" required>
+                                <label for="nit">Nit</label><br>
+                                <input type="text" name="nit" id="nit" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Correo </label><br>
-                                <input type="email" name="correo" id="correo" class="form-control" required>
+                                <label for="correo">Correo </label><br>
+                                <input type="text" name="correo" id="correo" class="form-control" required>
                             </div>
                         </div>
                     </div>
-
-
                     <input type="hidden" name="accion" value="insertar_proveedor">
-
                     <br>
 
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary" id="register" name="registrar">Guardar</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                     </div>
-
-            </div>
-
+                </div>
             </form>
         </div>
     </div>

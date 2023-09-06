@@ -1,0 +1,14 @@
+/* Estilos para el formulario de métodos de pago */
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.payment-form {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Estilos adicionales según tu preferencia */

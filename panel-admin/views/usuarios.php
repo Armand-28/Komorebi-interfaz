@@ -28,7 +28,7 @@
                                     <th>Correo</th>
                                     <th>Telefono</th>
                                     <th>Rol</th>
-                                    <th>Fecha</th>
+                                    <th>Fecha de Modificacion</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>

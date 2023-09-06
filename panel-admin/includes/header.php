@@ -9,7 +9,6 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
     alert('Error: Debes iniciar sesion primero ');
     location.assign('../includes/sesion/login.php');
     </script>";
-
     die();
 } ?>
 <!DOCTYPE html>
@@ -45,8 +44,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../index/index.php">
                 <div class="sidebar-brand-text mx-3">Mi Plaza Autoservicio</div>
             </a>
 
@@ -56,7 +54,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="../views/index.php">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-fw fa-bars"></i>
                     <span>Inicio</span></a>
             </li>
 
@@ -68,13 +66,13 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
+                    <i class="fas fa-fw  fa-folder-open"></i>
                     <span>Inventario</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Opciones</h6>
-                        <a class="collapse-item" href="../views/inventario.php">Inventario</a>
+                        <a class="collapse-item" href="../views/inventario.php">Productos</a>
                         
                     </div>
                 </div>
@@ -83,7 +81,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
+                    <i class="fas fa-fw fa-handshake"></i>
                     <span>Proveedores</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
@@ -107,16 +105,24 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="../views/categorias.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-clipboard-list"></i>
                     <span>Categorias</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="../views/usuarios.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Roles</span></a>
-            </li>
+            <?php
+
+
+                
+                if(isset($_SESSION['usuario'])){
+                  echo '<li class="nav-item">
+                  <a class="nav-link" href="../views/usuarios.php">
+                      <i class="fas fa-users fa-table"></i>
+                      <span>Usuarios</span></a>
+              </li>';  
+                }
+
+            ?>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -148,7 +154,7 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                     <!-- Topbar Search -->
                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder= "Buscar..." aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -199,8 +205,8 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                        <div class="small text-gray-500">Julio 15/2023</div>
+                                        <span class="font-weight-bold">¡Un nuevo informe mensual está listo para descargar!</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -210,8 +216,8 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
+                                        <div class="small text-gray-500">Julio 20/2023</div>
+                                        <span class="font-weight-bold">¡Se han depositado $290.29 en su cuenta!</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -221,11 +227,11 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
+                                        <div class="small text-gray-500">Junio 23/2023</div>                                      
+                                        Alerta de gastos: Hemos notado gastos inusualmente altos para su cuenta.
                                     </div>
                                 </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                <a class="dropdown-item text-center small text-gray-800" href="#">Cerrar</a>
                             </div>
                         </li>
 
@@ -241,13 +247,13 @@ if ($usuario == null || $usuario == ''  && $permiso == null || $permiso == '') {
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="../views/profile.php">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-600"></i>
                                     Perfil
                                 </a>
 
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>
                                     Cerrar Sesion
                                 </a>
                             </div>

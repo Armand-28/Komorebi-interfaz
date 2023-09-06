@@ -27,16 +27,16 @@ cierre.addEventListener("click", () =>{
 
 // seccion de modo de entrega
 
-var modoEntregaMostrar = document.querySelector(".modoentrega");
-var modoEntregaSalir = document.querySelector(".cerrar-modo-entrega");
+// var modoEntregaMostrar = document.querySelector(".modoentrega");
+// var modoEntregaSalir = document.querySelector(".cerrar-modo-entrega");
 
-modoEntregaMostrar.addEventListener("click", () =>{
-   document.getElementById("modo-entrega").classList.toggle("active");
-})
+// modoEntregaMostrar.addEventListener("click", () =>{
+//    document.getElementById("modo-entrega").classList.toggle("active");
+// })
 
-modoEntregaSalir.addEventListener("click", () =>{
-   document.getElementById("modo-entrega").classList.toggle("active");
-})
+// modoEntregaSalir.addEventListener("click", () =>{
+//    document.getElementById("modo-entrega").classList.toggle("active");
+// })
 // click para mostrar las ventanas emergentes//
 
 var verificar = document.querySelector(".recoger-tienda");

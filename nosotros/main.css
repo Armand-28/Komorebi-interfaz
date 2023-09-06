@@ -10,176 +10,123 @@
 }
 .container{
     position: relative;
-    max-width: 1600px;
+    width: 100%;
     height: 100vh;
-    margin: auto; 
+    margin: auto;
+    font-family: var(--YanoneKaffeesatz);
 }
 
-header{
+aside {
     position: relative;
-    background-color: #D2D2D2;
-    width: 1600px;
-    height: 30px;
+    margin: auto;
+    left: 0px;
+    top: 710px;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 400px;
+    justify-content: center;
+    background-color:black;
+    width: 100%;
+    height: 600px
+}
+
+.card {
+    position: relative;
+    top: 100px;
+    width: 600px;
+    height: 400px;
+    margin-left: -30%;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    margin: auto;
-}
-header p{
-    position: relative;
-    display:inline-flex ;
-    align-items:center ;
-    font-size: 20px;
-    padding-left: 25px; 
-    top: 5px;
-    left: 15px;
-    color: #777777;
-}
-.navegacion{
-    position: relative;
-    background-color: #e90000;
-    width: 1600px;
-    height: 120px;
-    margin: auto;
-}
-.navegacion p i{
-    position: absolute;
-    top: 0px;
-    font-size: 40px;
-    color: #FFFFFF;
-    left: 72px;
-    cursor: pointer;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-image: url('../imagenes/MISION.png');
+    background-size: cover;
 }
 
-.navegacion p img{
-    position: absolute;
-    top: -14px;
-    width: 210px;
-    height: 70px;
-    left: 150px;
+.card h1 {
+    color: #fff;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.navegacion input{
-    position: absolute;
-    width: 580px;
-    height: 40px;
-    left: 507px;
-    top: 20px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    padding-left: 20px;
-    font-size: 16px;
-    font-family: var(--YanoneKaffeesatz); 
-}
-.navegacion input::placeholder{
-    color: #aaaaaa;
-    font-family: var(--YanoneKaffeesatz);
-}
-.navegacion span{
-    position: absolute;
-    top: 30px;
-    left: 1055px;
-    font-size: 23px;
-    color: #000000; 
-    cursor: pointer;
 
+.card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.cuenta .fa-circle-user{
-    position: relative;
-    left: 1310px;
-    top: 30px;
-    color: #FFFFFF;
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
-.navegacion .li-2{
+
+.card__content {
     position: absolute;
-    list-style: none;
-    left: 1400px;
-    top: 80px;
-    font-size: 16px;
-    z-index: 1;
-    }
-.li-2 a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 14px;
-    font-weight: bold;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.navegacion div{
-position: absolute;
-top: 70px;
-left: 530px;
-display: flex;
-width: 500px;
-height: 40px;
-justify-content: space-between;
+
+.card:hover .card__content {
+    transform: rotateX(0deg);
 }
-.navegacion div .modoentrega{
-    background-color: #FFFFFF;
-    border-radius: 20px;
-    width: 180px;
-    height: 28px;
-    top: 6px;
-    font-size: 14px;
-    font-family: var(--OpenSans);
-    font-weight: 600;
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+    margin-top: 40px;
+    text-align: center;
 }
-.modoentrega a{
-    text-decoration: none;
-    color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
+
+.card:hover svg {
+    scale: 0;
 }
-div .modoentrega .fa-shop{
-    position: absolute;
-    color: #000000;
-    font-size: 20px;
-    left: 15px;
-    top: 4px;
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: 19px;
+    color: #777;
+    line-height: 1.7;
+    margin-top: 20px;
 }
-.navegacion div .quienessomos{
-    background-color: #FFFFFF;
-    border-radius: 20px;
-    width: 180px;
-    height: 28px;
-    top: 6px;
-    font-size: 14px;
-    font-family: var(--OpenSans);
-    font-weight: 600;
-}
-.quienessomos a{
-    text-decoration: none;
-    color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px
-}
-div .quienessomos .fa-store{
-    position: absolute;
-    color: #000000;
-    font-size: 20px;
-    left: 15px;
-    top: 4px;
-}
-#menu{
+
+#menu {
     position: relative;
     background-color: #e90000;
     width: 200px;
-    height: 400px;
+    height: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     left: -200px;
+    z-index: 10;
     transition: all .3s linear;
-    z-index: 2;
+    border: solid rgba(0, 0, 0, 0.121) 2px;
 }
-#menu.active{
+
+#menu.active {
     opacity: 1;
     left: 0;
 }
-.fa-xmark{
+
+.fa-xmark {
     position: absolute;
     right: -10px;
     top: 18px;
@@ -187,7 +134,7 @@ div .quienessomos .fa-store{
     cursor: pointer;
 }
 
-#menu ul{
+#menu ul {
     position: absolute;
     list-style: none;
     font-family: var(--YanoneKaffeesatz);
@@ -195,253 +142,100 @@ div .quienessomos .fa-store{
     color: #FFFFFF;
     top: -10px;
 }
-#menu ul li{
+
+#menu ul li {
     border-bottom: 2px solid #FF9F23;
     padding: 10px;
     padding-top: 35px;
     padding-left: 10px;
 }
-#menu ul li a{
+
+#menu ul li a {
     color: #FFFFFF;
-    text-decoration: none;   
-}
-.quienes-somos{
-    position: absolute;
-    top: 950px;
-    width: 1600px;
-    border-top: 2px solid #777777;
-
+    text-decoration: none;
 }
 
-.quienes-somos p{
-    position: absolute;
-    text-align: center;
+/* vision */
+.cards {
+    position: relative;
+    width: 600px;
+    height: 400px;
     top: 100px;
-    right: 300px;
-    color: #000000;
-    font-size: 30px;
-    text-transform: capitalize;
-    font-family: var(--YanoneKaffeesatz);
-}
-.quienes-somos p span{
-    position: absolute;
-    color: #FF9F23;
-    left: 65px;
-    font-size: 60px;
-    letter-spacing: 1px;
-}
-.quienes-somos div{
-position: absolute;
-left: 120px;
-width: 1000px;
-height: 400px;
-top: 550px;
-color: #000000;
-z-index: 999;
-}
-.quienes-somos div h1{
-    position: absolute;
-    color: #e90000;
-    font-size: 30px;
-    font-family: var(--YanoneKaffeesatz);
-}
-.quienes-somos div p{
-    position: absolute;
-    display: inline-block;
-    width: 980px;
-    text-align: justify;
-    line-height: 30px;
-    top: 60px;
-    left: 10px;
-    color: #000000;
-    font-size: 18px;
-    font-family: var(--YanoneKaffeesatz);
-    text-transform: none;
-}
-aside{
-    position: relative;
-    margin: auto;
-    left: 0px;
-    top: 660px;
-    display: grid;
-    grid-template-columns: repeat(2, 400px);
-    grid-template-rows: repeat(2, 200px);
-    gap: 250px;
-    width: 1600px;
-    height: 400px
-}
-aside .mision{
-    position: relative;
-    top: 40px;
-    width: 550px;
-    height: 320px;
-    background-color: #FFFFFF;
+    margin-left: -20%;
+    background-color: #f2f2f2;
     border-radius: 10px;
-    box-shadow: 1px 2px 20px 4px #00000082;
-}
-aside .mision h2{
-    position: absolute;
-    color: #FF9F23;
-    font-size: 30px;
-    font-family: var(--YanoneKaffeesatz);
-    font-weight: bold;
-    display: block;
-    left: 35px;
-    top: 40px;
-}
-aside .mision p{
-    position: absolute;
-    top: 90px;
-    left: 35px;
-    width: 450px;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 25px;
-    text-transform: none;
-}
-aside .vision{
-    position: relative;
-    top: 40px;
-    width: 550px;
-    height: 320px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 1px 2px 20px 4px #00000082;
-}
-aside .vision h2{
-    position: absolute;
-    color: #FF9F23;
-    font-size: 30px;
-    font-family: var(--YanoneKaffeesatz);
-    font-weight: bold;
-    display: block;
-    left: 35px;
-    top: 40px;
-}
-aside .vision p{
-    position: absolute;
-    top: 90px;
-    left: 35px;
-    width: 470px;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 25px;
-    text-transform: none;
-}
-footer{
-    position: relative;
-    top: 580px;
-    height: 250px;
-    width: 1600px;
-    background-color: #D2D2D2;
-    overflow: hidden; 
-    margin: auto;
-}
-footer button{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    left: 60px;
-    top: 20px;
-    font-size: 40px;
-    font-weight: normal;
-    border: none;
-    border-radius: 5px;
-    color: #e90000;
-    cursor: pointer;
-    box-shadow: 0px 0px 15px 0px #000000;
-}
-footer > p{
-    position: absolute;
-    top:208px;
-    right: 20px;
-    font-weight: bold;
-    font-family: var(--YanoneKaffeesatz);
-}
-footer > p i{
-    position: relative;
-    color: #FF9F23;
-    font-size: 28px;
-    top: 5px;
-}
-.emerguente{
-    position: absolute;
-    box-shadow: 0px 1px 10px 0px #000000;
-    border-radius: 5px;
-    background-color: #FFFFFF;
-    width: 300px;
-    height: 150px;
-    top: 250px;
-    left: 50px;
-    opacity: 0;
-    transition: all .2s ease-in;
-    z-index: 1;
-}
-.emerguente.active{
-    opacity: 1;
-    left: 55px;
-    top: 0px;
-}
-.emerguente .fa-circle-xmark{
-    position: absolute;
-    font-size: 23px;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-}
-footer button .emerguente .ayuda{
-    position: absolute;
-    font-size: 18px;
-    font-family: var(--YanoneKaffeesatz);
-    color: #000000;
-    left: 5px;
-    top: 30px;
-    width: 330px;
-    letter-spacing: 1px;
-    padding-left: 0px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-image: url('../imagenes/Vision.png');
+    background-size: cover;
 }
-footer button .emerguente .ayuda a{
-    position: absolute;
-    padding-left: 50px;
-    text-decoration: none;
-    color: #000000;
-    left: 30px; 
+
+
+.cards h1 {
+    color: #fff;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-color: 2px solid black;
+    text-shadow: 0px 5px 3px black;
 }
-footer button .emerguente .ayuda i{
+
+.cards svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cards:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.cards__content {
     position: absolute;
-    color: #e90000 ;
+    top: 0;
     left: 0;
-font-size: 35px
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-footer button .emerguente .ayuda2{
-    position: absolute;
-    font-size: 18px;
-    font-family: var(--YanoneKaffeesatz);
-    color: #000000;
-    left: 5px;
-    top: 20px;
-    display: flex;
-    width: 350px;
-    padding-left: 30px;
-    margin-top: 80px;
+
+.cards:hover .cards__content {
+    transform: rotateX(0deg);
 }
-footer button .emerguente .ayuda2 a{
-    position: absolute;
-    padding-left: 50px;
-    text-decoration: none;
-    color: #000000;
-    left: 30px; 
+
+.cards__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+    margin-top: 40px;
 }
-footer button .emerguente .ayuda2 i{
-    position: absolute;
-    color: #e90000 ;
-    left: 0;
-    font-size: 35px
+
+.cards:hover svg {
+    scale: 0;
 }
-.dir{
+
+.cards__description {
+    margin: 10px 0 0;
+    font-size: 19px;
+    color: #777;
+    line-height: 1.7;
+    margin-top: 20px;
+}
+
+/* final vision */
+
+.dir {
     position: absolute;
     top: 30px;
     right: 600px;
@@ -450,458 +244,288 @@ footer button .emerguente .ayuda2 i{
     font-family: var(--YanoneKaffeesatz);
     font-weight: normal;
 }
-footer span{
-    position: absolute;
-    top: 180px;
-    left: 20px;
-    font-size: 45px;
-    color: #e90000;
-}
-footer span i{
-    padding-left: 14px;
-}
-/* modo entrega */
-.modo-entrega{
-    position: absolute;
-    background-color: #FFFFFF;
-    opacity: 0.2;
-    left: 550px;
-    width: 380px;
-    overflow: hidden;
-    height: 450px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0px 0px 10px #000000;
-}
-#modo-entrega{
-    top: -450px;
-    opacity:0;
-    transition: all .4s linear;
-}
-#modo-entrega.active{
-    top: 150px;
-    opacity: 1;
-}
-.modo-entrega .fa-circle-xmark{
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 22px;
-    cursor: pointer;
-}
-.modo-entrega .header-titulo{
-    background-color: #e90000;
-    color: #FFFFFF;
-    display: flex;
-    font-size: 12px;
-    margin-left: -80px;
-    justify-content: center;
-    align-items: center;
-    height: 70px;
-}
-.modo-entrega .opc-modo-entrega{
-    display: flex;
-    width: 390px;
-    height: 360px;
-    border-radius: 10px;
-    justify-content: space-around;
-    padding-left: 0px;
-    border-radius: 10px;
-}
-.modo-entrega .opc-modo-entrega .recoger-tienda{
-    width: 120;
-    margin-top: 40px;
-    margin-left: -10px;
-    box-shadow: 0px 0px 10px #000000;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.modo-entrega .opc-modo-entrega .recoger-tienda:hover{
-    transform: scale(1.02);
-}
-.modo-entrega .opc-modo-entrega .recoger-tienda img{
-    position: relative;
-    padding-left: -130px;
-    width: 160px;
-    height: 200px;
-}
-.modo-entrega .opc-modo-entrega .recoger-tienda p{
-    position: relative;
-    width: 160px;
-    left: 25px;
-    font-weight: bold;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 17px;
-    top: 30px;
 
-}
-.modo-entrega .opc-modo-entrega .recoger-domicilio{
-    width: 120;
-    height: 320px;
-    margin-left: -20px;
-    margin-top: 40px;
-    box-shadow: 0px 0px 10px #000000;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.modo-entrega .opc-modo-entrega .recoger-domicilio:hover{
-    transform:scale(1.02) ;
-}
-.modo-entrega .opc-modo-entrega .recoger-domicilio p{
-    position: relative;
-    width: 160px;
-    left: 25px;
-    font-weight: bold;
-    font-family: var(--YanoneKaffeesatz);
-    font-size: 17px;
-    top: 30px; 
-}
-.modo-entrega .opc-modo-entrega .recoger-domicilio img{
-    width: 180px;
-    height: 200px;
-}
-/* verificar correo */
-.verificar{
+.banner {
+    width: 100%;
+    height: 100vh;
+    animation: banner 10s infinite linear alternate;
+    background-size: 100% 100%;
     position: absolute;
-    top: 350px;
-    width: 450px;
-    height: 220px;
-    box-shadow: 0px 0px 10px #000000;
-    z-index: 4;
-    background-color: #FFFFFF;
-    left:550px;
-}
-#verificar{
-    display: none;
-}
-.verificar.active{
-    opacity: 1;
-    top: 350px;
-}
-.verificar .header-titulo{
-    background-color: #e90000;
-    color: #FFFFFF;
-    height: 60px;
-    padding: 15px 10px;
-    font-size: 20px;
-    text-transform: capitalize;
-}
-.verificar p{
-    font-size: 13px;
-    padding: 20px 25px;
-}
-.verificar div{
-    display: flex;
-    position: relative;
-    padding: 30px 20px;
-    justify-content: space-between;
-}
-.verificar div input{
-    height: 40px;
-    width: 300px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    outline: none;
-    padding: 0px 30px ;
-}
-.verificar div input::placeholder{
-    font-size: 14px;
-}
-.verificar div i{
-    position: absolute;
-    font-size: 25px;
-    padding: 7px 5px;
-}
-.verificar div .btn-verificar{
-    background-color: #FF9F23;
-    border: none;
-    height: 40px;
-    width: 90px;
-    border-radius: 10px;
-}
-.verificar div .btn-verificar a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 17px;
-}
-
-.verificar{
-    position: absolute;
-    top: 350px;
-    width: 450px;
-    height: 220px;
-    box-shadow: 0px 0px 10px #000000;
-    z-index: 10;
-    background-color: #FFFFFF;
-    left:550px;
-}
-#verificar{
-    display: none;
-}
-.verificar.active{
-    opacity: 1;
-    top: 350px;
-}
-.verificar .header-titulo{
-    background-color: #e90000;
-    color: #FFFFFF;
-    height: 60px;
-    padding: 15px 10px;
-    font-size: 20px;
-    text-transform: capitalize;
-}
-.verificar p{
-    font-size: 13px;
-    padding: 20px 25px;
-}
-.verificar div{
-    display: flex;
-    position: relative;
-    padding: 30px 20px;
-    justify-content: space-between;
-}
-.verificar div input{
-    height: 40px;
-    width: 300px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    outline: none;
-    padding: 0px 30px ;
-}
-.verificar div input::placeholder{
-    font-size: 14px;
-}
-.verificar div i{
-    position: absolute;
-    font-size: 25px;
-    padding: 7px 5px;
-}
-.verificar div .btn-verificar{
-    background-color: #FF9F23;
-    border: none;
-    height: 40px;
-    width: 90px;
-    border-radius: 10px;
-}
-.verificar div .btn-verificar a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 17px;
-}
-/* donde te encuentras */
-.donde-encuentras{
-    position: absolute;
-    width: 650px;
-    height: 390px;
-    box-shadow: 0px 0px 10px inset;
-    background-color: #FFFFFF;
-    top: 150px;
-    left: 500px;
-    border: 1px solid #000000;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    transition: all .3s linear;
-}
-#donde-encuentras{
-    top: -350px;
-    opacity: 0;
-}
-#donde-encuentras.active{
-    top: 150px;
-    opacity: 1;
-}
-.donde-encuentras .header-titulo{
-    background-color: #e90000;
-    height: 70px;
-    color: #FFFFFF;
     display: flex;
     justify-content: center;
-    align-items: center;
+    right: 0;
+    top: 150px;
+    object-fit: cover;
 }
-.donde-encuentras .contenido{
-    position: relative;
-    display: inline-block;
-    top: -20px;
-    padding: 0px -50px;
-    color: #000000;
-    line-height: 35px;
-    margin: 20px;
-}
-.donde-encuentras .contenido p{
-    font-size: 15px;
-    margin: 10px 0px 10px 0px;
-}
-.formulario-dir{
-    display: inline-block;
-}
-.formulario-dir label{
-    font-weight: bold;
-    font-size: 14px;
-}
-.formulario-dir input{
-    height: 30px;
-    border-radius: 5px;
-}
-.formulario-dir .barrio{
-    display: block;
-}
-.formulario-dir .barrio input{
-    width: 100%;
-    height: 30px;
-    padding: 0 10px;
-}
-.formulario-dir .direccion{
-    position: relative;
-    top: 20px;
-    padding: 0 0px;
-    display: inline-block;
-}
-.formulario-dir .direccion select{
-    width: 90px;
-    height: 30px;
-    border-radius: 5px;
-}
-.formulario-dir .direccion input[type="number"]{
-    width: 70px;
-}
-.formulario-dir .textarea{
-    display: inline-block;
-    position: relative;
-    top: 20px;
-}
-.formulario-dir .textarea textarea{
-    position: relative;
-    top: 20px;
-    height: 50px;
-    width: 520px;
-    padding: 10px 0;
-}
-.formulario-dir .textarea textarea::placeholder{
-    font-size: 15px;
-}
-.donde-encuentras .contenido .btn-guardar{
-    position: relative;
-    top: 40px;
-    width: 100%;
-    height: 30px;
-    border-radius: 5px;
-    background: #FF9F23;
-    border: none;
-    cursor: pointer;
-}
-.donde-encuentras .contenido .btn-guardar a{
-    font-size: 17px;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-/* Seguir comprando */
 
-.cuadro-seguir{
+@keyframes banner {
+
+    0%,
+    20% {
+        background-image: url("../imagenes/quienes-som22.jpg");
+    }
+
+    25%,
+    45% {
+        background-image: url("../imagenes/komorebi-quienes-somos.jpg");
+    }
+
+    50%,
+    70% {
+        background-image: url("../imagenes/quienes-somos-mk.jpg");
+    }
+
+    75%,
+    100% {
+        background-image: url("../imagenes/quienes-fotos.jpg");
+    }
+}
+
+.capa {
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 850px;
-    width: 450px;
-    height: 550px;
-    box-shadow: 0px 0px 20px #000000;
-    background-color: #FFFFFF;
-    left:600px;
-    border-radius: 10px;
-    transition: all .3s linear;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    object-fit: contain;
 }
-#cuadro-seguir{
-    top: -600px;
-    opacity: 1;
-}
-#cuadro-seguir.active{
-    opacity: 1;
-    top: 200px;
-    transition: all .3s linear;
-    z-index: 5;
-}
-.cuadro-seguir .fa-circle-check{
-    font-size: 215px;
-    color: #e90000;
-    padding: 35px 112px;
-}
-.cuadro-seguir h3{
+
+.info {
+    z-index: 1;
+    width: 100%;
+    max-width: 550px;
     text-align: center;
-    font-size: 20px;
-}
-.cuadro-seguir .btn-seguir{
-    background-color: #FF9F23;
-    border: none;
-    width: 140px;
-    height: 40px;
     border-radius: 8px;
-    position: absolute;
-    left: 150px;
-    top: 400px;
-}
-.cuadro-seguir .btn-seguir a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 16px;
+    margin: 300px;
 
 }
 
-.banner{
-	width: 100%;
-	height: 800px;
-	animation: banner 10s infinite linear alternate;
-	background-size: 100% 100%;
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    margin: auto;
-    top: 150px;
-}
-
-@keyframes banner{
-	0%, 20%{
-		background-image: url("../imagenes/quienes-som22.jpg");
-	}
-	25%, 45%{
-		background-image: url("../imagenes/komorebi-quienes-somos.jpg");
-	}
-	50%, 70%{
-		background-image: url("../imagenes/quienes-somos-mk.jpg");
-	}
-	75%, 100%{
-		background-image: url("../imagenes/quienes-fotos.jpg");
-	}
-}
-.capa{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: rgba(0,0,0,0.6);
-}
-.info{
-	z-index: 1;
-	width: 100%;
-	max-width: 550px;
-	text-align: center;
-    border-radius: 8px;
-}
-.info h1{
-	color: #fff;
-	font-size: 69px;
-	margin-bottom: 20px;
-	letter-spacing: 1px;
+.info h1 {
+    color: #fff;
+    font-size: 69px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.info p{
-	color: #c7c7c7;
-	line-height: 1.7;
-	margin-bottom: 30px;
+
+.info p {
+    color: #c7c7c7;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 20px;
 }
-.info a{
-	color: #fff;
-	text-decoration: none;
-	background: #e90000;
-	padding: 16px 37px;
-	display: inline-block;
-	border-radius: 50px;
+
+.info a {
+    color: #fff;
+    text-decoration: none;
+    background: #e90000;
+    padding: 16px 37px;
+    display: inline-block;
+    border-radius: 50px;
 }
+
+/* ¿QUIENES SOMOS? TEXTO */
+.card-quienes {
+    left: 30%;
+    top: 630px;
+    position: relative;
+    padding: 20px;
+    width: 800px;
+    min-height: 80px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 5px 5px 8px #cbc5c5,
+               -5px -5px 8px #cbc5c5;
+    transition: 0.4s;
+  }
+  
+  .card-somos:hover {
+    translate: 0 -10px;
+  }
+  
+  .cardsom-title {
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 15px 0 0 10px;
+    text-align: center;
+  }
+  
+  .cardsom-body {
+    margin: 13px 0 0 10px;
+    color: #000000;
+    font-size: 17px;
+    text-align: left;
+  }
+  
+
+/*boton*/
+
+.Btn {
+  width: 180px;
+  height: 40px;
+  border: none;
+  top: 10px;
+  left: 260px;
+  border-radius: 10px;
+  background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+  background-size: 250%;
+  background-position: left;
+  color: #ffd277;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+.Btn::before {
+  position: absolute;
+  content: "¿Donde Encontrarnos?";
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.Btn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.Btn:active {
+  transform: scale(0.95);
+}
+
+/*google maps*/
+.mapa {
+    margin: 13%;
+    padding:1%;
+    width: 76%;
+    left: 10%;
+    margin-top: 3%;
+    min-height: 20%px;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+  }
+  
+  .mapa:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+  
+  .mapa-5 {
+    background: radial-gradient( #ffffff , #ffffff);
+  }
+  
+  @media (max-width: 1400px) {
+    .mapa {
+      justify-content: center;
+    }
+  }
+  .ubicacion{
+   margin-top: 150px;
+    text-align: center;
+    font-size: 120%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 40%;
+  }
+  
+  /* footer */
+  footer{
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url('../imagenes/background-footer.svg');
+    background-size: cover;
+    height: 450px;
+    /*background-color: #d0f0f8;
+    -webkit-mask-image: url("../Images/background-footer.svg");
+    mask-image: url("../Images/background-footer.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;*/
+}
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.box__footer .logo img{
+    width: 200px;
+}
+
+.box__footer .terms{
+    max-width: 350px;
+    margin-top: 5px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 17px;
+}
+
+.box__footer h2{
+    margin-bottom: 55px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+    margin-top: 10;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 10px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+/*Aquí termina el FOOTER*/

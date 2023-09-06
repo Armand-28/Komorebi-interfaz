@@ -21,7 +21,7 @@ session_start();
                 <br>
 
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#prov">
-                    <span class="glyphicon glyphicon-plus"></span> Agregar <i class="fa fa-plus"></i> </a></button>
+                    <span class="glyphicon glyphicon-plus"></span> Agregar Proveedor    <i class="fa fa-plus"></i> </a></button>
             </div>
 
             <div class="card-body">
@@ -33,7 +33,7 @@ session_start();
                                 <th>Razon Social</th>
                                 <th>Direccion</th>
                                 <th>Telefono</th>
-                                <th>RFC</th>
+                                <th>Nit</th>
                                 <th>Correo</th>
                                 <th>Fecha</th>
                                 <th>Acciones.</th>
@@ -51,7 +51,7 @@ session_start();
                                     <td><?php echo $fila['r_social']; ?></td>
                                     <td><?php echo $fila['direccion']; ?></td>
                                     <td><?php echo $fila['telefono']; ?></td>
-                                    <td><?php echo $fila['rfc']; ?></td>
+                                    <td><?php echo $fila['nit']; ?></td>
                                     <td><?php echo $fila['correo']; ?></td>
                                     <td><?php echo $fila['fecha']; ?></td>
                                     <td>

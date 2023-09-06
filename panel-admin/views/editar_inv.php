@@ -21,7 +21,7 @@
 
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre       </label>
+                                <label for="nombre" class="form-label">Producto</label>
                                 <input type="text" id="producto" name="producto" class="form-control" value="<?php echo $fila['producto']; ?>" required>
                             </div>
                         </div>
@@ -30,15 +30,15 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Cantidad</label><br>
+                                <label for="password">Cantidad del Articulo</label><br>
                                 <input type="number" name="existencia" id="existencia" class="form-control" value="<?php echo $fila['existencia']; ?>" required>
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Minimo</label><br>
-                                <input type="number" name="minimo" id="minimo" class="form-control" value="<?php echo $fila['minimo']; ?>" required>
+                                <label for="password">Descripción</label><br>
+                                <input type="text" name="minimo" id="minimo" class="form-control" value="<?php echo $fila['minimo']; ?>" required>
                             </div>
                         </div>
                     </div>
@@ -46,17 +46,18 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Precio Venta </label><br>
+                                <label for="password">Precio de Venta </label><br>
                                 <input type="number" step=".01" id="venta" name="venta" class="form-control" value="<?php echo $fila['venta']; ?>">
                             </div>
                         </div>
 
                         <div class="col-sm-6">
                             <div class="mb-3">
-                                <label for="password">Precio Compra </label><br>
+                                <label for="password">Precio de Compra </label><br>
                                 <input type="number" step=".01" id="compra" name="compra" class="form-control" value="<?php echo $fila['compra']; ?>">
                             </div>
                         </div>
+
                     </div>
 
                     <div class="row">
@@ -64,10 +65,12 @@
                             <div class="mb-3">
                                 <label for="password">Tipo de Unidad</label><br>
                                 <select name="unidad" id="unidad" class="form-control" required>
-                                    <option <?php echo $fila['unidad'] === 'UND' ? 'selected' : ''; ?> value="UND">UND</option>
-                                    <option <?php echo $fila['unidad'] === 'PZA' ? 'selected' : ''; ?> value="PZA">PZA</option>
-                                    <option <?php echo $fila['unidad'] === 'PAQUETES' ? 'selected' : ''; ?> value="PAQUETES">PAQUETES</option>
-                                    <option <?php echo $fila['unidad'] === 'KG' ? 'selected' : ''; ?> value="KG">KG</option>
+                                    <option <?php echo $fila['unidad'] === 'Gr' ? 'selected' : ''; ?> value="Gr">Gramos</option>
+                                    <option <?php echo $fila['unidad'] === 'Lb' ? 'selected' : ''; ?> value="Lb">Libras</option>
+                                    <option <?php echo $fila['unidad'] === 'Kg' ? 'selected' : ''; ?> value="Kg">Kilogramos</option>
+                                    <option <?php echo $fila['unidad'] === 'Ml' ? 'selected' : ''; ?> value="Ml">Mililitros</option>
+                                    <option <?php echo $fila['unidad'] === 'Cm' ? 'selected' : ''; ?> value="Cm">Centimetros</option>
+                                    <option <?php echo $fila['unidad'] === 'Mt' ? 'selected' : ''; ?> value="Mt">Metros</option>
                                 </select>
                             </div>
                         </div>
